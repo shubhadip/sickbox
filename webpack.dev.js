@@ -46,6 +46,9 @@ module.exports = {
     ],
   },
   plugins: [
+    new webpack.DefinePlugin({
+      __isBrowser__: "true"
+    }),
     new webpack.HotModuleReplacementPlugin(),
     new htmlWebpackPlugin({
       template: path.resolve(__dirname, 'src/index.html'),

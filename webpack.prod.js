@@ -18,7 +18,7 @@ module.exports = {
         filename: '[name].[hash].js',
         chunkFilename: '[name].[chunkhash].js',
         path: path.resolve(__dirname, 'build'),
-        publicPath: '/build',
+        publicPath: '/',
     },
     resolve: {
         extensions: ['.ts', '.tsx', '.js', '.jsx'],
@@ -51,6 +51,9 @@ module.exports = {
         }, ],
     },
     plugins:[
+      new webpack.DefinePlugin({
+        __isBrowser__: "true"
+      }),
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
             filename: devMode ? '[name].css' : '[name].[hash].css',
@@ -63,7 +66,7 @@ module.exports = {
         new ReactLoadablePlugin({
             filename: './build/react-loadable.json',
         }),
-        new BundleAnalyzerPlugin(),
+        // new BundleAnalyzerPlugin(),
     ],
     optimization: {
         splitChunks: {

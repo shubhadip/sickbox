@@ -3,6 +3,7 @@ const webpackNodeExternals = require('webpack-node-externals');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const reactLoadableTransformer = require('react-loadable-ts-transformer');
 const devMode = process.env.NODE_ENV !== 'production';
+const webpack = require('webpack')
 
 console.log(process.env.NODE_ENV)
 module.exports = {
@@ -12,7 +13,7 @@ module.exports = {
     output: {
         filename: 'server.js',
         path: path.resolve(__dirname, 'build'),
-        publicPath: '/build',
+        publicPath: '/',
     },
     resolve: {
         extensions: ['.ts', '.tsx', '.js', '.jsx'],
@@ -40,6 +41,9 @@ module.exports = {
     },
     externals: [webpackNodeExternals()],
     plugins:[
+        new webpack.DefinePlugin({
+            __isBrowser__: "false"
+        }),
         new MiniCssExtractPlugin({
             filename: devMode ? '[name].css' : '[name].[hash].css',
             chunkFilename: devMode ? '[id].css' : '[id].[hash].css',

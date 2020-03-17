@@ -11,11 +11,9 @@ class About extends React.Component<any, any> {
   }
 
   handleClick = () => {
-    console.log('tett');
   };
 
   componentDidMount() {
-    console.log('I mounted');
   }
   render() {
     return (

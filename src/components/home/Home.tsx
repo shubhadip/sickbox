@@ -14,7 +14,7 @@ class Home extends React.Component<any, any> {
     return (
       <div className="home-container">
         <p>I am Home Component</p>
-        <a href="/about">About</a> <br/>
+        {/* <a href="/about">About</a> <br/> */}
         <a href="/contact">Contact</a>
       </div>
     );
