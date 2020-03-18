@@ -1,5 +1,8 @@
 import * as React from 'react';
 import { hot } from 'react-hot-loader';
+import { connect } from 'react-redux';
+import { fetchAboutData } from './../../helpers/loadData';
+
 import './home.scss';
 interface Iprops {
   isMobileDevice?: boolean;
@@ -10,15 +13,26 @@ class Home extends React.Component<any, any> {
     super(props);
   }
 
+  componentDidMount() {
+    if (!this.props.todos.length) {
+      fetchAboutData();
+    }
+  }
+
   render() {
     return (
       <div className="home-container">
         <p>I am Home Component</p>
-        {/* <a href="/about">About</a> <br/> */}
         <a href="/contact">Contact</a>
       </div>
     );
   }
 }
 
-export default hot(module)(Home);
+function mapStateToProps(state: any) {
+  return {
+    todos: state.todo.list
+  };
+}
+
+export default hot(module)(connect(mapStateToProps, null)(Home));

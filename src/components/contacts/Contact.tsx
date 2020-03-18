@@ -11,6 +11,9 @@ class Contact extends React.Component<any, any> {
     super(props);
   }
 
+  componentDidMount() {
+  }
+
   render() {
     return (
       <div className="contact-container">

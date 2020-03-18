@@ -1,12 +1,17 @@
 import * as React from 'react';
 import * as ReactDOMServer from 'react-dom/server';
+import { Provider } from 'react-redux';
+// import { createStore } from "redux";
 import { renderRoutes } from 'react-router-config';
 import Loadable from 'react-loadable';
 import { getBundles } from 'react-loadable/webpack';
 import Routes from '../routerLinks';
 import express from 'express';
-import { StaticRouter } from 'react-router-dom';
-
+import { StaticRouter, matchPath } from 'react-router-dom';
+import { createStore } from 'redux';
+import rootReducer from '../reducers';
+import { filterData } from './utils';
+// import { serialize } from 'serialize-javascript';
 const app = express();
 const data = require('../../build/stats.json');
 const stats = require('../../build/react-loadable.json');
@@ -19,20 +24,36 @@ app.get('*', (req, res) => {
   const vendorfiles = data['assetsByChunkName']['vendor'];
   const context = {};
   const modules: any = [];
+  let preloadedState = {};
+  let promise;
+  const currentRoute = Routes.find(route => matchPath(req.url, route)) || {};
+  if (currentRoute['loadData']) {
+    promise = currentRoute['loadData']();
+  } else {
+    promise = Promise.resolve({});
+  }
+  promise.then((response: any) => {
+    const cleanedData = filterData(req.path, response.data) || {};
+    preloadedState = { ...preloadedState, ...cleanedData };
+    const store = createStore(rootReducer, preloadedState);
 
-  const content = ReactDOMServer.renderToString(
-    <Loadable.Capture report={moduleName => modules.push(moduleName)}>
-      <StaticRouter location={req.path} context={context}>
-        <div>{renderRoutes(Routes)}</div>
-      </StaticRouter>
-    </Loadable.Capture>
-  );
+    const content = ReactDOMServer.renderToString(
+      <Loadable.Capture report={moduleName => modules.push(moduleName)}>
+        <Provider store={store}>
+          <StaticRouter location={req.path} context={context}>
+            <div>{renderRoutes(Routes)}</div>
+          </StaticRouter>
+        </Provider>
+      </Loadable.Capture>
+    );
 
-  const bundles = getBundles(stats, modules);
-  const cssStyles = bundles.filter(bundle => bundle.file.endsWith('.css'));
-  const jsBudles = bundles.filter(bundle => bundle.file.endsWith('.js'));
+    const finalState = store.getState();
+    const bundles = getBundles(stats, modules);
+    const cssStyles = bundles.filter(bundle => bundle.file.endsWith('.css'));
+    const jsBudles = bundles.filter(bundle => bundle.file.endsWith('.js'));
+    promise = null;
 
-  res.send(`
+    return res.send(`
       <!DOCTYPE html>
       <html>
         <head>
@@ -46,18 +67,26 @@ app.get('*', (req, res) => {
         </head>
         <body>
           <div id="app">${content}</div>
+
+<script>
+window.__PRELOADED_STATE__ = ${(JSON.stringify(finalState) as any).replace(
+      /</g,
+      '\\u003c'
+    )}
+</script>
           <script type="text/javascript" src="${
             vendorfiles[0]
           }" async ></script>
           ${jsBudles
             .map(bundle => {
-              return `<script type="text/javascript" src="/${bundle.file}"  defer></script>`;
+              return `<script type="text/javascript" src="${bundle.file}"  defer></script>`;
             })
             .join('\\n')}
           <script type="text/javascript" src="${mainFiles[1]}"  defer></script>
         </body>
       </html>
     `);
+  });
 });
 
 Loadable.preloadAll().then(() => {

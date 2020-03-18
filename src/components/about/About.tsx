@@ -1,5 +1,7 @@
 import * as React from 'react';
 import { hot } from 'react-hot-loader';
+import { connect } from 'react-redux';
+
 import './about.scss';
 interface Iprops {
   isMobileDevice?: boolean;
@@ -15,15 +17,20 @@ class About extends React.Component<any, any> {
 
   componentDidMount() {
   }
+
   render() {
     return (
       <div className="about-container">
         <p> I am About</p>
-        <button onClick={this.handleClick}>Click Me</button>
         <a href="/">Home</a>
       </div>
     );
   }
 }
 
-export default hot(module)(About);
+function mapStateToProps(state: any) {
+  return {
+    authenticated: state.auth
+  };
+}
+export default hot(module)(connect(mapStateToProps, null)(About));
