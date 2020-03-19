@@ -1,12 +1,12 @@
 import * as React from 'react';
 import { hot } from 'react-hot-loader';
-import './contact.scss';
+import './footer.scss';
 
 interface Iprops {
   isMobileDevice?: boolean;
 }
 
-class Contact extends React.Component<any, any> {
+class Footer extends React.Component<any, any> {
   constructor(props: Iprops) {
     super(props);
   }
@@ -15,13 +15,11 @@ class Contact extends React.Component<any, any> {
 
   render() {
     return (
-      <div className="contact-container">
-        <p>I am Contact Component</p>
-        <a href="/about">About</a>
-        <a href="/">Home</a>
+      <div className="footer-container">
+        <p>I am Footer Component</p>
       </div>
     );
   }
 }
 
-export default hot(module)(Contact);
+export default hot(module)(Footer);

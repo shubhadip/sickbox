@@ -1,17 +1,15 @@
 import * as React from 'react';
 import * as ReactDOMServer from 'react-dom/server';
 import { Provider } from 'react-redux';
-// import { createStore } from "redux";
-import { renderRoutes } from 'react-router-config';
 import Loadable from 'react-loadable';
 import { getBundles } from 'react-loadable/webpack';
-import Routes from '../routerLinks';
+import Routes from '../router/routerLinks';
 import express from 'express';
 import { StaticRouter, matchPath } from 'react-router-dom';
 import { createStore } from 'redux';
 import rootReducer from '../reducers';
 import { filterData } from './utils';
-// import { serialize } from 'serialize-javascript';
+import { routeMap } from '../router';
 const app = express();
 const data = require('../../build/stats.json');
 const stats = require('../../build/react-loadable.json');
@@ -41,10 +39,10 @@ app.get('*', (req, res) => {
       <Loadable.Capture report={moduleName => modules.push(moduleName)}>
         <Provider store={store}>
           <StaticRouter location={req.path} context={context}>
-            <div>{renderRoutes(Routes)}</div>
+            <div>{routeMap()}</div>
           </StaticRouter>
         </Provider>
-      </Loadable.Capture>
+      </Loadable.Capture>,
     );
 
     const finalState = store.getState();
@@ -71,7 +69,7 @@ app.get('*', (req, res) => {
 <script>
 window.__PRELOADED_STATE__ = ${(JSON.stringify(finalState) as any).replace(
       /</g,
-      '\\u003c'
+      '\\u003c',
     )}
 </script>
           <script type="text/javascript" src="${
@@ -91,6 +89,6 @@ window.__PRELOADED_STATE__ = ${(JSON.stringify(finalState) as any).replace(
 
 Loadable.preloadAll().then(() => {
   app.listen(PORT, () =>
-    console.log(`Frontend service listening on port: ${PORT}`)
+    console.log(`Frontend service listening on port: ${PORT}`),
   );
 });

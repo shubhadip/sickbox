@@ -12,11 +12,9 @@ class About extends React.Component<any, any> {
     super(props);
   }
 
-  handleClick = () => {
-  };
+  handleClick = () => {};
 
-  componentDidMount() {
-  }
+  componentDidMount() {}
 
   render() {
     return (

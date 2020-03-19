@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const htmlWebpackPlugin = require('html-webpack-plugin');
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -49,6 +50,7 @@ module.exports = {
     new webpack.DefinePlugin({
       __isBrowser__: "true"
     }),
+    new ForkTsCheckerWebpackPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new htmlWebpackPlugin({
       template: path.resolve(__dirname, 'src/index.html'),
