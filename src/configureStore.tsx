@@ -24,13 +24,13 @@ const store = createStore(
   preloadedState,
   process.env.NODE_ENV === 'development'
     ? composeEnhancers(applyMiddleware(...middleware))
-    : applyMiddleware(...middleware)
+    : applyMiddleware(...middleware),
   // window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
 
 if (process.env.NODE_ENV !== 'production' && (module as any).hot) {
   (module as any).hot.accept('./reducers', () =>
-    store.replaceReducer(rootReducer)
+    store.replaceReducer(rootReducer),
   );
 }
 

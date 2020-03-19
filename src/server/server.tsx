@@ -42,7 +42,7 @@ app.get('*', (req, res) => {
             <div>{routeMap()}</div>
           </StaticRouter>
         </Provider>
-      </Loadable.Capture>,
+      </Loadable.Capture>
     );
 
     const finalState = store.getState();
@@ -69,7 +69,7 @@ app.get('*', (req, res) => {
 <script>
 window.__PRELOADED_STATE__ = ${(JSON.stringify(finalState) as any).replace(
       /</g,
-      '\\u003c',
+      '\\u003c'
     )}
 </script>
           <script type="text/javascript" src="${
@@ -89,6 +89,6 @@ window.__PRELOADED_STATE__ = ${(JSON.stringify(finalState) as any).replace(
 
 Loadable.preloadAll().then(() => {
   app.listen(PORT, () =>
-    console.log(`Frontend service listening on port: ${PORT}`),
+    console.log(`Frontend service listening on port: ${PORT}`)
   );
 });

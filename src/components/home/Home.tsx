@@ -31,7 +31,7 @@ class Home extends React.Component<any, any> {
 
 function mapStateToProps(state: any) {
   return {
-    todos: state.todo.list,
+    todos: state.todo.list
   };
 }
 
