@@ -6,10 +6,10 @@ import Footer from './../components/footer/footer';
 
 export const routeMap = () => {
   return (
-    <div>
+    <main>
       <Header />
       {renderRoutes(Routes)}
       <Footer />
-    </div>
+    </main>
   );
 };

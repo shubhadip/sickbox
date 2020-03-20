@@ -15,9 +15,9 @@ class Footer extends React.Component<any, any> {
 
   render() {
     return (
-      <div className="footer-container">
+      <footer className="footer-container">
         <p>I am Footer Component</p>
-      </div>
+      </footer>
     );
   }
 }

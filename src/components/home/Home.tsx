@@ -21,10 +21,26 @@ class Home extends React.Component<any, any> {
 
   render() {
     return (
-      <div className="home-container">
-        <p>I am Home Component</p>
-        <a href="/contact">Contact</a>
-      </div>
+      <>
+        <section className="home-hero-container">
+          <div className="container">
+            <div className="row">
+              <div className="col-sm-6">
+                <h1 className="heading">The Sick Day Survival Kit</h1>
+                <p className="sub-heading">
+                  Everything you need to make it through a sick day.
+                </p>
+              </div>
+              <div className="col-sm-6">
+                <img
+                  alt=""
+                  src="//cdn.shopify.com/s/files/1/2225/6647/files/front_cropped_1440x640.png?v=1511110579"
+                ></img>
+              </div>
+            </div>
+          </div>
+        </section>
+      </>
     );
   }
 }

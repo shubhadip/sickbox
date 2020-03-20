@@ -18,7 +18,7 @@ class About extends React.Component<any, any> {
 
   render() {
     return (
-      <div className="about-container">
+      <div className="container about-container">
         <p> I am About</p>
         <a href="/">Home</a>
       </div>

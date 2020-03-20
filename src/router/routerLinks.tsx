@@ -16,7 +16,7 @@ const About = Loadable({
 const Contact = Loadable({
   loader: () =>
     import(
-      /* webpackChunkName: 'Contact' */ './../components/contacts/Contact',
+      /* webpackChunkName: 'Contact' */ './../components/contacts/Contact'
     ),
   loading,
   modules: ['./../components/contacts/Contact'],

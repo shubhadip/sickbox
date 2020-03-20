@@ -1,7 +1,9 @@
 import * as React from 'react';
 import { Provider } from 'react-redux';
 import store from './../../configureStore';
+import './../../scss/main.scss'; // this has to be on the top
 import { routeMap } from '../../router';
+
 interface IProps {
   isMobileDevice?: boolean;
 }

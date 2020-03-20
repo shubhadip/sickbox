@@ -1,0 +1,64 @@
+/***** common mixin for keyframe
+use : @mixin AnimateContent 0.5s, dropdownfadeIn, 0.25s;
+*****/
+@define-mixin AnimateContent $delay: 0.5s, $name: slideup, $duration: 0.25s {
+    animation-name: $name;
+    animation-duration: $duration;
+    animation-iteration-count: 1;
+    /* animation-direction: alternate; */
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    animation-delay: $delay;
+}
+
+@keyframes slider-right {
+	from {
+		transform: translateX(-100px);
+		opacity: 0;
+	}
+
+	to {
+		transform: translateX(0px);
+		opacity: 1;
+	}
+}
+@keyframes fadeincontent {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+@keyframes slideup {
+	from {
+		opacity: 0;
+		transform: translateY(20%);
+	}
+
+	to {
+		transform: translateY(0%);
+		opacity: 1;
+	}
+}
+@keyframes zerotohalf {
+  0% {
+	width: 25%;
+  }
+  100% {
+	width: 50%;
+  }
+}
+@keyframes halftofull {
+  0% {
+	width: 50%;
+  }
+  100% {
+	width: 100%;
+  }
+}
+
+
+
+

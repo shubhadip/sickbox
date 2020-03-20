@@ -15,9 +15,9 @@ class Header extends React.Component<any, any> {
 
   render() {
     return (
-      <div className="header-container">
+      <header className="header-container">
         <p>I am Header Component</p>
-      </div>
+      </header>
     );
   }
 }
