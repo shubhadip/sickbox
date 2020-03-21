@@ -2,9 +2,9 @@ import { TODOS } from '../actions/types';
 
 export default function(
   state = {
-    list: [],
+    list: []
   },
-  action: any,
+  action: any
 ) {
   switch (action.type) {
     case TODOS:

@@ -28,7 +28,7 @@ class About extends React.Component<any, any> {
 
 function mapStateToProps(state: any) {
   return {
-    authenticated: state.auth,
+    authenticated: state.auth
   };
 }
 export default hot(module)(connect(mapStateToProps, null)(About));

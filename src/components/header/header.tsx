@@ -19,9 +19,11 @@ class Header extends React.Component<any, any> {
         <div className="container">
           <div className="row wrapper">
             <div className="col-sm-6 header-container_logo">
-              <span><i>SickDay Box</i></span>
+              <span>
+                <i>SickDay Box</i>
+              </span>
             </div>
-            <div className="col-sm-6 header-container_cart-icon"></div>
+            <div className="col-sm-6 header-container_cart-icon" />
           </div>
         </div>
       </header>

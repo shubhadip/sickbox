@@ -9,7 +9,7 @@ const About = Loadable({
   loader: () =>
     import(/* webpackChunkName: 'About' */ './../components/about/About'),
   loading,
-  modules: ['./../components/about/About'],
+  modules: ['./../components/about/About']
   // webpack: () => [(require as any).resolveWeak('./../components/about/About')],
 });
 
@@ -22,7 +22,7 @@ const Contact = Loadable({
   modules: ['./../components/contacts/Contact'],
   webpack: () => [
     // (require as any).resolveWeak('./../components/contacts/Contact'),
-  ],
+  ]
 });
 
 export default [
@@ -30,14 +30,14 @@ export default [
     component: Home,
     path: '/',
     exact: true,
-    loadData: fetchAboutData,
+    loadData: fetchAboutData
   },
   {
     component: About,
-    path: '/about',
+    path: '/about'
   },
   {
     component: Contact,
-    path: '/contact',
-  },
+    path: '/contact'
+  }
 ];

@@ -49,8 +49,8 @@ app.get('*', (req, res) => {
     const bundles = getBundles(stats, modules);
     const cssStyles = bundles.filter(bundle => bundle.file.endsWith('.css'));
     const jsBudles = bundles.filter(bundle => bundle.file.endsWith('.js'));
-    console.log(jsBudles)
-    console.log(cssStyles)
+    console.log(jsBudles);
+    console.log(cssStyles);
     promise = null;
 
     return res.send(`

@@ -7,8 +7,8 @@ export const filterData = (url, response) => {
       });
     return {
       todo: {
-        list: data,
-      },
+        list: data
+      }
     };
   } else {
     return null;
