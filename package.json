@@ -8,9 +8,10 @@
     "webpack:server": "NODE_ENV='production' webpack --config webpack.server.js",
     "webpack:prod": "NODE_ENV='production' webpack --config webpack.prod.js",
     "webpack:start": "nodemon -w build --exec node build/bundle.js",
-    "webpack:node-server":"node build/server.js",
+    "webpack:node-server": "node build/server.js",
     "dev": "npm-run-all --parallel webpack:**",
-    "lint:ts": "tslint 'src/**/*.{ts,tsx,js}' --fix"
+    "lint:ts": "tslint 'src/**/*.{ts,tsx,js}' --fix",
+    "tslint-check": "tslint-config-prettier-check ./tslint.json"
   },
   "author": "",
   "license": "ISC",
@@ -61,6 +62,7 @@
     "postcss-loader": "^3.0.0",
     "postcss-mixins": "^6.2.3",
     "prettier": "^1.19.1",
+    "react-hot-loader": "^4.12.20",
     "react-loadable-ts-transformer": "0.0.5",
     "redux-logger": "^3.0.6",
     "sass-loader": "^8.0.2",

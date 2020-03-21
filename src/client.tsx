@@ -12,14 +12,14 @@ function loadApp() {
         <BrowserRouter>
           <App />
         </BrowserRouter>,
-        document.getElementById('app'),
+        document.getElementById('app')
       )
     : Loadable.preloadReady().then(() => {
         ReactDOM.hydrate(
           <BrowserRouter>
             <App />
           </BrowserRouter>,
-          document.getElementById('app'),
+          document.getElementById('app')
         );
       });
 }

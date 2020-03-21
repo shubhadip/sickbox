@@ -25,11 +25,10 @@ app.get('*', (req, res) => {
   let preloadedState = {};
   let promise;
   const currentRoute = Routes.find(route => matchPath(req.url, route)) || {};
-  if (currentRoute['loadData']) {
-    promise = currentRoute['loadData']();
-  } else {
-    promise = Promise.resolve({});
-  }
+  promise = currentRoute['loadData']
+    ? currentRoute['loadData']()
+    : Promise.resolve({});
+
   promise.then((response: any) => {
     const cleanedData = filterData(req.path, response.data) || {};
     preloadedState = { ...preloadedState, ...cleanedData };

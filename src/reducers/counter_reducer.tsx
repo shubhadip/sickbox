@@ -2,9 +2,9 @@ import { INCREMENT } from '../actions/types';
 
 export default function(
   state = {
-    count: 0,
+    count: 0
   },
-  action: any,
+  action: any
 ) {
   switch (action.type) {
     case INCREMENT:
