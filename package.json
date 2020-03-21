@@ -5,13 +5,11 @@
   "main": "index.js",
   "scripts": {
     "webpack:client": "webpack-dev-server --config='webpack.dev.js'",
-    "webpack:server": "NODE_ENV='production' webpack --config webpack.server.js",
-    "webpack:prod": "NODE_ENV='production' webpack --config webpack.prod.js",
+    "webpack:ssr": "NODE_ENV='production' webpack --config webpack.server.js &&  NODE_ENV='production' webpack --config webpack.prod.js && node build/server.js",
     "webpack:start": "nodemon -w build --exec node build/bundle.js",
-    "webpack:node-server": "node build/server.js",
-    "dev": "npm-run-all --parallel webpack:**",
     "lint:ts": "tslint 'src/**/*.{ts,tsx,js}' --fix",
-    "tslint-check": "tslint-config-prettier-check ./tslint.json"
+    "tslint-check": "tslint-config-prettier-check ./tslint.json",
+    "precommit":"npm run lint:ts"
   },
   "author": "",
   "license": "ISC",
@@ -55,6 +53,7 @@
     "file-loader": "^5.1.0",
     "fork-ts-checker-webpack-plugin": "^4.1.0",
     "html-webpack-plugin": "^3.2.0",
+    "husky": "^4.2.3",
     "ignore-loader": "^0.1.2",
     "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "^4.13.1",
