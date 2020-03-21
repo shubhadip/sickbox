@@ -36,9 +36,34 @@ module.exports = {
                     },
                   },
                   'css-loader',
+                  { loader: 'postcss-loader'},
                   'sass-loader',
                 ],
-            },{
+            },
+            {
+              test:/\.(gif|jpe?g|png|ico)$/,
+              use:[
+                  {
+                      loader: 'file-loader',
+                      options: {
+                          limit: 8192
+                      }
+                  }
+              ]
+            },
+            {
+              test: /\.(woff|woff2|eot|ttf|svg|otf)$/,
+              use: [
+                {
+                  loader: 'file-loader',
+                  options:{
+                    limit:1024,
+                    name:'fonts/[name].[ext]'
+                  }
+                }
+              ]
+          },
+          {
             test: /\.(js|jsx|ts|tsx)?$/,
             loader: 'awesome-typescript-loader',
             exclude: '/node_modules/',

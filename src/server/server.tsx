@@ -49,13 +49,15 @@ app.get('*', (req, res) => {
     const bundles = getBundles(stats, modules);
     const cssStyles = bundles.filter(bundle => bundle.file.endsWith('.css'));
     const jsBudles = bundles.filter(bundle => bundle.file.endsWith('.js'));
+    console.log(jsBudles)
+    console.log(cssStyles)
     promise = null;
 
     return res.send(`
       <!DOCTYPE html>
       <html>
         <head>
-          <title>SSR with RR</title>
+          <title>SickDay Box</title>
           <link href="/${mainFiles[0]}" rel="stylesheet"/>
           ${cssStyles
             .map(style => {

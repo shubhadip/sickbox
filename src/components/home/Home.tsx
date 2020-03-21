@@ -2,6 +2,7 @@ import * as React from 'react';
 import { hot } from 'react-hot-loader';
 import { connect } from 'react-redux';
 import { fetchAboutData } from './../../helpers/loadData';
+const img = require('./../../assets/img/logo.png');
 
 import './home.scss';
 interface Iprops {
@@ -22,9 +23,9 @@ class Home extends React.Component<any, any> {
   render() {
     return (
       <>
-        <section className="home-hero-container">
+        <section className="hcontainer">
           <div className="container">
-            <div className="row">
+            <div className="row hcontainer-banner">
               <div className="col-sm-6">
                 <h1 className="heading">The Sick Day Survival Kit</h1>
                 <p className="sub-heading">
@@ -32,10 +33,7 @@ class Home extends React.Component<any, any> {
                 </p>
               </div>
               <div className="col-sm-6">
-                <img
-                  alt=""
-                  src="//cdn.shopify.com/s/files/1/2225/6647/files/front_cropped_1440x640.png?v=1511110579"
-                ></img>
+                <img alt="" src={img.default} />
               </div>
             </div>
           </div>
@@ -47,7 +45,7 @@ class Home extends React.Component<any, any> {
 
 function mapStateToProps(state: any) {
   return {
-    todos: state.todo.list
+    todos: state.todo.list,
   };
 }
 

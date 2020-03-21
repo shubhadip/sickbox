@@ -1,0 +1,17 @@
+@import './../../scss/mixins';
+.header-container{
+    .wrapper{
+        min-height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &_logo{
+        text-align: left;
+        font-size: 2.5em;
+    }
+    &_cart-icon{
+        @include iconFontStatic;
+        @include pseudoElementIcon(e910);        
+    }
+}

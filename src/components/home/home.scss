@@ -1,7 +1,20 @@
-.home-hero-container {
-  color: red;
-  .heading {
-  }
-  .sub-heading {
-  }
+@import './../../scss/variables';
+.hcontainer {
+    color:white;
+      .heading {
+        font-size: 5em;
+      }
+      .sub-heading {
+        margin: 20px 0px;
+        font-size: 2em;
+        letter-spacing: 1px;
+        font-weight: 200;
+      }
+      &-banner{
+        @media only screen and ( min-width: $screen-width-xs + 1){
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+    }
 }

@@ -1,4 +1,4 @@
-@import "./_settings.css";
+@import "variables";
 
 /* product icon extentions/mixins */
 $iconCross: e904;
@@ -32,7 +32,7 @@ $iconHelp: e91b;
 $iconWarningOutline: e91c;
 $iconWarning: e91d;
 
-@define-mixin iconFontStatic {
+@mixin iconFontStatic {
     font-family: "iconfont" !important;
     speak: none;
     font-style: normal;
@@ -43,9 +43,9 @@ $iconWarning: e91d;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-@define-mixin elementIcon $content: "*", $size: inherit, $color: inherit {
+@mixin elementIcon($content: "*", $size: inherit, $color: inherit) {
     display: inline-block;
-    @mixin iconFontStatic;
+    @include iconFontStatic();
     &:before {
         content: "\$content";
         color: $color;
@@ -53,55 +53,55 @@ $iconWarning: e91d;
     }
 }
 
-@define-mixin pseudoElementIcon $content: "*", $size: inherit, $color: inherit {
+@mixin pseudoElementIcon($content: "*", $size: inherit, $color: inherit) {
     content: "\$content";
     display: inline-block;
     font-size: $size;
     color: $color;
-    @mixin iconFontStatic;
+    @include iconFontStatic();
 }
 
-@define-mixin textEllipsis {
+@mixin textEllipsis {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
-@define-mixin transition $range: all, $time: 0.4s, $ease: cubic-bezier(0.25, 0.8, 0.25, 1) {
+@mixin transition($range: all, $time: 0.4s, $ease: cubic-bezier(0.25, 0.8, 0.25, 1) ){
     transition: $range $time $ease;
 }
 
-@define-mixin cardTitle {
+@mixin cardTitle {
     font-size: 32px;
     font-weight: bold;
     text-align: left;
     line-height: 44px;
 }
 
-@define-mixin subCardTitle {
+@mixin subCardTitle {
     font-size: 14px;
     line-height: 19px;
     margin-bottom: 32px;
 }
 
-@define-mixin cardBaseShadow {
+@mixin cardBaseShadow {
     box-shadow: 0 2px 12px 5px rgba(0, 0, 0, 0.11);
 }
 
-@define-mixin cardLightShadow {
+@mixin cardLightShadow {
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 -1px 0 0 rgba(0, 0, 0, 0.03);
 }
 
-@define-mixin cardHoverShadow {
+@mixin cardHoverShadow {
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
-@define-mixin cardHeavyShadow {
+@mixin cardHeavyShadow {
     box-shadow: 0px 2px 25px 0px rgba(0, 0, 0, 0.12);
 }
 
-@define-mixin flexContainer $direction: row, $wrap: wrap, $justifyContent: center, $alignContent: flex-start,
-    $alignItems: flex-start {
+@mixin flexContainer($direction: row, $wrap: wrap, $justifyContent: center, $alignContent: flex-start,
+    $alignItems: flex-start) {
     display: flex;
     flex-direction: $direction;
     flex-wrap: $wrap;
@@ -110,19 +110,19 @@ $iconWarning: e91d;
     align-items: $alignItems;
 }
 
-@define-mixin clearFocus {
+@mixin clearFocus {
     &:focus {
         outline: none;
     }
 }
 
-@define-mixin roundedCorners $radius: 3px {
+@mixin roundedCorners($radius: 3px) {
     border-radius: $radius;
 }
 
 /* for creating any kind of pseudo element */
-@define-mixin pseudoicon $width: 10px, $height: 10px, $bcolor: inherit, $bgcolor: inherit, $left: auto, $right: auto,
-    $top: auto, $bottom: auto {
+@mixin pseudoicon($width: 10px, $height: 10px, $bcolor: inherit, $bgcolor: inherit, $left: auto, $right: auto,
+    $top: auto, $bottom: auto) {
     position: absolute;
     content: "";
     height: $height;
@@ -135,14 +135,14 @@ $iconWarning: e91d;
     bottom: $bottom;
 }
 
-@define-mixin centerFlex {
+@mixin centerFlex {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-@define-mixin iconCross {
-    @mixin elementIcon $iconCrossSmall, 18px, $black;
+@mixin iconCross {
+    @include elementIcon($iconCrossSmall, 18px, $black);
     font-weight: 700;
     padding: 8px;
     width: 35px;
@@ -150,8 +150,8 @@ $iconWarning: e91d;
     text-align: center;
 }
 
-@define-mixin iconCalendar {
-    @mixin elementIcon $iconCalendar, 18px, $black;
+@mixin iconCalendar {
+    @include elementIcon($iconCalendar, 18px, $black);
     font-weight: 700;
     padding: 8px;
     width: 35px;
@@ -159,8 +159,8 @@ $iconWarning: e91d;
     text-align: center;
 }
 
-@define-mixin iconCalendar {
-    @mixin elementIcon $iconCalendar, 18px, $baseDark;
+@mixin iconCalendar {
+    @include elementIcon($iconCalendar, 18px, $black);
     width: 18px;
     height: 17px;
     position: absolute;
@@ -168,30 +168,30 @@ $iconWarning: e91d;
     right: 5px;
 }
 
-@define-mixin subriderTitle {
+@mixin subriderTitle {
     font-size: 24px;
     line-height: 42px;
     color: $black;
     font-weight: $bold;
 }
 
-@define-mixin subriderDescription {
+@mixin subriderDescription {
     font-size: 18px;
     color: $black;
     opacity: 0.6;
     font-weight: 500;
 }
 
-@define-mixin greetingText $fs: 24px, $firstColor: #c86dd7, $secondColor: #3023ae, $greetingBaseColor: #3023ae {
+@mixin greetingText($fs: 24px, $firstColor: #c86dd7, $secondColor: #3023ae, $greetingBaseColor: #3023ae) {
     font-size: $fs;
-    color: $greetingBaseColor;
+    color: $black;
     background: -webkit-linear-gradient(-134deg, $firstColor 0%, $secondColor 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     display: inline-block;
 }
 
-@define-mixin pseudocross $width: 2px, $height: 12px, $bgcolor: inherit {
+@mixin pseudocross($width: 2px, $height: 12px, $bgcolor: inherit) {
     &:before,
     &:after {
         content: "";
@@ -214,7 +214,7 @@ $iconWarning: e91d;
         content: "";
         width: 20px;
         height: 20px;
-        @mixin roundedCorners 32px;
+        @include roundedCorners(32px);
         border: 1px solid #979797;
         left: 0;
         top: 1px;
@@ -226,13 +226,13 @@ $iconWarning: e91d;
         height: 12px;
         left: 4px;
         top: 5px;
-        @mixin roundedCorners 32px;
+        @include roundedCorners(32px);
         background: #979797;
         transform: scale(0);
         transition-duration: 200ms;
     }
     &.active {
-        color: $baseDark;
+        color: $black;
         &:after {
             position: absolute;
             content: "";
@@ -240,7 +240,7 @@ $iconWarning: e91d;
             height: 12px;
             left: 4px;
             top: 5px;
-            @mixin roundedCorners 32px;
+            @include roundedCorners(32px);
             background: #6b7afe;
             transform: scale(1);
             opacity: 1;
@@ -253,7 +253,7 @@ $iconWarning: e91d;
     justify-content: space-between;
 }
 
-@define-mixin arrowProp {
+@mixin arrowProp {
     border: solid transparent;
     content: " ";
     height: 0;
@@ -262,11 +262,11 @@ $iconWarning: e91d;
     pointer-events: none;
 }
 
-@define-mixin arrowRight $size, $color, $border-width, $border-color {
+@mixin arrowRight($size, $color, $border-width, $border-color ){
     &:after,
     &:before {
         left: 100%;
-        @mixin arrowProp;
+        @include arrowProp;
     }
     &:after {
         border-left-color: $color;
@@ -282,11 +282,11 @@ $iconWarning: e91d;
     }
 }
 
-@define-mixin arrowBottom $size, $color, $border-width, $border-color {
+@mixin arrowBottom($size, $color, $border-width, $border-color){
     &:after,
     &:before {
         top: 100%;
-        @mixin arrowProp;
+        @include arrowProp;
     }
     &:after {
         border-top-color: $color;
@@ -302,7 +302,7 @@ $iconWarning: e91d;
     }
 }
 
-/* for centerlized element with position-relative parent */
+// /* for centerlized element with position-relative parent */
 %absolutecenter {
     position: absolute;
     left: 50%;
@@ -312,8 +312,8 @@ $iconWarning: e91d;
 
 %buttonshape {
     border: 1px solid rgba(49, 68, 81, 0.12);
-    @mixin roundedCorners 4px;
-    @mixin transition;
+    @include roundedCorners( 4px);
+    @include transition;
     font-size: 16px;
     height: 40px;
     line-height: 38px;
@@ -333,7 +333,7 @@ $iconWarning: e91d;
 %tooltip {
     position: absolute;
     right: 100%;
-    @mixin transition;
+    @include transition;
     width: 250px;
     padding: 15px;
     background: rgb(255, 255, 255);
@@ -345,23 +345,24 @@ $iconWarning: e91d;
     z-index: 1;
     top: 50%;
     transform: translate(-42px, -50%);
-    @mixin arrowRight 10px, #fff, 1px, #fff;
+    @include arrowRight(10px, #fff, 1px, #fff);
 }
 
 %iconDropdown {
-    @mixin elementIcon $iconDropdown, 16px;
+    @include elementIcon($iconDropdown, 16px);
     line-height: 9px;
     width: 16px;
     height: 9px;
     color: rgba(49, 68, 81, 0.4);
 }
+
 %iconDropdownToWhite {
     color: #fff;
 }
 
 %modalDesc {
     margin-top: 32px;
-    color: $black-70;
+    color: $black;
     h3 {
         font-size: 16px;
         font-weight: bold;
@@ -409,7 +410,7 @@ $iconWarning: e91d;
             height: 20px;
             background-color: #314451;
         }
-        @mixin clearFocus;
+        @include clearFocus;
     }
 }
 
@@ -417,7 +418,7 @@ $iconWarning: e91d;
     margin-top: 4px;
     margin-bottom: 12px;
     text-align: center;
-    color: $black-70;
+    color: $black;
 }
 
 %invertModalClose {
@@ -429,15 +430,15 @@ $iconWarning: e91d;
     background-size: 34px;
     &:before {
         font-size: 13px;
-        color: $baseDark;
+        color: $black;
     }
 }
 
-@define-mixin arrowTop $size, $color, $border-width, $border-color {
+@mixin arrowTop($size, $color, $border-width, $border-color){
     &:after,
     &:before {
         bottom: 100%;
-        @mixin arrowProp;
+        @include arrowProp;
     }
     &:after {
         border-width: $size;

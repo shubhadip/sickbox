@@ -10,7 +10,7 @@ const About = Loadable({
     import(/* webpackChunkName: 'About' */ './../components/about/About'),
   loading,
   modules: ['./../components/about/About'],
-  webpack: () => [(require as any).resolveWeak('./../components/about/About')],
+  // webpack: () => [(require as any).resolveWeak('./../components/about/About')],
 });
 
 const Contact = Loadable({
@@ -21,7 +21,7 @@ const Contact = Loadable({
   loading,
   modules: ['./../components/contacts/Contact'],
   webpack: () => [
-    (require as any).resolveWeak('./../components/contacts/Contact'),
+    // (require as any).resolveWeak('./../components/contacts/Contact'),
   ],
 });
 
