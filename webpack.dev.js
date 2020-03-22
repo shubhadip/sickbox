@@ -11,7 +11,7 @@ module.exports = {
   output: {
     filename: 'client.js',
     path: path.resolve(__dirname, 'build'),
-    publicPath: '/',
+    publicPath: devMode ? '/' : '/sickbox',
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.jsx'],
