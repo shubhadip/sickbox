@@ -21,7 +21,7 @@ app.use(express.static('build'));
 // temp favicon fix
 app.get('/favicon.ico', (req, res) => res.status(204));
 
-app.get('*', (req, res) => {
+app.get('*', (req, res, next) => {
   const md = new mobileDetect(req.headers['user-agent']);
   const mainFiles = data['assetsByChunkName']['main'];
   const vendorfiles = data['assetsByChunkName']['vendor'];
@@ -39,29 +39,30 @@ app.get('*', (req, res) => {
     ? currentRoute['loadData']()
     : Promise.resolve({});
 
-  promise.then((response: any) => {
-    const cleanedData = filterData(req.path, response.data) || {};
-    preloadedState = { ...preloadedState, ...cleanedData };
-    const store = createStore(rootReducer, preloadedState);
+  promise
+    .then((response: any) => {
+      const cleanedData = filterData(req.path, response.data) || {};
+      preloadedState = { ...preloadedState, ...cleanedData };
+      const store = createStore(rootReducer, preloadedState);
 
-    const content = ReactDOMServer.renderToString(
-      <Loadable.Capture report={moduleName => modules.push(moduleName)}>
-        <Provider store={store}>
-          <StaticRouter location={req.path} context={context}>
-            <div>{routeMap()}</div>
-          </StaticRouter>
-        </Provider>
-      </Loadable.Capture>
-    );
+      const content = ReactDOMServer.renderToString(
+        <Loadable.Capture report={moduleName => modules.push(moduleName)}>
+          <Provider store={store}>
+            <StaticRouter location={req.path} context={context}>
+              <div>{routeMap()}</div>
+            </StaticRouter>
+          </Provider>
+        </Loadable.Capture>
+      );
 
-    const finalState = store.getState();
-    const bundles = getBundles(stats, modules);
-    const cssStyles = bundles.filter(bundle => bundle.file.endsWith('.css'));
-    const jsBudles = bundles.filter(bundle => bundle.file.endsWith('.js'));
+      const finalState = store.getState();
+      const bundles = getBundles(stats, modules);
+      const cssStyles = bundles.filter(bundle => bundle.file.endsWith('.css'));
+      const jsBudles = bundles.filter(bundle => bundle.file.endsWith('.js'));
 
-    promise = null;
+      promise = null;
 
-    return res.send(`
+      return res.send(`
       <!DOCTYPE html>
       <html>
         <head>
@@ -79,9 +80,9 @@ app.get('*', (req, res) => {
 
 <script>
 window.__PRELOADED_STATE__ = ${(JSON.stringify(finalState) as any).replace(
-      /</g,
-      '\\u003c'
-    )}
+        /</g,
+        '\\u003c'
+      )}
 </script>
           <script type="text/javascript" src="${
             vendorfiles[0]
@@ -95,7 +96,10 @@ window.__PRELOADED_STATE__ = ${(JSON.stringify(finalState) as any).replace(
         </body>
       </html>
     `);
-  });
+    })
+    .catch(e => {
+      next(e);
+    });
 });
 
 Loadable.preloadAll().then(() => {
