@@ -4,7 +4,8 @@ const htmlWebpackPlugin = require('html-webpack-plugin');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const devMode = process.env.NODE_ENV !== 'production';
-const isForGHPAGE = process.env.GH_PAGES;
+const isForGHPAGE = process.env.GH__PAGES;
+console.log(isForGHPAGE);
 
 module.exports = {
   mode: 'development',

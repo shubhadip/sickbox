@@ -39,5 +39,10 @@ export default [
   {
     component: Contact,
     path: '/contact'
+  },
+  {
+    component: Home,
+    path: '*',
+    loadData: fetchAboutData
   }
 ];

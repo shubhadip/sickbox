@@ -3,8 +3,8 @@ import * as ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 import Loadable from 'react-loadable';
 
-const isForGHPAGE = process.env.GH_PAGES;
-
+const isForGHPAGE = process.env.GH__PAGES;
+console.log(isForGHPAGE);
 import App from './components/app/app';
 
 function loadApp() {
