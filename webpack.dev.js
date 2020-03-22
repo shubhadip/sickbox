@@ -4,6 +4,7 @@ const htmlWebpackPlugin = require('html-webpack-plugin');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const devMode = process.env.NODE_ENV !== 'production';
+const isForGHPAGE = process.env.GH_PAGES;
 
 module.exports = {
   mode: 'development',
@@ -11,7 +12,7 @@ module.exports = {
   output: {
     filename: '[name].js',
     path: path.resolve(__dirname, 'build'),
-    publicPath: devMode ? '/' : '/sickbox/',
+    publicPath: !isForGHPAGE ? '/' : '/sickbox/',
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.jsx'],
