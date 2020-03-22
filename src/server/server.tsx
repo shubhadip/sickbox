@@ -10,6 +10,8 @@ import { createStore } from 'redux';
 import rootReducer from '../reducers';
 import { filterData } from './utils';
 import { routeMap } from '../router';
+
+const mobileDetect = require('mobile-detect');
 const app = express();
 const data = require('../../build/stats.json');
 const stats = require('../../build/react-loadable.json');
@@ -18,11 +20,17 @@ const PORT = process.env.PORT || 3000;
 app.use(express.static('build'));
 
 app.get('*', (req, res) => {
+  const md = new mobileDetect(req.headers['user-agent']);
   const mainFiles = data['assetsByChunkName']['main'];
   const vendorfiles = data['assetsByChunkName']['vendor'];
   const context = {};
   const modules: any = [];
-  let preloadedState = {};
+  let preloadedState = {
+    common: {
+      isMobile: md.mobile() ? true : false,
+      isBot: md.is('bot')
+    }
+  };
   let promise;
   const currentRoute = Routes.find(route => matchPath(req.url, route)) || {};
   promise = currentRoute['loadData']
@@ -48,14 +56,14 @@ app.get('*', (req, res) => {
     const bundles = getBundles(stats, modules);
     const cssStyles = bundles.filter(bundle => bundle.file.endsWith('.css'));
     const jsBudles = bundles.filter(bundle => bundle.file.endsWith('.js'));
-    console.log(jsBudles);
-    console.log(cssStyles);
+
     promise = null;
 
     return res.send(`
       <!DOCTYPE html>
       <html>
         <head>
+          <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
           <title>SickDay Box</title>
           <link href="/${mainFiles[0]}" rel="stylesheet"/>
           ${cssStyles

@@ -1,8 +1,43 @@
 @import './../../scss/variables';
-.hcontainer {
+.hcontainer{
+  .container{
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  &-banner{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    margin-top: 30px;
+  }
+
+  .product-img{
+    height: 200px;
+  }
+
+  .heading {
+    font-size: 3em;
+    margin-top: 30px;
+    text-align: center;
+  }
+  .sub-heading {
+    margin: 30px 0px;
+    font-size: 1.5em;
+    letter-spacing: 1px;
+    font-weight: 200;
+  }
+}
+
+
+@media only screen and (min-width: $screen-width-xs + 1){
+  .hcontainer {
     color:white;
-      .heading {
+    .wrapper{
+      max-width: 500px;
+    }
+    .heading {
         font-size: 5em;
+        text-align: left;
       }
       .sub-heading {
         margin: 20px 0px;
@@ -10,11 +45,18 @@
         letter-spacing: 1px;
         font-weight: 200;
       }
+
+      .product-img{
+        height: auto;
+      }
       &-banner{
-        @media only screen and ( min-width: $screen-width-xs + 1){
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-        }
-    }
+        margin-top: 0px;
+        min-height: 60vh;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+}
+
 }

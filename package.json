@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "webpack:client": "webpack-dev-server --config='webpack.dev.js'",
-    "webpack:ssr": "NODE_ENV='production' webpack --config webpack.server.js &&  NODE_ENV='production' webpack --config webpack.prod.js && node build/server.js",
+    "webpack:ssr": "NODE_ENV='production' webpack --config webpack.prod.js &&  NODE_ENV='production' webpack --config webpack.server.js && node build/server.js",
     "webpack:start": "nodemon -w build --exec node build/bundle.js",
     "lint:ts": "tslint 'src/**/*.{ts,tsx,js}' --fix",
     "tslint-check": "tslint-config-prettier-check ./tslint.json"

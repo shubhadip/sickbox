@@ -1,5 +1,7 @@
 import * as React from 'react';
 import { hot } from 'react-hot-loader';
+const logo = require('./../../assets/img/logo.png');
+
 import './header.scss';
 
 interface Iprops {
@@ -17,13 +19,18 @@ class Header extends React.Component<any, any> {
     return (
       <header className="header-container">
         <div className="container">
-          <div className="row wrapper">
-            <div className="col-sm-6 header-container_logo">
+          <div className="wrapper">
+            <div className="mobile-ham">
+              <span className="icon" />
+            </div>
+            <div className="logo">
               <span>
-                <i>SickDay Box</i>
+                <img alt="logo" src={logo.default} />
               </span>
             </div>
-            <div className="col-sm-6 header-container_cart-icon" />
+            <div className="cart">
+              <span className="icon_bag" />
+            </div>
           </div>
         </div>
       </header>

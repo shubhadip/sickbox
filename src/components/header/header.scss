@@ -1,17 +1,87 @@
 @import './../../scss/mixins';
 .header-container{
+    .container{
+        border-bottom: 1px solid;
+    }
     .wrapper{
-        min-height: 70px;
+        position: relative;
         display: flex;
         align-items: center;
         justify-content: space-between;
+        img{
+            width: 150px;
+            height: 60px;
+        }
+        .logo{
+            margin-left: 50px;
+        }
     }
-    &_logo{
-        text-align: left;
-        font-size: 2.5em;
+    .cart{
+        font-size: 25px;
     }
-    &_cart-icon{
-        @include iconFontStatic;
-        @include pseudoElementIcon(e910);        
+    .mobile-ham{
+        position: absolute;
+        top: 15px;
+        left: 20px;
+        .icon{
+            position: absolute;
+            content: '';
+            background-color:$white;
+            width: 2px;
+            height: 25px;
+            transform: rotate(90deg);
+            &:before{
+                content: '';
+                width: 2px;
+                height: 25px;
+                background-color: $white;
+                display: inline-block;
+                position: absolute;
+                left: 8px;
+                transform: rotate(180deg);
+            }
+            &:after{
+                content: '';
+                width: 2px;
+                height: 25px;
+                background-color: $white;
+                display: inline-block;
+                position: absolute;
+                right: 8px;
+                transform: rotate(180deg);
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: $screen-width-xs + 1) {
+    .header-container{
+        .container{
+            border: 0px;
+        }
+        
+        .mobile-ham{
+            display: none;
+        }
+        .cart{
+            display: block;
+            font-size: 25px;
+            margin-top: -5px;
+        }
+        .wrapper{
+            min-height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            img{
+                width: 200px;
+                height: 80px;
+            }
+            .logo{
+                text-align: left;
+                font-size: 2.5em;
+                margin-left: 0px;
+            }
+        }
     }
 }

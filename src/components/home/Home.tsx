@@ -2,7 +2,7 @@ import * as React from 'react';
 import { hot } from 'react-hot-loader';
 import { connect } from 'react-redux';
 import { fetchAboutData } from './../../helpers/loadData';
-const img = require('./../../assets/img/logo.png');
+const product = require('./../../assets/img/product.png');
 
 import './home.scss';
 interface Iprops {
@@ -25,15 +25,19 @@ class Home extends React.Component<any, any> {
       <>
         <section className="hcontainer">
           <div className="container">
-            <div className="row hcontainer-banner">
-              <div className="col-sm-6">
+            <div className="hcontainer-banner">
+              <div className="wrapper">
                 <h1 className="heading">The Sick Day Survival Kit</h1>
                 <p className="sub-heading">
                   Everything you need to make it through a sick day.
                 </p>
               </div>
-              <div className="col-sm-6">
-                <img alt="" src={img.default} />
+              <div className="">
+                <img
+                  className="product-img"
+                  alt="sickbox-product"
+                  src={product.default}
+                />
               </div>
             </div>
           </div>
