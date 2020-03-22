@@ -8,7 +8,10 @@
     "webpack:ssr": "NODE_ENV='production' webpack --config webpack.prod.js &&  NODE_ENV='production' webpack --config webpack.server.js && node build/server.js",
     "webpack:start": "nodemon -w build --exec node build/bundle.js",
     "lint:ts": "tslint 'src/**/*.{ts,tsx,js}' --fix",
-    "tslint-check": "tslint-config-prettier-check ./tslint.json"
+    "tslint-check": "tslint-config-prettier-check ./tslint.json",
+    "predeploy": "npm run webpack:ssr",
+    "deploy":"gh-pages -d build",
+    "start": "npm run webpack:ssr"
   },
   "author": "",
   "license": "ISC",
@@ -51,6 +54,7 @@
     "css-loader": "^3.4.2",
     "file-loader": "^5.1.0",
     "fork-ts-checker-webpack-plugin": "^4.1.0",
+    "gh-pages": "^2.2.0",
     "html-webpack-plugin": "^3.2.0",
     "husky": "^4.2.3",
     "ignore-loader": "^0.1.2",
@@ -82,9 +86,10 @@
     "webpack-node-externals": "^1.7.2",
     "webpack-stats-plugin": "^0.3.1"
   },
-  "husky":{
+  "husky": {
     "hooks": {
       "pre-commit": "npm run lint:ts"
     }
-  }
+  },
+  "homepage": "https://github.com/shubhadip/sickbox"
 }
