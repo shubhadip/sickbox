@@ -27,6 +27,7 @@ app.get('*', (req, res, next) => {
   const vendorfiles = data['assetsByChunkName']['vendor'];
   const context = {};
   const modules: any = [];
+  
   let preloadedState = {
     common: {
       isMobile: md.mobile() ? true : false,

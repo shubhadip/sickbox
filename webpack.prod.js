@@ -7,6 +7,8 @@ const { ReactLoadablePlugin } = require('react-loadable/webpack');
 const reactLoadableTransformer = require('react-loadable-ts-transformer');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const CompressionPlugin = require('compression-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 const devMode = process.env.NODE_ENV !== 'production';
 console.log(process.env.NODE_ENV);
@@ -77,8 +79,21 @@ module.exports = {
     },
     plugins:[
       new webpack.DefinePlugin({
-        __isBrowser__: "true"
+        __isBrowser__: "true",
+        'process.env': {
+          'NODE_ENV': JSON.stringify('production')
+        }
       }),
+        // new webpack.optimize.UglifyJsPlugin(),
+        new CompressionPlugin(
+          {   
+            filename: "[path].gz[query]",
+            algorithm: "gzip",
+            test: /\.js$|\.css$|\.html$/,
+            threshold: 10240,
+            minRatio: 0.8
+          }
+        ),
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
             filename: devMode ? '[name].css' : '[name].[hash].css',
@@ -94,6 +109,18 @@ module.exports = {
         // new BundleAnalyzerPlugin(),
     ],
     optimization: {
+      minimizer:[
+        new UglifyJsPlugin({
+            cache: true,
+            parallel: true,
+            uglifyOptions: {
+              compress: false,
+              ecma: 6,
+              mangle: true
+            },
+            sourceMap: true
+          })
+    ],
         splitChunks: {
           cacheGroups: {
             commons: {

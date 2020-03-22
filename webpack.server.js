@@ -2,10 +2,12 @@ const path = require('path');
 const webpackNodeExternals = require('webpack-node-externals');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const reactLoadableTransformer = require('react-loadable-ts-transformer');
+var CompressionPlugin = require('compression-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+
 const devMode = process.env.NODE_ENV !== 'production';
 const webpack = require('webpack')
 
-console.log(process.env.NODE_ENV)
 module.exports = {
     entry: './src/server/server.tsx',
     target: 'node',
@@ -65,11 +67,30 @@ module.exports = {
     externals: [webpackNodeExternals()],
     plugins:[
         new webpack.DefinePlugin({
-            __isBrowser__: "false"
+            __isBrowser__: "false",
+            'process.env': {
+                'NODE_ENV': JSON.stringify('production')
+            }
         }),
+        // new webpack.optimize.UglifyJsPlugin(),
+        new CompressionPlugin(),
         new MiniCssExtractPlugin({
             filename: devMode ? '[name].css' : '[name].[hash].css',
             chunkFilename: devMode ? '[id].css' : '[id].[hash].css',
         }),
-    ]
+    ],
+    optimization:{
+        minimizer:[
+            new UglifyJsPlugin({
+                cache: true,
+                parallel: true,
+                uglifyOptions: {
+                  compress: false,
+                  ecma: 6,
+                  mangle: true
+                },
+                sourceMap: true
+              })
+        ]
+    }
 };
