@@ -18,6 +18,8 @@ const stats = require('../../build/react-loadable.json');
 const PORT = process.env.PORT || 3000;
 
 app.use(express.static('build'));
+// temp favicon fix
+app.get('/favicon.ico', (req, res) => res.status(204));
 
 app.get('*', (req, res) => {
   const md = new mobileDetect(req.headers['user-agent']);
