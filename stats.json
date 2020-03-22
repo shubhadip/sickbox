@@ -1,0 +1,26 @@
+{
+  "assetsByChunkName": {
+    "About": [
+      "0.35edc6f4757a7a04844c.css",
+      "About.c4b29999316ca961165e.js",
+      "0.35edc6f4757a7a04844c.css.map",
+      "About.c4b29999316ca961165e.js.map"
+    ],
+    "Contact": [
+      "1.35edc6f4757a7a04844c.css",
+      "Contact.59e1bb20cd14e0e46a7d.js",
+      "1.35edc6f4757a7a04844c.css.map",
+      "Contact.59e1bb20cd14e0e46a7d.js.map"
+    ],
+    "main": [
+      "main.35edc6f4757a7a04844c.css",
+      "main.35edc6f4757a7a04844c.js",
+      "main.35edc6f4757a7a04844c.css.map",
+      "main.35edc6f4757a7a04844c.js.map"
+    ],
+    "vendor": [
+      "vendor.ec93d9bbbe6dda797f3b.js",
+      "vendor.ec93d9bbbe6dda797f3b.js.map"
+    ]
+  }
+}
