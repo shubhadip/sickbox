@@ -9,7 +9,7 @@ module.exports = {
   mode: 'development',
   entry: './src/client.tsx',
   output: {
-    filename: 'client.js',
+    filename: '[name].js',
     path: path.resolve(__dirname, 'build'),
     publicPath: devMode ? '/' : '/sickbox/',
   },
@@ -95,6 +95,11 @@ module.exports = {
   optimization:{
     splitChunks: {
       cacheGroups: {
+        commons: {
+          test: /[\\/]node_modules[\\/]/,
+          name: "vendor",
+          chunks: "all"
+        },
         styles: {
           name: 'styles',
           test: /\.css$/,
