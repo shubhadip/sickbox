@@ -11,6 +11,7 @@
     "tslint-check": "tslint-config-prettier-check ./tslint.json",
     "predeploy": "npm run webpack:ssr",
     "deploy":"gh-pages -d build",
+    "heroku-prebuild": "npm install",
     "start": "npm run webpack:ssr"
   },
   "author": "",
