@@ -1,0 +1,55 @@
+@import './../../../scss/variables';
+
+.homepromote{
+    text-align: center;
+    background-color: $white;
+    color: $red;
+    h1{
+        font-size: 3em;
+    }
+    img{
+        height: 320px;
+    }
+    article{
+        padding: 15px 0px;
+    }
+    .content-wrapper{
+        text-align: left;
+        .heading{
+            font-size: 24px;
+            text-align: left;
+        }
+        .sub-heading{
+            font-size: 14px;
+            letter-spacing: 1px;
+            margin: 10px 0px;
+            color: $black;
+        }
+        .w--button{
+            color: $white;
+            background-color: $red;
+        }
+    }
+}
+
+@media only screen and (min-width: $screen-width-xs + 1){
+    .homepromote{
+        max-width: 1020px;
+        margin: auto;
+        h1{
+            padding: 20px 0px;
+        }
+        article{
+            padding: 30px 15px;
+            margin: 40px 0px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .content-wrapper{
+                max-width: 500px;
+                margin: 0 auto;
+            }
+        }
+        
+    }
+}

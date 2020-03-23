@@ -17,7 +17,7 @@ interface IProps {
   title?: any;
   type?: '' | 'loading';
   customClass?: string;
-  onClick: any; // tbd : (evt, value) => void | undefined;
+  onClick?: any;
   disabled?: boolean;
   disableOnLoading?: boolean;
   member?: string;

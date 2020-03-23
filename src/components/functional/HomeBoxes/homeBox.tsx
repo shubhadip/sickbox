@@ -14,7 +14,7 @@ function HomeBox(props: IProps) {
     props.url ||
     'https://cdn.shopify.com/s/files/1/2225/6647/files/12_660x275.png';
   return (
-    <section className="homebox-wrapper">
+    <section className="homebox">
       <img src={img} alt={props.altTag} />
       <article>
         <p className="title">{props.title}</p>

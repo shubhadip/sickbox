@@ -2,67 +2,18 @@ import * as React from 'react';
 import { hot } from 'react-hot-loader';
 import { connect } from 'react-redux';
 import { fetchAboutData } from './../../helpers/loadData';
-import HomeBox from './../common/HomeBoxes/homeBox';
 import Button from './../common/Button/Button';
 import TextInput from './../common/TextInput/TextInput';
+import HomeBox from './../functional/HomeBoxes/homeBox';
+import HomePromote from './../functional/HomePromote/HomePromote';
 
+import { data, renderTitles } from './../../constants';
 const product = require('./../../assets/img/product.png');
 import './home.scss';
 
 interface Iprops {
   isMobileDevice?: boolean;
 }
-
-const data = [
-  {
-    title: 'Amazon Movie Rental',
-    desc:
-      'Included in the box is a gift card for one movie rental from Amazon.',
-    altTag: 'Amazon Movie Rental',
-    imgUrl: 'https://cdn.shopify.com/s/files/1/2225/6647/files/12_660x275.png'
-  },
-  {
-    title: 'Thermometer',
-    desc: "You know the old hand on the forehead trick doesn't cut it",
-    altTag: 'Thermometer',
-    imgUrl: 'https://cdn.shopify.com/s/files/1/2225/6647/files/10_660x275.png'
-  },
-  {
-    title: 'Emergen-C',
-    desc:
-      "Immune boosting Vitamin C, B Vitamins, and Electrolytes. It's never too late.",
-    altTag: 'Emergen-C',
-    imgUrl: 'https://cdn.shopify.com/s/files/1/2225/6647/files/6_660x275.png'
-  },
-  {
-    title: 'Hot Cocoa',
-    desc: 'Because not all drinks needs to be "healthy" when you are sick.',
-    altTag: 'Hot Cocoa',
-    imgUrl: 'https://cdn.shopify.com/s/files/1/2225/6647/files/4_660x275.png'
-  },
-  {
-    title: 'Saltines + Chicken Noodle Soup',
-    desc:
-      "What's a sick day without some chicken noodle soup and some Saltines in the mix? ",
-    altTag: 'Saltines + Chicken Noodle Soup',
-    imgUrl:
-      'https://cdn.shopify.com/s/files/1/2225/6647/files/chickensoupsaltinecombo_660x275.png?v=1511142309'
-  },
-  {
-    title: 'Ginger Drops',
-    desc: 'Feeling queasy? These ginger candies are a safe and tasty fix.',
-    altTag: 'Ginger Drops',
-    imgUrl: 'https://cdn.shopify.com/s/files/1/2225/6647/files/11_660x275.png'
-  }
-];
-
-const renderTitles = [
-  'ginger ale',
-  'herbal tea',
-  'breath mints',
-  'tissues',
-  'cough drops'
-];
 
 class Home extends React.Component<any, any> {
   constructor(props: Iprops) {
@@ -78,9 +29,7 @@ class Home extends React.Component<any, any> {
     }
   }
 
-  handleClick() {
-    debugger;
-  }
+  handleClick() {}
   handleChange() {}
 
   renderSections = () => {
@@ -96,6 +45,11 @@ class Home extends React.Component<any, any> {
       );
     });
   };
+
+  renderHomePromote = () => {
+    return <HomePromote />;
+  };
+
   render() {
     return (
       <>
@@ -119,7 +73,7 @@ class Home extends React.Component<any, any> {
           </div>
           <div className="content container">
             <h1>Whats Inside</h1>
-            {this.renderSections()}
+            <div className="homebox-wrapper">{this.renderSections()}</div>
           </div>
           <div className="title-wrapper container">
             <hr />
@@ -133,8 +87,9 @@ class Home extends React.Component<any, any> {
             </section>
             <hr />
           </div>
+          <div className="promote container">{this.renderHomePromote()}</div>
           <div className="subscribe container">
-            <section>
+            <section className="subscribe-wrapper">
               <h1>Health Tips & Discounts</h1>
               <p className="desc">
                 Subscribe to our newsletter to get discounts and tips to stay
