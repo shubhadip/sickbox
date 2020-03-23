@@ -1,5 +1,8 @@
 @import './../../../scss/variables';
 
+.homepromote-wrapper{
+    padding: 0px 15px;
+}
 .homepromote{
     text-align: center;
     background-color: $white;
@@ -11,7 +14,7 @@
         height: 320px;
     }
     article{
-        padding: 15px 0px;
+        padding: 30px 0px;
     }
     .content-wrapper{
         text-align: left;
@@ -33,6 +36,9 @@
 }
 
 @media only screen and (min-width: $screen-width-xs + 1){
+    .homepromote-wrapper{
+        padding: 0px;
+    }
     .homepromote{
         max-width: 1020px;
         margin: auto;
