@@ -1,0 +1,21 @@
+@import './../../../scss/variables';
+
+.homebox-wrapper{
+    img{
+        padding: 20px 0px;
+    }
+    article{
+      font-weight: 200;
+      .title{
+        font-size: 24px;
+        padding: 10px;
+        letter-spacing: 1px;
+      }
+      .desc{
+        letter-spacing: 0.5px;
+        color: $black;
+        font-size: 16px;
+        padding: 10px;
+      }
+    }
+}
