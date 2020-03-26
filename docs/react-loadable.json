@@ -1,0 +1,1928 @@
+{
+  "undefined": [
+    {
+      "id": "",
+      "name": null,
+      "file": "0.6f47a5a03aefcf4b1c85.css",
+      "publicPath": "/0.6f47a5a03aefcf4b1c85.css"
+    },
+    {
+      "id": "",
+      "name": null,
+      "file": "About.b2d18e1e11ef3b9b7772.js",
+      "publicPath": "/About.b2d18e1e11ef3b9b7772.js"
+    },
+    {
+      "id": "",
+      "name": null,
+      "file": "0.6f47a5a03aefcf4b1c85.css.map",
+      "publicPath": "/0.6f47a5a03aefcf4b1c85.css.map"
+    },
+    {
+      "id": "",
+      "name": null,
+      "file": "About.b2d18e1e11ef3b9b7772.js.map",
+      "publicPath": "/About.b2d18e1e11ef3b9b7772.js.map"
+    },
+    {
+      "id": "",
+      "name": null,
+      "file": "1.6f47a5a03aefcf4b1c85.css",
+      "publicPath": "/1.6f47a5a03aefcf4b1c85.css"
+    },
+    {
+      "id": "",
+      "name": null,
+      "file": "Contact.2e63306bf3b9ae7b124c.js",
+      "publicPath": "/Contact.2e63306bf3b9ae7b124c.js"
+    },
+    {
+      "id": "",
+      "name": null,
+      "file": "1.6f47a5a03aefcf4b1c85.css.map",
+      "publicPath": "/1.6f47a5a03aefcf4b1c85.css.map"
+    },
+    {
+      "id": "",
+      "name": null,
+      "file": "Contact.2e63306bf3b9ae7b124c.js.map",
+      "publicPath": "/Contact.2e63306bf3b9ae7b124c.js.map"
+    },
+    {
+      "id": "",
+      "name": null,
+      "file": "main.6f47a5a03aefcf4b1c85.css",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.css"
+    },
+    {
+      "id": "",
+      "name": null,
+      "file": "main.6f47a5a03aefcf4b1c85.css",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.css"
+    },
+    {
+      "id": "",
+      "name": null,
+      "file": "main.6f47a5a03aefcf4b1c85.css",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.css"
+    },
+    {
+      "id": "",
+      "name": null,
+      "file": "main.6f47a5a03aefcf4b1c85.css",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.css"
+    },
+    {
+      "id": "",
+      "name": null,
+      "file": "main.6f47a5a03aefcf4b1c85.css",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.css"
+    },
+    {
+      "id": "",
+      "name": null,
+      "file": "main.6f47a5a03aefcf4b1c85.css",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.css"
+    },
+    {
+      "id": "",
+      "name": null,
+      "file": "main.6f47a5a03aefcf4b1c85.css",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.css"
+    },
+    {
+      "id": "",
+      "name": null,
+      "file": "main.6f47a5a03aefcf4b1c85.css",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.css"
+    },
+    {
+      "id": "",
+      "name": null,
+      "file": "main.6f47a5a03aefcf4b1c85.css",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.css"
+    },
+    {
+      "id": "",
+      "name": null,
+      "file": "main.6f47a5a03aefcf4b1c85.css",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.css"
+    },
+    {
+      "id": "",
+      "name": null,
+      "file": "main.6f47a5a03aefcf4b1c85.js",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.js"
+    },
+    {
+      "id": "",
+      "name": null,
+      "file": "main.6f47a5a03aefcf4b1c85.js",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.js"
+    },
+    {
+      "id": "",
+      "name": null,
+      "file": "main.6f47a5a03aefcf4b1c85.js",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.js"
+    },
+    {
+      "id": "",
+      "name": null,
+      "file": "main.6f47a5a03aefcf4b1c85.js",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.js"
+    },
+    {
+      "id": "",
+      "name": null,
+      "file": "main.6f47a5a03aefcf4b1c85.js",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.js"
+    },
+    {
+      "id": "",
+      "name": null,
+      "file": "main.6f47a5a03aefcf4b1c85.js",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.js"
+    },
+    {
+      "id": "",
+      "name": null,
+      "file": "main.6f47a5a03aefcf4b1c85.js",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.js"
+    },
+    {
+      "id": "",
+      "name": null,
+      "file": "main.6f47a5a03aefcf4b1c85.js",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.js"
+    },
+    {
+      "id": "",
+      "name": null,
+      "file": "main.6f47a5a03aefcf4b1c85.js",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.js"
+    },
+    {
+      "id": "",
+      "name": null,
+      "file": "main.6f47a5a03aefcf4b1c85.js",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.js"
+    },
+    {
+      "id": "",
+      "name": null,
+      "file": "main.6f47a5a03aefcf4b1c85.css.map",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.css.map"
+    },
+    {
+      "id": "",
+      "name": null,
+      "file": "main.6f47a5a03aefcf4b1c85.css.map",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.css.map"
+    },
+    {
+      "id": "",
+      "name": null,
+      "file": "main.6f47a5a03aefcf4b1c85.css.map",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.css.map"
+    },
+    {
+      "id": "",
+      "name": null,
+      "file": "main.6f47a5a03aefcf4b1c85.css.map",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.css.map"
+    },
+    {
+      "id": "",
+      "name": null,
+      "file": "main.6f47a5a03aefcf4b1c85.css.map",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.css.map"
+    },
+    {
+      "id": "",
+      "name": null,
+      "file": "main.6f47a5a03aefcf4b1c85.css.map",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.css.map"
+    },
+    {
+      "id": "",
+      "name": null,
+      "file": "main.6f47a5a03aefcf4b1c85.css.map",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.css.map"
+    },
+    {
+      "id": "",
+      "name": null,
+      "file": "main.6f47a5a03aefcf4b1c85.css.map",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.css.map"
+    },
+    {
+      "id": "",
+      "name": null,
+      "file": "main.6f47a5a03aefcf4b1c85.css.map",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.css.map"
+    },
+    {
+      "id": "",
+      "name": null,
+      "file": "main.6f47a5a03aefcf4b1c85.css.map",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.css.map"
+    },
+    {
+      "id": "",
+      "name": null,
+      "file": "main.6f47a5a03aefcf4b1c85.js.map",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.js.map"
+    },
+    {
+      "id": "",
+      "name": null,
+      "file": "main.6f47a5a03aefcf4b1c85.js.map",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.js.map"
+    },
+    {
+      "id": "",
+      "name": null,
+      "file": "main.6f47a5a03aefcf4b1c85.js.map",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.js.map"
+    },
+    {
+      "id": "",
+      "name": null,
+      "file": "main.6f47a5a03aefcf4b1c85.js.map",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.js.map"
+    },
+    {
+      "id": "",
+      "name": null,
+      "file": "main.6f47a5a03aefcf4b1c85.js.map",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.js.map"
+    },
+    {
+      "id": "",
+      "name": null,
+      "file": "main.6f47a5a03aefcf4b1c85.js.map",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.js.map"
+    },
+    {
+      "id": "",
+      "name": null,
+      "file": "main.6f47a5a03aefcf4b1c85.js.map",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.js.map"
+    },
+    {
+      "id": "",
+      "name": null,
+      "file": "main.6f47a5a03aefcf4b1c85.js.map",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.js.map"
+    },
+    {
+      "id": "",
+      "name": null,
+      "file": "main.6f47a5a03aefcf4b1c85.js.map",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.js.map"
+    },
+    {
+      "id": "",
+      "name": null,
+      "file": "main.6f47a5a03aefcf4b1c85.js.map",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.js.map"
+    }
+  ],
+  "./../components/about/About": [
+    {
+      "id": 89,
+      "name": "./src/components/about/About.tsx",
+      "file": "0.6f47a5a03aefcf4b1c85.css",
+      "publicPath": "/0.6f47a5a03aefcf4b1c85.css"
+    },
+    {
+      "id": 89,
+      "name": "./src/components/about/About.tsx",
+      "file": "About.b2d18e1e11ef3b9b7772.js",
+      "publicPath": "/About.b2d18e1e11ef3b9b7772.js"
+    },
+    {
+      "id": 89,
+      "name": "./src/components/about/About.tsx",
+      "file": "0.6f47a5a03aefcf4b1c85.css.map",
+      "publicPath": "/0.6f47a5a03aefcf4b1c85.css.map"
+    },
+    {
+      "id": 89,
+      "name": "./src/components/about/About.tsx",
+      "file": "About.b2d18e1e11ef3b9b7772.js.map",
+      "publicPath": "/About.b2d18e1e11ef3b9b7772.js.map"
+    }
+  ],
+  "./about.scss": [
+    {
+      "id": 91,
+      "name": "./src/components/about/about.scss",
+      "file": "0.6f47a5a03aefcf4b1c85.css",
+      "publicPath": "/0.6f47a5a03aefcf4b1c85.css"
+    },
+    {
+      "id": 91,
+      "name": "./src/components/about/about.scss",
+      "file": "About.b2d18e1e11ef3b9b7772.js",
+      "publicPath": "/About.b2d18e1e11ef3b9b7772.js"
+    },
+    {
+      "id": 91,
+      "name": "./src/components/about/about.scss",
+      "file": "0.6f47a5a03aefcf4b1c85.css.map",
+      "publicPath": "/0.6f47a5a03aefcf4b1c85.css.map"
+    },
+    {
+      "id": 91,
+      "name": "./src/components/about/about.scss",
+      "file": "About.b2d18e1e11ef3b9b7772.js.map",
+      "publicPath": "/About.b2d18e1e11ef3b9b7772.js.map"
+    }
+  ],
+  "./../components/contacts/Contact": [
+    {
+      "id": 90,
+      "name": "./src/components/contacts/Contact.tsx",
+      "file": "1.6f47a5a03aefcf4b1c85.css",
+      "publicPath": "/1.6f47a5a03aefcf4b1c85.css"
+    },
+    {
+      "id": 90,
+      "name": "./src/components/contacts/Contact.tsx",
+      "file": "Contact.2e63306bf3b9ae7b124c.js",
+      "publicPath": "/Contact.2e63306bf3b9ae7b124c.js"
+    },
+    {
+      "id": 90,
+      "name": "./src/components/contacts/Contact.tsx",
+      "file": "1.6f47a5a03aefcf4b1c85.css.map",
+      "publicPath": "/1.6f47a5a03aefcf4b1c85.css.map"
+    },
+    {
+      "id": 90,
+      "name": "./src/components/contacts/Contact.tsx",
+      "file": "Contact.2e63306bf3b9ae7b124c.js.map",
+      "publicPath": "/Contact.2e63306bf3b9ae7b124c.js.map"
+    }
+  ],
+  "./contact.scss": [
+    {
+      "id": 92,
+      "name": "./src/components/contacts/contact.scss",
+      "file": "1.6f47a5a03aefcf4b1c85.css",
+      "publicPath": "/1.6f47a5a03aefcf4b1c85.css"
+    },
+    {
+      "id": 92,
+      "name": "./src/components/contacts/contact.scss",
+      "file": "Contact.2e63306bf3b9ae7b124c.js",
+      "publicPath": "/Contact.2e63306bf3b9ae7b124c.js"
+    },
+    {
+      "id": 92,
+      "name": "./src/components/contacts/contact.scss",
+      "file": "1.6f47a5a03aefcf4b1c85.css.map",
+      "publicPath": "/1.6f47a5a03aefcf4b1c85.css.map"
+    },
+    {
+      "id": 92,
+      "name": "./src/components/contacts/contact.scss",
+      "file": "Contact.2e63306bf3b9ae7b124c.js.map",
+      "publicPath": "/Contact.2e63306bf3b9ae7b124c.js.map"
+    }
+  ],
+  "../common/Button/Button": [
+    {
+      "id": 14,
+      "name": "./src/components/common/Button/Button.tsx",
+      "file": "main.6f47a5a03aefcf4b1c85.css",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.css"
+    },
+    {
+      "id": 14,
+      "name": "./src/components/common/Button/Button.tsx",
+      "file": "main.6f47a5a03aefcf4b1c85.js",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.js"
+    },
+    {
+      "id": 14,
+      "name": "./src/components/common/Button/Button.tsx",
+      "file": "main.6f47a5a03aefcf4b1c85.css.map",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.css.map"
+    },
+    {
+      "id": 14,
+      "name": "./src/components/common/Button/Button.tsx",
+      "file": "main.6f47a5a03aefcf4b1c85.js.map",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.js.map"
+    }
+  ],
+  "./../../constants": [
+    {
+      "id": 17,
+      "name": "./src/constants.tsx",
+      "file": "main.6f47a5a03aefcf4b1c85.css",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.css"
+    },
+    {
+      "id": 17,
+      "name": "./src/constants.tsx",
+      "file": "main.6f47a5a03aefcf4b1c85.js",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.js"
+    },
+    {
+      "id": 17,
+      "name": "./src/constants.tsx",
+      "file": "main.6f47a5a03aefcf4b1c85.css.map",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.css.map"
+    },
+    {
+      "id": 17,
+      "name": "./src/constants.tsx",
+      "file": "main.6f47a5a03aefcf4b1c85.js.map",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.js.map"
+    }
+  ],
+  "../helpers/loadData": [
+    {
+      "id": 20,
+      "name": "./src/helpers/loadData.tsx",
+      "file": "main.6f47a5a03aefcf4b1c85.css",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.css"
+    },
+    {
+      "id": 20,
+      "name": "./src/helpers/loadData.tsx",
+      "file": "main.6f47a5a03aefcf4b1c85.js",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.js"
+    },
+    {
+      "id": 20,
+      "name": "./src/helpers/loadData.tsx",
+      "file": "main.6f47a5a03aefcf4b1c85.css.map",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.css.map"
+    },
+    {
+      "id": 20,
+      "name": "./src/helpers/loadData.tsx",
+      "file": "main.6f47a5a03aefcf4b1c85.js.map",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.js.map"
+    }
+  ],
+  "./../common/subscribe/Subscribe": [
+    {
+      "id": 21,
+      "name": "./src/components/common/subscribe/Subscribe.tsx",
+      "file": "main.6f47a5a03aefcf4b1c85.css",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.css"
+    },
+    {
+      "id": 21,
+      "name": "./src/components/common/subscribe/Subscribe.tsx",
+      "file": "main.6f47a5a03aefcf4b1c85.js",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.js"
+    },
+    {
+      "id": 21,
+      "name": "./src/components/common/subscribe/Subscribe.tsx",
+      "file": "main.6f47a5a03aefcf4b1c85.css.map",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.css.map"
+    },
+    {
+      "id": 21,
+      "name": "./src/components/common/subscribe/Subscribe.tsx",
+      "file": "main.6f47a5a03aefcf4b1c85.js.map",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.js.map"
+    }
+  ],
+  "../common/TextInput/TextInput": [
+    {
+      "id": 22,
+      "name": "./src/components/common/TextInput/TextInput.tsx",
+      "file": "main.6f47a5a03aefcf4b1c85.css",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.css"
+    },
+    {
+      "id": 22,
+      "name": "./src/components/common/TextInput/TextInput.tsx",
+      "file": "main.6f47a5a03aefcf4b1c85.js",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.js"
+    },
+    {
+      "id": 22,
+      "name": "./src/components/common/TextInput/TextInput.tsx",
+      "file": "main.6f47a5a03aefcf4b1c85.css.map",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.css.map"
+    },
+    {
+      "id": 22,
+      "name": "./src/components/common/TextInput/TextInput.tsx",
+      "file": "main.6f47a5a03aefcf4b1c85.js.map",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.js.map"
+    }
+  ],
+  "./../../../utils/Validations": [
+    {
+      "id": 23,
+      "name": "./src/utils/Validations.tsx",
+      "file": "main.6f47a5a03aefcf4b1c85.css",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.css"
+    },
+    {
+      "id": 23,
+      "name": "./src/utils/Validations.tsx",
+      "file": "main.6f47a5a03aefcf4b1c85.js",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.js"
+    },
+    {
+      "id": 23,
+      "name": "./src/utils/Validations.tsx",
+      "file": "main.6f47a5a03aefcf4b1c85.css.map",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.css.map"
+    },
+    {
+      "id": 23,
+      "name": "./src/utils/Validations.tsx",
+      "file": "main.6f47a5a03aefcf4b1c85.js.map",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.js.map"
+    }
+  ],
+  "./../components/home/Home": [
+    {
+      "id": 41,
+      "name": "./src/components/home/Home.tsx",
+      "file": "main.6f47a5a03aefcf4b1c85.css",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.css"
+    },
+    {
+      "id": 41,
+      "name": "./src/components/home/Home.tsx",
+      "file": "main.6f47a5a03aefcf4b1c85.js",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.js"
+    },
+    {
+      "id": 41,
+      "name": "./src/components/home/Home.tsx",
+      "file": "main.6f47a5a03aefcf4b1c85.css.map",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.css.map"
+    },
+    {
+      "id": 41,
+      "name": "./src/components/home/Home.tsx",
+      "file": "main.6f47a5a03aefcf4b1c85.js.map",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.js.map"
+    }
+  ],
+  "./../functional/HomeBoxes/homeBox": [
+    {
+      "id": 43,
+      "name": "./src/components/functional/HomeBoxes/homeBox.tsx",
+      "file": "main.6f47a5a03aefcf4b1c85.css",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.css"
+    },
+    {
+      "id": 43,
+      "name": "./src/components/functional/HomeBoxes/homeBox.tsx",
+      "file": "main.6f47a5a03aefcf4b1c85.js",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.js"
+    },
+    {
+      "id": 43,
+      "name": "./src/components/functional/HomeBoxes/homeBox.tsx",
+      "file": "main.6f47a5a03aefcf4b1c85.css.map",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.css.map"
+    },
+    {
+      "id": 43,
+      "name": "./src/components/functional/HomeBoxes/homeBox.tsx",
+      "file": "main.6f47a5a03aefcf4b1c85.js.map",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.js.map"
+    }
+  ],
+  "./../functional/HomePromote/HomePromote": [
+    {
+      "id": 44,
+      "name": "./src/components/functional/HomePromote/HomePromote.tsx",
+      "file": "main.6f47a5a03aefcf4b1c85.css",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.css"
+    },
+    {
+      "id": 44,
+      "name": "./src/components/functional/HomePromote/HomePromote.tsx",
+      "file": "main.6f47a5a03aefcf4b1c85.js",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.js"
+    },
+    {
+      "id": 44,
+      "name": "./src/components/functional/HomePromote/HomePromote.tsx",
+      "file": "main.6f47a5a03aefcf4b1c85.css.map",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.css.map"
+    },
+    {
+      "id": 44,
+      "name": "./src/components/functional/HomePromote/HomePromote.tsx",
+      "file": "main.6f47a5a03aefcf4b1c85.js.map",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.js.map"
+    }
+  ],
+  "./../components/product/Product": [
+    {
+      "id": 45,
+      "name": "./src/components/product/Product.tsx",
+      "file": "main.6f47a5a03aefcf4b1c85.css",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.css"
+    },
+    {
+      "id": 45,
+      "name": "./src/components/product/Product.tsx",
+      "file": "main.6f47a5a03aefcf4b1c85.js",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.js"
+    },
+    {
+      "id": 45,
+      "name": "./src/components/product/Product.tsx",
+      "file": "main.6f47a5a03aefcf4b1c85.css.map",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.css.map"
+    },
+    {
+      "id": 45,
+      "name": "./src/components/product/Product.tsx",
+      "file": "main.6f47a5a03aefcf4b1c85.js.map",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.js.map"
+    }
+  ],
+  "./../components/header/header": [
+    {
+      "id": 46,
+      "name": "./src/components/header/header.tsx",
+      "file": "main.6f47a5a03aefcf4b1c85.css",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.css"
+    },
+    {
+      "id": 46,
+      "name": "./src/components/header/header.tsx",
+      "file": "main.6f47a5a03aefcf4b1c85.js",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.js"
+    },
+    {
+      "id": 46,
+      "name": "./src/components/header/header.tsx",
+      "file": "main.6f47a5a03aefcf4b1c85.css.map",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.css.map"
+    },
+    {
+      "id": 46,
+      "name": "./src/components/header/header.tsx",
+      "file": "main.6f47a5a03aefcf4b1c85.js.map",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.js.map"
+    }
+  ],
+  "./../components/footer/footer": [
+    {
+      "id": 47,
+      "name": "./src/components/footer/footer.tsx",
+      "file": "main.6f47a5a03aefcf4b1c85.css",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.css"
+    },
+    {
+      "id": 47,
+      "name": "./src/components/footer/footer.tsx",
+      "file": "main.6f47a5a03aefcf4b1c85.js",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.js"
+    },
+    {
+      "id": 47,
+      "name": "./src/components/footer/footer.tsx",
+      "file": "main.6f47a5a03aefcf4b1c85.css.map",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.css.map"
+    },
+    {
+      "id": 47,
+      "name": "./src/components/footer/footer.tsx",
+      "file": "main.6f47a5a03aefcf4b1c85.js.map",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.js.map"
+    }
+  ],
+  "./../../scss/main.scss": [
+    {
+      "id": 57,
+      "name": "./src/scss/main.scss",
+      "file": "main.6f47a5a03aefcf4b1c85.css",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.css"
+    },
+    {
+      "id": 57,
+      "name": "./src/scss/main.scss",
+      "file": "main.6f47a5a03aefcf4b1c85.js",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.js"
+    },
+    {
+      "id": 57,
+      "name": "./src/scss/main.scss",
+      "file": "main.6f47a5a03aefcf4b1c85.css.map",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.css.map"
+    },
+    {
+      "id": 57,
+      "name": "./src/scss/main.scss",
+      "file": "main.6f47a5a03aefcf4b1c85.js.map",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.js.map"
+    }
+  ],
+  "./HomeBox.scss": [
+    {
+      "id": 75,
+      "name": "./src/components/functional/HomeBoxes/HomeBox.scss",
+      "file": "main.6f47a5a03aefcf4b1c85.css",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.css"
+    },
+    {
+      "id": 75,
+      "name": "./src/components/functional/HomeBoxes/HomeBox.scss",
+      "file": "main.6f47a5a03aefcf4b1c85.js",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.js"
+    },
+    {
+      "id": 75,
+      "name": "./src/components/functional/HomeBoxes/HomeBox.scss",
+      "file": "main.6f47a5a03aefcf4b1c85.css.map",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.css.map"
+    },
+    {
+      "id": 75,
+      "name": "./src/components/functional/HomeBoxes/HomeBox.scss",
+      "file": "main.6f47a5a03aefcf4b1c85.js.map",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.js.map"
+    }
+  ],
+  "./HomePromote.scss": [
+    {
+      "id": 77,
+      "name": "./src/components/functional/HomePromote/HomePromote.scss",
+      "file": "main.6f47a5a03aefcf4b1c85.css",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.css"
+    },
+    {
+      "id": 77,
+      "name": "./src/components/functional/HomePromote/HomePromote.scss",
+      "file": "main.6f47a5a03aefcf4b1c85.js",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.js"
+    },
+    {
+      "id": 77,
+      "name": "./src/components/functional/HomePromote/HomePromote.scss",
+      "file": "main.6f47a5a03aefcf4b1c85.css.map",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.css.map"
+    },
+    {
+      "id": 77,
+      "name": "./src/components/functional/HomePromote/HomePromote.scss",
+      "file": "main.6f47a5a03aefcf4b1c85.js.map",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.js.map"
+    }
+  ],
+  "./Button.scss": [
+    {
+      "id": 78,
+      "name": "./src/components/common/Button/Button.scss",
+      "file": "main.6f47a5a03aefcf4b1c85.css",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.css"
+    },
+    {
+      "id": 78,
+      "name": "./src/components/common/Button/Button.scss",
+      "file": "main.6f47a5a03aefcf4b1c85.js",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.js"
+    },
+    {
+      "id": 78,
+      "name": "./src/components/common/Button/Button.scss",
+      "file": "main.6f47a5a03aefcf4b1c85.css.map",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.css.map"
+    },
+    {
+      "id": 78,
+      "name": "./src/components/common/Button/Button.scss",
+      "file": "main.6f47a5a03aefcf4b1c85.js.map",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.js.map"
+    }
+  ],
+  "./TextInput.scss": [
+    {
+      "id": 79,
+      "name": "./src/components/common/TextInput/TextInput.scss",
+      "file": "main.6f47a5a03aefcf4b1c85.css",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.css"
+    },
+    {
+      "id": 79,
+      "name": "./src/components/common/TextInput/TextInput.scss",
+      "file": "main.6f47a5a03aefcf4b1c85.js",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.js"
+    },
+    {
+      "id": 79,
+      "name": "./src/components/common/TextInput/TextInput.scss",
+      "file": "main.6f47a5a03aefcf4b1c85.css.map",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.css.map"
+    },
+    {
+      "id": 79,
+      "name": "./src/components/common/TextInput/TextInput.scss",
+      "file": "main.6f47a5a03aefcf4b1c85.js.map",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.js.map"
+    }
+  ],
+  "./subscribe.scss": [
+    {
+      "id": 80,
+      "name": "./src/components/common/subscribe/subscribe.scss",
+      "file": "main.6f47a5a03aefcf4b1c85.css",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.css"
+    },
+    {
+      "id": 80,
+      "name": "./src/components/common/subscribe/subscribe.scss",
+      "file": "main.6f47a5a03aefcf4b1c85.js",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.js"
+    },
+    {
+      "id": 80,
+      "name": "./src/components/common/subscribe/subscribe.scss",
+      "file": "main.6f47a5a03aefcf4b1c85.css.map",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.css.map"
+    },
+    {
+      "id": 80,
+      "name": "./src/components/common/subscribe/subscribe.scss",
+      "file": "main.6f47a5a03aefcf4b1c85.js.map",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.js.map"
+    }
+  ],
+  "./../../assets/img/product.png": [
+    {
+      "id": 81,
+      "name": "./src/assets/img/product.png",
+      "file": "main.6f47a5a03aefcf4b1c85.css",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.css"
+    },
+    {
+      "id": 81,
+      "name": "./src/assets/img/product.png",
+      "file": "main.6f47a5a03aefcf4b1c85.js",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.js"
+    },
+    {
+      "id": 81,
+      "name": "./src/assets/img/product.png",
+      "file": "main.6f47a5a03aefcf4b1c85.css.map",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.css.map"
+    },
+    {
+      "id": 81,
+      "name": "./src/assets/img/product.png",
+      "file": "main.6f47a5a03aefcf4b1c85.js.map",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.js.map"
+    }
+  ],
+  "./home.scss": [
+    {
+      "id": 82,
+      "name": "./src/components/home/home.scss",
+      "file": "main.6f47a5a03aefcf4b1c85.css",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.css"
+    },
+    {
+      "id": 82,
+      "name": "./src/components/home/home.scss",
+      "file": "main.6f47a5a03aefcf4b1c85.js",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.js"
+    },
+    {
+      "id": 82,
+      "name": "./src/components/home/home.scss",
+      "file": "main.6f47a5a03aefcf4b1c85.css.map",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.css.map"
+    },
+    {
+      "id": 82,
+      "name": "./src/components/home/home.scss",
+      "file": "main.6f47a5a03aefcf4b1c85.js.map",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.js.map"
+    }
+  ],
+  "./product.scss": [
+    {
+      "id": 83,
+      "name": "./src/components/product/product.scss",
+      "file": "main.6f47a5a03aefcf4b1c85.css",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.css"
+    },
+    {
+      "id": 83,
+      "name": "./src/components/product/product.scss",
+      "file": "main.6f47a5a03aefcf4b1c85.js",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.js"
+    },
+    {
+      "id": 83,
+      "name": "./src/components/product/product.scss",
+      "file": "main.6f47a5a03aefcf4b1c85.css.map",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.css.map"
+    },
+    {
+      "id": 83,
+      "name": "./src/components/product/product.scss",
+      "file": "main.6f47a5a03aefcf4b1c85.js.map",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.js.map"
+    }
+  ],
+  "./../../assets/img/logo.png": [
+    {
+      "id": 84,
+      "name": "./src/assets/img/logo.png",
+      "file": "main.6f47a5a03aefcf4b1c85.css",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.css"
+    },
+    {
+      "id": 84,
+      "name": "./src/assets/img/logo.png",
+      "file": "main.6f47a5a03aefcf4b1c85.js",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.js"
+    },
+    {
+      "id": 84,
+      "name": "./src/assets/img/logo.png",
+      "file": "main.6f47a5a03aefcf4b1c85.css.map",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.css.map"
+    },
+    {
+      "id": 84,
+      "name": "./src/assets/img/logo.png",
+      "file": "main.6f47a5a03aefcf4b1c85.js.map",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.js.map"
+    }
+  ],
+  "./header.scss": [
+    {
+      "id": 85,
+      "name": "./src/components/header/header.scss",
+      "file": "main.6f47a5a03aefcf4b1c85.css",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.css"
+    },
+    {
+      "id": 85,
+      "name": "./src/components/header/header.scss",
+      "file": "main.6f47a5a03aefcf4b1c85.js",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.js"
+    },
+    {
+      "id": 85,
+      "name": "./src/components/header/header.scss",
+      "file": "main.6f47a5a03aefcf4b1c85.css.map",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.css.map"
+    },
+    {
+      "id": 85,
+      "name": "./src/components/header/header.scss",
+      "file": "main.6f47a5a03aefcf4b1c85.js.map",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.js.map"
+    }
+  ],
+  "./footer.scss": [
+    {
+      "id": 86,
+      "name": "./src/components/footer/footer.scss",
+      "file": "main.6f47a5a03aefcf4b1c85.css",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.css"
+    },
+    {
+      "id": 86,
+      "name": "./src/components/footer/footer.scss",
+      "file": "main.6f47a5a03aefcf4b1c85.js",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.js"
+    },
+    {
+      "id": 86,
+      "name": "./src/components/footer/footer.scss",
+      "file": "main.6f47a5a03aefcf4b1c85.css.map",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.css.map"
+    },
+    {
+      "id": 86,
+      "name": "./src/components/footer/footer.scss",
+      "file": "main.6f47a5a03aefcf4b1c85.js.map",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.js.map"
+    }
+  ],
+  "./src/client.tsx": [
+    {
+      "id": 88,
+      "name": "./src/client.tsx",
+      "file": "main.6f47a5a03aefcf4b1c85.css",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.css"
+    },
+    {
+      "id": 88,
+      "name": "./src/client.tsx",
+      "file": "main.6f47a5a03aefcf4b1c85.js",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.js"
+    },
+    {
+      "id": 88,
+      "name": "./src/client.tsx",
+      "file": "main.6f47a5a03aefcf4b1c85.css.map",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.css.map"
+    },
+    {
+      "id": 88,
+      "name": "./src/client.tsx",
+      "file": "main.6f47a5a03aefcf4b1c85.js.map",
+      "publicPath": "/main.6f47a5a03aefcf4b1c85.js.map"
+    }
+  ],
+  "react": [
+    {
+      "id": 0,
+      "name": "./node_modules/react/index.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js"
+    },
+    {
+      "id": 0,
+      "name": "./node_modules/react/index.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js.map",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js.map"
+    }
+  ],
+  "tslib": [
+    {
+      "id": 1,
+      "name": "./node_modules/tslib/tslib.es6.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js"
+    },
+    {
+      "id": 1,
+      "name": "./node_modules/tslib/tslib.es6.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js.map",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js.map"
+    }
+  ],
+  "@babel/runtime/helpers/esm/extends": [
+    {
+      "id": 2,
+      "name": "./node_modules/@babel/runtime/helpers/esm/extends.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js"
+    },
+    {
+      "id": 2,
+      "name": "./node_modules/@babel/runtime/helpers/esm/extends.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js.map",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js.map"
+    }
+  ],
+  "react-hot-loader": [
+    {
+      "id": 3,
+      "name": "./node_modules/react-hot-loader/index.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js"
+    },
+    {
+      "id": 3,
+      "name": "./node_modules/react-hot-loader/index.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js.map",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js.map"
+    }
+  ],
+  "@babel/runtime/helpers/esm/objectWithoutPropertiesLoose": [
+    {
+      "id": 4,
+      "name": "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js"
+    },
+    {
+      "id": 4,
+      "name": "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js.map",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js.map"
+    }
+  ],
+  "./utils": [
+    {
+      "id": 5,
+      "name": "./node_modules/axios/lib/utils.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js"
+    },
+    {
+      "id": 5,
+      "name": "./node_modules/axios/lib/utils.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js.map",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js.map"
+    }
+  ],
+  "react-router": [
+    {
+      "id": 6,
+      "name": "./node_modules/react-router/esm/react-router.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js"
+    },
+    {
+      "id": 6,
+      "name": "./node_modules/react-router/esm/react-router.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js.map",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js.map"
+    }
+  ],
+  "tiny-invariant": [
+    {
+      "id": 7,
+      "name": "./node_modules/tiny-invariant/dist/tiny-invariant.esm.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js"
+    },
+    {
+      "id": 7,
+      "name": "./node_modules/tiny-invariant/dist/tiny-invariant.esm.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js.map",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js.map"
+    }
+  ],
+  "history": [
+    {
+      "id": 8,
+      "name": "./node_modules/history/esm/history.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js"
+    },
+    {
+      "id": 8,
+      "name": "./node_modules/history/esm/history.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js.map",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js.map"
+    }
+  ],
+  "@babel/runtime/helpers/esm/inheritsLoose": [
+    {
+      "id": 9,
+      "name": "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js"
+    },
+    {
+      "id": 9,
+      "name": "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js.map",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js.map"
+    }
+  ],
+  "./../../../node_modules/webpack/buildin/harmony-module.js": [
+    {
+      "id": 10,
+      "name": "./node_modules/webpack/buildin/harmony-module.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js"
+    },
+    {
+      "id": 10,
+      "name": "./node_modules/webpack/buildin/harmony-module.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js.map",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js.map"
+    }
+  ],
+  "react-dom": [
+    {
+      "id": 11,
+      "name": "./node_modules/react-dom/index.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js"
+    },
+    {
+      "id": 11,
+      "name": "./node_modules/react-dom/index.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js.map",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js.map"
+    }
+  ],
+  "redux": [
+    {
+      "id": 12,
+      "name": "./node_modules/redux/es/redux.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js"
+    },
+    {
+      "id": 12,
+      "name": "./node_modules/redux/es/redux.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js.map",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js.map"
+    }
+  ],
+  "prop-types": [
+    {
+      "id": 13,
+      "name": "./node_modules/prop-types/index.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js"
+    },
+    {
+      "id": 13,
+      "name": "./node_modules/prop-types/index.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js.map",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js.map"
+    }
+  ],
+  "react-loadable": [
+    {
+      "id": 15,
+      "name": "./node_modules/react-loadable/lib/index.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js"
+    },
+    {
+      "id": 15,
+      "name": "./node_modules/react-loadable/lib/index.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js.map",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js.map"
+    }
+  ],
+  "hoist-non-react-statics": [
+    {
+      "id": 16,
+      "name": "./node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js"
+    },
+    {
+      "id": 16,
+      "name": "./node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js.map",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js.map"
+    }
+  ],
+  "react-is": [
+    {
+      "id": 18,
+      "name": "./node_modules/react-is/index.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js"
+    },
+    {
+      "id": 18,
+      "name": "./node_modules/react-is/index.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js.map",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js.map"
+    }
+  ],
+  "react-redux": [
+    {
+      "id": 19,
+      "name": "./node_modules/react-redux/es/index.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js"
+    },
+    {
+      "id": 19,
+      "name": "./node_modules/react-redux/es/index.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js.map",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js.map"
+    }
+  ],
+  "symbol-observable": [
+    {
+      "id": 25,
+      "name": "./node_modules/symbol-observable/es/index.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js"
+    },
+    {
+      "id": 25,
+      "name": "./node_modules/symbol-observable/es/index.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js.map",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js.map"
+    }
+  ],
+  "@babel/runtime/helpers/inheritsLoose": [
+    {
+      "id": 26,
+      "name": "./node_modules/@babel/runtime/helpers/inheritsLoose.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js"
+    },
+    {
+      "id": 26,
+      "name": "./node_modules/@babel/runtime/helpers/inheritsLoose.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js.map",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js.map"
+    }
+  ],
+  "path-to-regexp": [
+    {
+      "id": 27,
+      "name": "./node_modules/react-router/node_modules/path-to-regexp/index.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js"
+    },
+    {
+      "id": 27,
+      "name": "./node_modules/react-router/node_modules/path-to-regexp/index.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js.map",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js.map"
+    }
+  ],
+  "react-router-dom": [
+    {
+      "id": 28,
+      "name": "./node_modules/react-router-dom/esm/react-router-dom.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js"
+    },
+    {
+      "id": 28,
+      "name": "./node_modules/react-router-dom/esm/react-router-dom.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js.map",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js.map"
+    }
+  ],
+  "object-assign": [
+    {
+      "id": 29,
+      "name": "./node_modules/object-assign/index.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js"
+    },
+    {
+      "id": 29,
+      "name": "./node_modules/object-assign/index.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js.map",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js.map"
+    }
+  ],
+  "./../../webpack/buildin/global.js": [
+    {
+      "id": 30,
+      "name": "./node_modules/webpack/buildin/global.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js"
+    },
+    {
+      "id": 30,
+      "name": "./node_modules/webpack/buildin/global.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js.map",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js.map"
+    }
+  ],
+  "./helpers/bind": [
+    {
+      "id": 31,
+      "name": "./node_modules/axios/lib/helpers/bind.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js"
+    },
+    {
+      "id": 31,
+      "name": "./node_modules/axios/lib/helpers/bind.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js.map",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js.map"
+    }
+  ],
+  "../helpers/buildURL": [
+    {
+      "id": 32,
+      "name": "./node_modules/axios/lib/helpers/buildURL.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js"
+    },
+    {
+      "id": 32,
+      "name": "./node_modules/axios/lib/helpers/buildURL.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js.map",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js.map"
+    }
+  ],
+  "./cancel/isCancel": [
+    {
+      "id": 33,
+      "name": "./node_modules/axios/lib/cancel/isCancel.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js"
+    },
+    {
+      "id": 33,
+      "name": "./node_modules/axios/lib/cancel/isCancel.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js.map",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js.map"
+    }
+  ],
+  "./defaults": [
+    {
+      "id": 34,
+      "name": "./node_modules/axios/lib/defaults.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js"
+    },
+    {
+      "id": 34,
+      "name": "./node_modules/axios/lib/defaults.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js.map",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js.map"
+    }
+  ],
+  "./adapters/xhr": [
+    {
+      "id": 35,
+      "name": "./node_modules/axios/lib/adapters/xhr.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js"
+    },
+    {
+      "id": 35,
+      "name": "./node_modules/axios/lib/adapters/xhr.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js.map",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js.map"
+    }
+  ],
+  "../core/createError": [
+    {
+      "id": 36,
+      "name": "./node_modules/axios/lib/core/createError.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js"
+    },
+    {
+      "id": 36,
+      "name": "./node_modules/axios/lib/core/createError.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js.map",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js.map"
+    }
+  ],
+  "./core/mergeConfig": [
+    {
+      "id": 37,
+      "name": "./node_modules/axios/lib/core/mergeConfig.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js"
+    },
+    {
+      "id": 37,
+      "name": "./node_modules/axios/lib/core/mergeConfig.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js.map",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js.map"
+    }
+  ],
+  "./cancel/Cancel": [
+    {
+      "id": 38,
+      "name": "./node_modules/axios/lib/cancel/Cancel.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js"
+    },
+    {
+      "id": 38,
+      "name": "./node_modules/axios/lib/cancel/Cancel.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js.map",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js.map"
+    }
+  ],
+  "./ponyfill.js": [
+    {
+      "id": 39,
+      "name": "./node_modules/symbol-observable/es/ponyfill.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js"
+    },
+    {
+      "id": 39,
+      "name": "./node_modules/symbol-observable/es/ponyfill.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js.map",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js.map"
+    }
+  ],
+  "redux-thunk": [
+    {
+      "id": 40,
+      "name": "./node_modules/redux-thunk/es/index.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js"
+    },
+    {
+      "id": 40,
+      "name": "./node_modules/redux-thunk/es/index.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js.map",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js.map"
+    }
+  ],
+  "axios": [
+    {
+      "id": 42,
+      "name": "./node_modules/axios/index.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js"
+    },
+    {
+      "id": 42,
+      "name": "./node_modules/axios/index.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js.map",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js.map"
+    }
+  ],
+  "react-router-config": [
+    {
+      "id": 48,
+      "name": "./node_modules/react-router-config/esm/react-router-config.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js"
+    },
+    {
+      "id": 48,
+      "name": "./node_modules/react-router-config/esm/react-router-config.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js.map",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js.map"
+    }
+  ],
+  "gud": [
+    {
+      "id": 49,
+      "name": "./node_modules/gud/index.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js"
+    },
+    {
+      "id": 49,
+      "name": "./node_modules/gud/index.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js.map",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js.map"
+    }
+  ],
+  "./cjs/react.production.min.js": [
+    {
+      "id": 50,
+      "name": "./node_modules/react/cjs/react.production.min.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js"
+    },
+    {
+      "id": 50,
+      "name": "./node_modules/react/cjs/react.production.min.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js.map",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js.map"
+    }
+  ],
+  "./cjs/react-dom.production.min.js": [
+    {
+      "id": 51,
+      "name": "./node_modules/react-dom/cjs/react-dom.production.min.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js"
+    },
+    {
+      "id": 51,
+      "name": "./node_modules/react-dom/cjs/react-dom.production.min.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js.map",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js.map"
+    }
+  ],
+  "scheduler": [
+    {
+      "id": 52,
+      "name": "./node_modules/scheduler/index.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js"
+    },
+    {
+      "id": 52,
+      "name": "./node_modules/scheduler/index.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js.map",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js.map"
+    }
+  ],
+  "./cjs/scheduler.production.min.js": [
+    {
+      "id": 53,
+      "name": "./node_modules/scheduler/cjs/scheduler.production.min.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js"
+    },
+    {
+      "id": 53,
+      "name": "./node_modules/scheduler/cjs/scheduler.production.min.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js.map",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js.map"
+    }
+  ],
+  "./factoryWithThrowingShims": [
+    {
+      "id": 54,
+      "name": "./node_modules/prop-types/factoryWithThrowingShims.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js"
+    },
+    {
+      "id": 54,
+      "name": "./node_modules/prop-types/factoryWithThrowingShims.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js.map",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js.map"
+    }
+  ],
+  "./lib/ReactPropTypesSecret": [
+    {
+      "id": 55,
+      "name": "./node_modules/prop-types/lib/ReactPropTypesSecret.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js"
+    },
+    {
+      "id": 55,
+      "name": "./node_modules/prop-types/lib/ReactPropTypesSecret.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js.map",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js.map"
+    }
+  ],
+  "./cjs/react-is.production.min.js": [
+    {
+      "id": 56,
+      "name": "./node_modules/react-is/cjs/react-is.production.min.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js"
+    },
+    {
+      "id": 56,
+      "name": "./node_modules/react-is/cjs/react-is.production.min.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js.map",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js.map"
+    }
+  ],
+  "./lib/axios": [
+    {
+      "id": 58,
+      "name": "./node_modules/axios/lib/axios.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js"
+    },
+    {
+      "id": 58,
+      "name": "./node_modules/axios/lib/axios.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js.map",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js.map"
+    }
+  ],
+  "./core/Axios": [
+    {
+      "id": 59,
+      "name": "./node_modules/axios/lib/core/Axios.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js"
+    },
+    {
+      "id": 59,
+      "name": "./node_modules/axios/lib/core/Axios.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js.map",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js.map"
+    }
+  ],
+  "./InterceptorManager": [
+    {
+      "id": 60,
+      "name": "./node_modules/axios/lib/core/InterceptorManager.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js"
+    },
+    {
+      "id": 60,
+      "name": "./node_modules/axios/lib/core/InterceptorManager.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js.map",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js.map"
+    }
+  ],
+  "./dispatchRequest": [
+    {
+      "id": 61,
+      "name": "./node_modules/axios/lib/core/dispatchRequest.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js"
+    },
+    {
+      "id": 61,
+      "name": "./node_modules/axios/lib/core/dispatchRequest.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js.map",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js.map"
+    }
+  ],
+  "./transformData": [
+    {
+      "id": 62,
+      "name": "./node_modules/axios/lib/core/transformData.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js"
+    },
+    {
+      "id": 62,
+      "name": "./node_modules/axios/lib/core/transformData.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js.map",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js.map"
+    }
+  ],
+  "./../../process/browser.js": [
+    {
+      "id": 63,
+      "name": "./node_modules/process/browser.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js"
+    },
+    {
+      "id": 63,
+      "name": "./node_modules/process/browser.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js.map",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js.map"
+    }
+  ],
+  "./helpers/normalizeHeaderName": [
+    {
+      "id": 64,
+      "name": "./node_modules/axios/lib/helpers/normalizeHeaderName.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js"
+    },
+    {
+      "id": 64,
+      "name": "./node_modules/axios/lib/helpers/normalizeHeaderName.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js.map",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js.map"
+    }
+  ],
+  "./../core/settle": [
+    {
+      "id": 65,
+      "name": "./node_modules/axios/lib/core/settle.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js"
+    },
+    {
+      "id": 65,
+      "name": "./node_modules/axios/lib/core/settle.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js.map",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js.map"
+    }
+  ],
+  "./enhanceError": [
+    {
+      "id": 66,
+      "name": "./node_modules/axios/lib/core/enhanceError.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js"
+    },
+    {
+      "id": 66,
+      "name": "./node_modules/axios/lib/core/enhanceError.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js.map",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js.map"
+    }
+  ],
+  "../core/buildFullPath": [
+    {
+      "id": 67,
+      "name": "./node_modules/axios/lib/core/buildFullPath.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js"
+    },
+    {
+      "id": 67,
+      "name": "./node_modules/axios/lib/core/buildFullPath.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js.map",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js.map"
+    }
+  ],
+  "../helpers/isAbsoluteURL": [
+    {
+      "id": 68,
+      "name": "./node_modules/axios/lib/helpers/isAbsoluteURL.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js"
+    },
+    {
+      "id": 68,
+      "name": "./node_modules/axios/lib/helpers/isAbsoluteURL.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js.map",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js.map"
+    }
+  ],
+  "../helpers/combineURLs": [
+    {
+      "id": 69,
+      "name": "./node_modules/axios/lib/helpers/combineURLs.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js"
+    },
+    {
+      "id": 69,
+      "name": "./node_modules/axios/lib/helpers/combineURLs.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js.map",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js.map"
+    }
+  ],
+  "./../helpers/parseHeaders": [
+    {
+      "id": 70,
+      "name": "./node_modules/axios/lib/helpers/parseHeaders.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js"
+    },
+    {
+      "id": 70,
+      "name": "./node_modules/axios/lib/helpers/parseHeaders.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js.map",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js.map"
+    }
+  ],
+  "./../helpers/isURLSameOrigin": [
+    {
+      "id": 71,
+      "name": "./node_modules/axios/lib/helpers/isURLSameOrigin.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js"
+    },
+    {
+      "id": 71,
+      "name": "./node_modules/axios/lib/helpers/isURLSameOrigin.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js.map",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js.map"
+    }
+  ],
+  "./../helpers/cookies": [
+    {
+      "id": 72,
+      "name": "./node_modules/axios/lib/helpers/cookies.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js"
+    },
+    {
+      "id": 72,
+      "name": "./node_modules/axios/lib/helpers/cookies.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js.map",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js.map"
+    }
+  ],
+  "./cancel/CancelToken": [
+    {
+      "id": 73,
+      "name": "./node_modules/axios/lib/cancel/CancelToken.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js"
+    },
+    {
+      "id": 73,
+      "name": "./node_modules/axios/lib/cancel/CancelToken.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js.map",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js.map"
+    }
+  ],
+  "./helpers/spread": [
+    {
+      "id": 74,
+      "name": "./node_modules/axios/lib/helpers/spread.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js"
+    },
+    {
+      "id": 74,
+      "name": "./node_modules/axios/lib/helpers/spread.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js.map",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js.map"
+    }
+  ],
+  "./dist/react-hot-loader.production.min.js": [
+    {
+      "id": 76,
+      "name": "./node_modules/react-hot-loader/dist/react-hot-loader.production.min.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js"
+    },
+    {
+      "id": 76,
+      "name": "./node_modules/react-hot-loader/dist/react-hot-loader.production.min.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js.map",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js.map"
+    }
+  ],
+  "isarray": [
+    {
+      "id": 87,
+      "name": "./node_modules/isarray/index.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js"
+    },
+    {
+      "id": 87,
+      "name": "./node_modules/isarray/index.js",
+      "file": "vendor.270d6ab319a3a104fc6c.js.map",
+      "publicPath": "/vendor.270d6ab319a3a104fc6c.js.map"
+    }
+  ]
+}
