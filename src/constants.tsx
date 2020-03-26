@@ -48,3 +48,18 @@ export const renderTitles = [
   'tissues',
   'cough drops'
 ];
+
+export const ingredients = [
+  'Chicken Noodle Soup',
+  'Digital Thermometer',
+  'Assorted Herbal Tea',
+  'Ginger Ale',
+  'Saltines',
+  'Breath Mints',
+  'Cough Drops',
+  'Tissues',
+  'Ginger Candy',
+  'Hot Chocolate',
+  'Emergen-C',
+  'Free Movie Rental (Not pictured)'
+];

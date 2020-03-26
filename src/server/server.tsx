@@ -15,7 +15,7 @@ const mobileDetect = require('mobile-detect');
 const app = express();
 const data = require('../../build/stats.json');
 const stats = require('../../build/react-loadable.json');
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 4000;
 
 app.use(express.static('build'));
 // temp favicon fix

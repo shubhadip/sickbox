@@ -232,7 +232,7 @@ class TextInput extends React.Component<IProps, IState> {
     const parentClass = isFocused ? 'is_focused' : '';
     const hasError = isValid === false && isShowErrors === true;
 
-    const className = `w--text_input ${parentClass} ${customClass}
+    const className = `w--text_input ${parentClass || ''} ${customClass || ''}
 			${hasError ? 'has-error' : ''}
 			${ellipsisOnOverflow ? 'text_ellipsis' : ''}
 			${prefixParentClass}`;

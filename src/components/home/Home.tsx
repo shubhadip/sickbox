@@ -2,21 +2,28 @@ import * as React from 'react';
 import { hot } from 'react-hot-loader';
 import { connect } from 'react-redux';
 import { fetchAboutData } from './../../helpers/loadData';
-import Button from './../common/Button/Button';
-import TextInput from './../common/TextInput/TextInput';
 import HomeBox from './../functional/HomeBoxes/homeBox';
 import HomePromote from './../functional/HomePromote/HomePromote';
+import Subscribe from './../common/subscribe/Subscribe';
 
 import { data, renderTitles } from './../../constants';
 const product = require('./../../assets/img/product.png');
 import './home.scss';
 
-interface Iprops {
-  isMobileDevice?: boolean;
-}
+// interface Iprops {
+//   isMobileDevice?: boolean;
+//   todos?: string[];
+// }
+
+// interface IState {
+//   todo?: {
+//     list: string[];
+//   };
+//   email?: string;
+// }
 
 class Home extends React.Component<any, any> {
-  constructor(props: Iprops) {
+  constructor(props) {
     super(props);
     this.state = {
       email: ''
@@ -24,13 +31,11 @@ class Home extends React.Component<any, any> {
   }
 
   componentDidMount() {
-    if (!this.props.todos.length) {
+    const { todos = [] } = this.props;
+    if (!todos.length) {
       fetchAboutData();
     }
   }
-
-  handleClick() {}
-  handleChange() {}
 
   renderSections = () => {
     return data.map(article => {
@@ -89,21 +94,7 @@ class Home extends React.Component<any, any> {
           </div>
           <div className="promote container">{this.renderHomePromote()}</div>
           <div className="subscribe container">
-            <section className="subscribe-wrapper">
-              <h1>Health Tips & Discounts</h1>
-              <p className="desc">
-                Subscribe to our newsletter to get discounts and tips to stay
-                healthy.{' '}
-              </p>
-              <article>
-                <TextInput
-                  value={this.state.email}
-                  onChange={() => this.handleChange}
-                  placeholder={'your@email.com'}
-                />
-                <Button title={'Subscribe'} onClick={() => this.handleClick} />
-              </article>
-            </section>
+            <Subscribe />
           </div>
         </section>
       </>
@@ -111,9 +102,9 @@ class Home extends React.Component<any, any> {
   }
 }
 
-function mapStateToProps(state: any) {
+function mapStateToProps(state) {
   return {
-    todos: state.todo.list
+    todos: state.todo && state.todo.list
   };
 }
 

@@ -2,7 +2,8 @@ import React from 'react';
 import Loadable from 'react-loadable';
 import Home from './../components/home/Home';
 import { fetchAboutData } from '../helpers/loadData';
-
+import PageNotFound from '../components/functional/PageNotFound/PageNotFound';
+import Product from './../components/product/Product';
 const loading = () => <div>Loading...</div>;
 
 const About = Loadable({
@@ -41,8 +42,11 @@ export default [
     path: '/contact'
   },
   {
-    component: Home,
-    path: '*',
-    loadData: fetchAboutData
+    component: Product,
+    path: '/p/:id'
+  },
+  {
+    component: PageNotFound,
+    path: '*'
   }
 ];
