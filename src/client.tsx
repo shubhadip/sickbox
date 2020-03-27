@@ -6,8 +6,8 @@ import App from './components/app/app';
 import { createBrowserHistory } from 'history';
 
 const isForGHPAGE = __isForGHPAGE__;
-const baseUrl = isForGHPAGE ? '/sickbox/' : '/'
-const browserHistory:any = createBrowserHistory({basename: baseUrl});
+const baseUrl = isForGHPAGE ? '/sickbox/' : '/';
+const browserHistory: any = createBrowserHistory({ basename: baseUrl });
 
 function loadApp() {
   const isProd = process.env.NODE_ENV === 'production';
