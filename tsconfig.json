@@ -9,6 +9,9 @@
         "name": "typescript-tslint-plugin"
       }
     ],
+    "typeRoots" : [
+      "./typings" // path to your typings directory (relative to tsconfig.json)
+    ],
     "sourceMap": true,
     "allowJs": true,
     "jsx": "preserve",
