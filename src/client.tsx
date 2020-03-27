@@ -1,27 +1,28 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
+import { Router } from 'react-router-dom';
 import Loadable from 'react-loadable';
-declare const __isForGHPAGE__;
+import App from './components/app/app';
+import { createBrowserHistory } from 'history';
 
 const isForGHPAGE = __isForGHPAGE__;
-console.log('jhjkhk', isForGHPAGE);
-import App from './components/app/app';
+const baseUrl = isForGHPAGE ? '/sickbox/' : '/'
+const browserHistory:any = createBrowserHistory({basename: baseUrl});
 
 function loadApp() {
   const isProd = process.env.NODE_ENV === 'production';
   return !isProd
     ? ReactDOM.render(
-        <BrowserRouter basename={isForGHPAGE ? '/sickbox/' : '/'}>
+        <Router history={browserHistory}>
           <App />
-        </BrowserRouter>,
+        </Router>,
         document.getElementById('app')
       )
     : Loadable.preloadReady().then(() => {
         ReactDOM.hydrate(
-          <BrowserRouter>
+          <Router history={browserHistory}>
             <App />
-          </BrowserRouter>,
+          </Router>,
           document.getElementById('app')
         );
       });
