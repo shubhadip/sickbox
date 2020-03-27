@@ -56,6 +56,7 @@ class Home extends React.Component<any, any> {
   };
 
   render() {
+    console.log('hkhkjhjk',this.props)
     return (
       <>
         <section className="hcontainer">
