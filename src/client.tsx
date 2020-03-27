@@ -5,7 +5,7 @@ import Loadable from 'react-loadable';
 declare const __isForGHPAGE__;
 
 const isForGHPAGE = __isForGHPAGE__;
-console.log('jhjkhk',isForGHPAGE)
+console.log('jhjkhk', isForGHPAGE);
 import App from './components/app/app';
 
 function loadApp() {
