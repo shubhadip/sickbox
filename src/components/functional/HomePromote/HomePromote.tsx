@@ -2,8 +2,14 @@ import * as React from 'react';
 import { hot } from 'react-hot-loader';
 import './HomePromote.scss';
 import Button from '../../common/Button/Button';
+import {browserHistory} from './../../../history'
+
+function handleClick(){
+  browserHistory.push('/p/sick-day-box')
+}
 
 export const HomePromote = () => {
+
   return (
     <section className="homepromote-wrapper">
       <div className="homepromote">
@@ -24,7 +30,7 @@ export const HomePromote = () => {
               and ginger ale on hand for the next time we wake up feeling sick.
               Who wants to run out to the store on a sick day?
             </p>
-            <Button title={'GIFT IT'} />
+            <Button title={'GIFT IT'} onClick={handleClick}/>
           </div>
         </article>
         <hr />
@@ -38,7 +44,7 @@ export const HomePromote = () => {
             <p className="sub-heading">
               Weather any storm with a 3 pack of Sick Day Boxes for the office.
             </p>
-            <Button title={'BUY PACK Of 3'} />
+            <Button title={'BUY PACK Of 3'} onClick={handleClick}/>
           </div>
         </article>
       </div>
