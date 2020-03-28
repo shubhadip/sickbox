@@ -93,6 +93,7 @@ module.exports = {
     new htmlWebpackPlugin({
       template: path.resolve(__dirname, 'src/index.html'),
       filename: 'index.html',
+      scriptLoading: 'defer'
     }),
   ],
   optimization:{
