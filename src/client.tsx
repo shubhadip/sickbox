@@ -5,7 +5,6 @@ import Loadable from 'react-loadable';
 import App from './components/app/app';
 import { browserHistory } from './history';
 
-
 function loadApp() {
   const isProd = process.env.NODE_ENV === 'production';
   console.log(history);
