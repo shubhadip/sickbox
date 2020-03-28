@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { hot } from 'react-hot-loader';
+import { browserHistory } from './../../history';
 const logo = require('./../../assets/img/logo.png');
 
 import './header.scss';
@@ -15,6 +16,14 @@ class Header extends React.Component<any, any> {
 
   componentDidMount() {}
 
+  handleClick = () => {
+    browserHistory.push('/cart');
+  };
+
+  goToHomepage = () => {
+    browserHistory.push('/');
+  };
+
   render() {
     return (
       <header className="header-container">
@@ -23,12 +32,12 @@ class Header extends React.Component<any, any> {
             <div className="mobile-ham">
               <span className="icon" />
             </div>
-            <div className="logo">
+            <div className="logo" onClick={this.goToHomepage}>
               <span>
                 <img alt="logo" src={logo.default} />
               </span>
             </div>
-            <div className="cart">
+            <div className="cart" onClick={this.handleClick}>
               <span className="icon_bag" />
             </div>
           </div>

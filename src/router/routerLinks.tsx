@@ -26,6 +26,14 @@ const Contact = Loadable({
   ]
 });
 
+const Cart = Loadable({
+  loader: () =>
+    import(/* webpackChunkName: 'Contact' */ './../components/cart/Cart'),
+  loading,
+  modules: ['./../components/cart/Cart'],
+  webpack: () => [(require as any).resolveWeak('./../components/cart/Cart')]
+});
+
 export default [
   {
     component: Home,
@@ -44,6 +52,10 @@ export default [
   {
     component: Product,
     path: '/p/:id'
+  },
+  {
+    component: Cart,
+    path: '/cart'
   },
   {
     component: PageNotFound,

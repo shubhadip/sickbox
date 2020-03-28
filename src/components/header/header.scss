@@ -14,9 +14,11 @@
         }
         .logo{
             margin-left: 50px;
+            cursor: pointer;
         }
     }
     .cart{
+        cursor: pointer;
         font-size: 25px;
     }
     .mobile-ham{
@@ -64,6 +66,7 @@
             display: none;
         }
         .cart{
+            cursor: pointer;
             display: block;
             font-size: 25px;
             margin-top: -5px;
@@ -78,6 +81,7 @@
                 height: 80px;
             }
             .logo{
+                cursor: pointer;
                 text-align: left;
                 font-size: 2.5em;
                 margin-left: 0px;
