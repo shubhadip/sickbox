@@ -4,6 +4,7 @@ import Home from './../components/home/Home';
 import { fetchAboutData } from '../helpers/loadData';
 import PageNotFound from '../components/functional/PageNotFound/PageNotFound';
 import Product from './../components/product/Product';
+
 const loading = () => <div>Loading...</div>;
 
 const About = Loadable({
