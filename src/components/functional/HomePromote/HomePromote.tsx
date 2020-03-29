@@ -23,7 +23,9 @@ export const HomePromote = () => {
               and ginger ale on hand for the next time we wake up feeling sick.
               Who wants to run out to the store on a sick day?
             </p>
-            <a href='/p/sick-day-box' className='w--button'>Gift It</a>
+            <a href="/p/sick-day-box" className="w--button">
+              Gift It
+            </a>
           </div>
         </article>
         <hr />
@@ -37,7 +39,9 @@ export const HomePromote = () => {
             <p className="sub-heading">
               Weather any storm with a 3 pack of Sick Day Boxes for the office.
             </p>
-            <a href='/p/sick-day-box' className='w--button'>BUY PACK Of 3</a>
+            <a href="/p/sick-day-box" className="w--button">
+              BUY PACK Of 3
+            </a>
           </div>
         </article>
       </div>
