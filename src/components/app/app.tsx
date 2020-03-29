@@ -13,7 +13,6 @@ class App extends React.Component<any, any> {
   }
 
   render() {
-    console.log('asd', this.props);
     return (
       <div>
         <Provider store={store}>{routeMap()}</Provider>

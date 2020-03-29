@@ -1,7 +1,7 @@
 import React from 'react';
 import Loadable from 'react-loadable';
 import Home from './../components/home/Home';
-import { fetchAboutData } from '../helpers/loadData';
+import { fetchAboutData, fetchProductData } from '../helpers/loadData';
 import PageNotFound from '../components/functional/PageNotFound/PageNotFound';
 import Product from './../components/product/Product';
 
@@ -52,7 +52,8 @@ export default [
   },
   {
     component: Product,
-    path: '/p/:id'
+    path: '/p/:id',
+    loadData: fetchProductData
   },
   {
     component: Cart,

@@ -81,8 +81,8 @@ module.exports = {
   },
   plugins: [
     new webpack.DefinePlugin({
-      __isBrowser__: "true",
-      __isForGHPAGE__: JSON.stringify(isForGHPAGE)
+      __isBrowser__: JSON.stringify(true),
+      __isForGHPAGE__: JSON.stringify(true)
     }),
     new MiniCssExtractPlugin({
         filename: '[name].css' ,

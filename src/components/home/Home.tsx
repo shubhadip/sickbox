@@ -10,18 +10,6 @@ import { data, renderTitles } from './../../constants';
 const product = require('./../../assets/img/product.png');
 import './home.scss';
 
-// interface Iprops {
-//   isMobileDevice?: boolean;
-//   todos?: string[];
-// }
-
-// interface IState {
-//   todo?: {
-//     list: string[];
-//   };
-//   email?: string;
-// }
-
 class Home extends React.Component<any, any> {
   constructor(props) {
     super(props);
@@ -31,9 +19,9 @@ class Home extends React.Component<any, any> {
   }
 
   componentDidMount() {
-    const { todos = [] } = this.props;
+    const { todos = [], dispatch } = this.props;
     if (!todos.length) {
-      fetchAboutData();
+      fetchAboutData(dispatch);
     }
   }
 
@@ -56,7 +44,6 @@ class Home extends React.Component<any, any> {
   };
 
   render() {
-    console.log('hkhkjhjk', this.props);
     return (
       <>
         <section className="hcontainer">

@@ -6,7 +6,6 @@ class PageNotFound extends React.Component {
   }
 
   render() {
-    console.log('hkhkjhjk', this.props);
     return <div>Page Not Found</div>;
   }
 }

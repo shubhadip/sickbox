@@ -67,9 +67,10 @@ module.exports = {
     externals: [webpackNodeExternals()],
     plugins:[
         new webpack.DefinePlugin({
-            __isBrowser__: "false",
+            __isBrowser__: JSON.stringify(false),
+            __isForGHPAGE__: JSON.stringify(false),
             'process.env': {
-                'NODE_ENV': JSON.stringify('production')
+                'NODE_ENV': JSON.stringify('production'),
             }
         }),
         // new webpack.optimize.UglifyJsPlugin(),
