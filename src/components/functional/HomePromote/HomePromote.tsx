@@ -5,7 +5,7 @@ import './HomePromote.scss';
 export const HomePromote = () => {
   const isForGHPAGE = __isForGHPAGE__;
 
-  const href = isForGHPAGE ? '/sickbox/p/sick-day-box' : '/p/sick-day-box'
+  const href = isForGHPAGE ? '/sickbox/p/sick-day-box' : '/p/sick-day-box';
 
   return (
     <section className="homepromote-wrapper">
