@@ -1,7 +1,7 @@
 /***** common mixin for keyframe
 use : @mixin AnimateContent 0.5s, dropdownfadeIn, 0.25s;
 *****/
-@define-mixin AnimateContent $delay: 0.5s, $name: slideup, $duration: 0.25s {
+@define-mixin AnimateContent($delay: 0.5s, $name: slideup, $duration: 0.25s) {
     animation-name: $name;
     animation-duration: $duration;
     animation-iteration-count: 1;

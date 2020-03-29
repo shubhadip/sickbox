@@ -7,6 +7,9 @@ import { ingredients, productData } from './../../constants';
 interface IState {
   qty: string;
   showMore: boolean;
+  ingredient: boolean;
+  nutritionFacts: boolean;
+  howToUse: boolean;
 }
 
 class Product extends React.Component<any, IState> {
@@ -14,7 +17,10 @@ class Product extends React.Component<any, IState> {
     super(props);
     this.state = {
       qty: '1',
-      showMore: false
+      showMore: false,
+      ingredient: false,
+      nutritionFacts: false,
+      howToUse: false
     };
   }
 
@@ -30,8 +36,34 @@ class Product extends React.Component<any, IState> {
     });
   };
 
-  renderIngredients() {
-    return ingredients.map(item => <li key={item}>{item}</li>);
+  handleNutritionFact = () => {
+    this.setState({
+      ...this.state,
+      nutritionFacts: !this.state.nutritionFacts
+    });
+  };
+
+  handleHowToUse = () => {
+    this.setState({
+      ...this.state,
+      howToUse: !this.state.howToUse
+    });
+  };
+
+  handleIngredientToggle = () => {
+    this.setState({
+      ...this.state,
+      ingredient: !this.state.ingredient
+    });
+  };
+
+  renderIngredients(asinline: boolean = false) {
+    return ingredients.map((item, index) => (
+      <li key={item}>
+        {item}
+        {asinline && index < ingredients.length - 1 ? ',' : ''}
+      </li>
+    ));
   }
 
   renderArticleImage = () => {
@@ -45,6 +77,7 @@ class Product extends React.Component<any, IState> {
     });
   };
   render() {
+    const { ingredient, nutritionFacts, howToUse } = this.state;
     return (
       <div className="product-container">
         <div className="">
@@ -115,6 +148,77 @@ class Product extends React.Component<any, IState> {
                 className="ingr-image"
                 src="https://images.ctfassets.net/iw4cawak30d4/5etL3Uy9hmgNdwa7u9HMaw/661f3ad60f7e0ac8fe0a79496b9a0bd0/Ginger___Greens_ingredients-image_2x-squashed.jpeg?w=550&fl=progressive"
               />
+            </div>
+          </div>
+        </section>
+        <section>
+          <div className="container ingredient-dd">
+            <div>
+              <p className="ingrients-p">
+                <span className="contain">Ingredients</span>
+                <span
+                  className={[
+                    'icon_down_solid',
+                    ingredient ? 'opened' : ''
+                  ].join(' ')}
+                  onClick={this.handleIngredientToggle}
+                />
+              </p>
+              {/* {ingredient ? ( */}
+              <div
+                className={[ingredient ? ' ingr-opened' : 'ingr-closed'].join(
+                  ' '
+                )}
+              >
+                <p>Contains : </p>
+                <ul>{this.renderIngredients(true)}</ul>
+              </div>
+              {/* ) : null} */}
+            </div>
+          </div>
+          <div className="container ingredient-dd">
+            <div>
+              <p className="ingrients-p">
+                <span className="contain">Nutrition Facts</span>
+                <span
+                  className={[
+                    'icon_down_solid',
+                    nutritionFacts ? 'opened' : ''
+                  ].join(' ')}
+                  onClick={this.handleNutritionFact}
+                />
+              </p>
+              <div
+                className={[
+                  nutritionFacts ? ' nutri-opened' : 'nutri-closed'
+                ].join(' ')}
+              >
+                <p>Contains : </p>
+                <ul>{this.renderIngredients(true)}</ul>
+              </div>
+            </div>
+          </div>
+          <div className="container ingredient-dd">
+            <div>
+              <p className="ingrients-p">
+                <span className="contain">How To Use</span>
+                <span
+                  className={['icon_down_solid', howToUse ? 'opened' : ''].join(
+                    ' '
+                  )}
+                  onClick={this.handleHowToUse}
+                />
+              </p>
+              {/* {howToUse ? ( */}
+              <div
+                className={[
+                  howToUse ? ' howtouse-opened' : 'howtouse-closed'
+                ].join(' ')}
+              >
+                <p>Contains : </p>
+                <ul>{this.renderIngredients(true)}</ul>
+              </div>
+              {/* ) : null} */}
             </div>
           </div>
         </section>

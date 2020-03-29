@@ -125,6 +125,50 @@
         }
         
     }
+    .ingredient-dd{
+        padding: 20px 25px;
+        border-top: 2px solid #f2f3f3;
+        .ingr-closed,.howtouse-closed,.nutri-closed{
+            visibility: hidden;
+            transition: opacity 1s ease-out;
+            opacity: 0;
+            display: none;
+        }
+        .ingr-opened,.howtouse-opened,.nutri-opened{
+            visibility: visible;
+            transition: opacity 1s ease-in;
+            opacity: 1;
+            display: block;
+        }
+        .ingrients-p{
+            position: relative;
+            opacity: .8;
+            .contain{
+                font-size: 20px;
+            }
+            .icon_down_solid{
+                opacity: .6;
+                cursor: pointer;
+                &:before{
+                    position: absolute;
+                    right: 10px;
+                }
+                &.opened{
+                    &:before {
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+        }
+        ul{
+            list-style: none;
+            li{
+                display: inline;
+                margin-left: 5px;
+                padding: 4px;
+            }
+        }
+    }
     .subscribe{
         padding: 30px 0px;
         text-align: center;
@@ -233,12 +277,57 @@
                 }
                 .w--button{
                     border-radius: 0px;
-                    border: 1px solid black;
+                    border: 1px solid $black;
                     margin-top: 10px;
                 }
                 .desc{
                     font-size: 11px;
                     max-width: 600px;
+                }
+            }
+        }
+        .ingredient-dd{
+            padding: 20px 10px;
+            border-top: 2px solid #f2f3f3;
+            .ingr-closed,.howtouse-closed,.nutri-closed{
+                visibility: hidden;
+                transition: opacity 1s ease-out;
+                opacity: 0;
+                display: none;
+            }
+            .ingr-opened,.howtouse-opened,.nutri-opened{
+                visibility: visible;
+                transition: opacity 1s ease-in;
+                opacity: 1;
+                display: block;
+            }
+            .ingrients-p{
+                position: relative;
+                opacity: .8;
+
+                .contain{
+                    font-size: 20px;
+                }
+                .icon_down_solid{
+                    opacity: .6;
+                    cursor: pointer;
+                    &:before{
+                        position: absolute;
+                        right: 10px;
+                    }
+                    &.opened{
+                        &:before {
+                            transform: rotate(180deg);
+                        }
+                    }
+                }
+            }
+            ul{
+                list-style: none;
+                li{
+                    display: inline;
+                    margin-left: 5px;
+                    padding: 4px;
                 }
             }
         }
