@@ -22,10 +22,25 @@
             font-size: 20px;
         }
         .title{
+            color: $black;
             font-size: 36px;
-            color: $red;
+            &.icon_rupee{
+                &:before{
+                    font-size: 24px;
+                }
+            }
+        }
+        .rupee{
+            font-size: 24px;
+            margin-top: 15px;
+            .icon_rupee{
+                &:before{
+                    font-size: 18px;
+                }
+            }
         }
         .price{
+            display: none;
             font-size: 30px;
             color:  $black;
         }
@@ -43,22 +58,36 @@
                 text-align: center;
             }
         }
+        .title-wrapper{
+            /* display: none; */
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 0px;
+        }
         .add-to-cart{
             margin: 20px 0px;
             outline: none;
             .w--button{
                 color: $white;
-            background-color: $red;
+                background-color: $red;
+                width: 100%;
+                font-weight: bold;
             }
         }
         .ing{
             text-align: left;
             color: $black;
+            margin-top: 50px;
+            font-weight: normal;
             .desc-title{
                 font-size: 20px;
             }
             .desc-subtitle{
                 font-size: 16px;
+                margin-top: 30px;
             }
             ul{
                 // list-style: none;
@@ -68,6 +97,12 @@
                 }
             }
         }
+    }
+    .ingr{
+        display: none;
+    }
+    .ingr-wrapper{
+        display: none;
     }
     .subscribe{
         padding: 30px 0px;
@@ -82,18 +117,104 @@
 @media only screen and (min-width: $screen-width-xs + 1){
     .product-container{
         background-color: $white;
-        color: red;
+        color: black;
+        min-height: 60vh;
         .product-details-wrapper{
             display: flex;
             justify-content: space-around;
+            align-items: center;
             .productimage-wrapper{
                 max-width: 600px;
+                .product-img{
+                    width: 99%;
+                    height: 60vh;
+                }
+            }
+            .detail-wrapper{
+                padding: 10px;
+                width: 400px;
+                height: 70vh;
+                .title{
+                    display: block;
+                    color:$black;
+                }
+                .price{
+                    display: block;
+                    font-size: 14px;
+                    color: $black;
+                    font-weight: normal;
+                    margin-top: 15px;
+                    opacity: .5;
+                    font-size: 18px;
+                }
+                .rupee{
+                    color: $black;
+                        margin-top: 15px;
+                        font-size: 24px;
+                        
+                    .icon_rupee{
+                        margin-right: 18px;
+                        &:before{
+                            font-size: 18px;
+                            margin-left: 3px;
+                        }
+                    }
+                }
+                .title-wrapper{
+                    display: flex;
+                    flex-wrap: wrap;
+                    list-style: none;
+                    padding: 10px;
+                    justify-content: center;
+                    li{
+                        margin: 5px;
+                    }
+                }
+                .w--button{
+                    color: $white;
+                    background-color: $red;
+                    border: 1px solid $white;
+                    border-radius: 0px;
+                    font-weight: normal;
+                    width: 100%;
+                    padding: 15px;
+                    font-size: 16px;
+                }
             }
             .ing{
                 display: none;
             }
         }
-
+        .ingr-wrapper{
+            display: block;
+            margin-top: 30px;
+            padding-top: 20px;
+            text-align: left;
+            background-color: $white;
+            border-top: 2px solid #f2f3f3;
+            .desc-title{
+                font-size: 24px;
+                font-weight: 400;
+            }
+            .desc-subtitle{
+                margin-top: 20px;
+                font-size: 16px;
+                font-weight: 400;
+            }
+        }
+        .ingr{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            ul{
+                padding: 10px 0px;
+                list-style: none;
+                li{
+                   padding: 10px 10px 10px 0px;
+                }
+            }
+        }
         .subscribe{
             padding: 30px 0px;
             text-align: center;

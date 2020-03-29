@@ -11,7 +11,6 @@ const CompressionPlugin = require('compression-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 const devMode = process.env.NODE_ENV !== 'production';
-console.log(process.env.NODE_ENV);
 
 module.exports = {
     mode: 'production',

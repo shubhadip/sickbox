@@ -10,7 +10,6 @@ export default function(getComponent: any) {
       if (!this.state.Component) {
         getComponent().then((Component: any) => {
           AsyncComponent.Component = Component;
-          console.log('called dynamic import');
           this.setState({ Component });
         });
       }

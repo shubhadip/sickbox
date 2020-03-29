@@ -41,6 +41,10 @@ export const data = [
   }
 ];
 
+export const productData = data.filter(
+  elem => elem.title !== 'Amazon Movie Rental'
+);
+
 export const renderTitles = [
   'ginger ale',
   'herbal tea',
@@ -49,17 +53,26 @@ export const renderTitles = [
   'cough drops'
 ];
 
-export const ingredients = [
+export const ingredientMap1 = [
   'Chicken Noodle Soup',
   'Digital Thermometer',
   'Assorted Herbal Tea',
-  'Ginger Ale',
+  'Ginger Ale'
+];
+export const ingredientMap2 = [
   'Saltines',
   'Breath Mints',
   'Cough Drops',
-  'Tissues',
+  'Tissues'
+];
+export const ingredientMap3 = [
   'Ginger Candy',
   'Hot Chocolate',
   'Emergen-C',
   'Free Movie Rental (Not pictured)'
+];
+export const ingredients = [
+  ...ingredientMap1,
+  ...ingredientMap2,
+  ...ingredientMap3
 ];
