@@ -98,11 +98,32 @@
             }
         }
     }
-    .ingr{
-        display: none;
-    }
     .ingr-wrapper{
-        display: none;
+        text-align: center;
+        border-top: 2px solid #f2f3f3;
+        margin-bottom: 20px;
+        .ingr-image{
+            width: 400px;
+        }
+        .w--button{
+            margin-top: 30px;
+            height: 40px;
+        }
+        .ingr-content{
+            padding: 0px 15px 15px 15px;
+            text-align: center;
+            min-height: 200px;
+            .desc-title{
+                margin-top: 30px;
+            }
+            .desc-subtitle{
+                margin-top: 30px;
+            }
+            .desc{
+                font-size: 12px;
+            }
+        }
+        
     }
     .subscribe{
         padding: 30px 0px;
@@ -186,32 +207,38 @@
             }
         }
         .ingr-wrapper{
-            display: block;
-            margin-top: 30px;
-            padding-top: 20px;
-            text-align: left;
-            background-color: $white;
-            border-top: 2px solid #f2f3f3;
-            .desc-title{
-                font-size: 24px;
-                font-weight: 400;
-            }
-            .desc-subtitle{
-                margin-top: 20px;
-                font-size: 16px;
-                font-weight: 400;
-            }
-        }
-        .ingr{
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            position: relative;
-            ul{
-                padding: 10px 0px;
-                list-style: none;
-                li{
-                   padding: 10px 10px 10px 0px;
+            justify-content: space-around;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            padding: 20px 0px;
+            background-color: $white;
+            border-top: 2px solid #f2f3f3;
+            .ingr-image{
+                width: auto;
+            }
+            .ingr-content{
+                width: 600px;
+                text-align: center;
+                min-height: 200px;
+                .desc-title{
+                    font-size: 24px;
+                    font-weight: 400;
+                }
+                .desc-subtitle{
+                    margin-top: 20px;
+                    font-size: 16px;
+                    font-weight: 400;
+                }
+                .w--button{
+                    border-radius: 0px;
+                    border: 1px solid black;
+                    margin-top: 10px;
+                }
+                .desc{
+                    font-size: 11px;
+                    max-width: 600px;
                 }
             }
         }
