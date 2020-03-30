@@ -23,8 +23,19 @@ export function saveAccessCredentials(values) {
   setCookie('Access-Token', accessToken);
 }
 
+export const guestToken = () => {
+  let d = new Date().getTime();
+  const randomToken = 'xxxxxxxxxxxxxxxxyxxxxxxxxxxxxxxx'.replace(/[xy]/g, c => {
+    const r = (d + Math.random() * 16) % 16 | 0;
+    d = Math.floor(d / 16);
+    return (c === 'x' ? r : (r & 0x3) | 0x8).toString(16);
+  });
+  setCookie('token', randomToken);
+  return randomToken;
+};
+
 export function getToken() {
-  return getFromCookie('token');
+  return getFromCookie('token') || guestToken();
 }
 
 export function getAccessToken() {

@@ -3,6 +3,8 @@ import { hot } from 'react-hot-loader';
 import './product.scss';
 import Subscribe from '../common/subscribe/Subscribe';
 import Button from '../common/Button/Button';
+import { connect } from 'react-redux';
+import { addToCart } from './../../actions/index';
 import { ingredients, productData } from './../../constants';
 interface IState {
   qty: string;
@@ -27,7 +29,12 @@ class Product extends React.Component<any, IState> {
   componentDidMount() {}
 
   handleChange() {}
-  addToCart() {}
+  handleCart = () => {
+    this.props.addToCart({
+      product_id: 1,
+      quantity: 1
+    });
+  };
 
   handleShowMore = () => {
     this.setState({
@@ -104,10 +111,7 @@ class Product extends React.Component<any, IState> {
                 <hr />
                 <ul className="title-wrapper">{this.renderArticleImage()}</ul>
                 <div className="add-to-cart">
-                  <Button
-                    onClick={() => this.addToCart}
-                    title={'Add To Cart'}
-                  />
+                  <Button onClick={this.handleCart} title={'Add To Cart'} />
                 </div>
                 {/* <div className="ing">
                   <p className="desc-title">
@@ -255,4 +259,4 @@ class Product extends React.Component<any, IState> {
   }
 }
 
-export default hot(module)(Product);
+export default hot(module)(connect(null, { addToCart })(Product));

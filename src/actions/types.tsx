@@ -4,3 +4,6 @@ export const AUTH_ERROR = 'auth_error';
 
 export const INCREMENT = 'increment';
 export const TODOS = 'todos';
+
+export const SAVE_PRODUCT_DETAILS = 'save_product_details';
+export const SAVE_CART_DETAILS = 'save_cart_details';

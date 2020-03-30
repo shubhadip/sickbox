@@ -8,8 +8,9 @@ import express from 'express';
 import { StaticRouter, matchPath } from 'react-router-dom';
 import { createStore } from 'redux';
 import rootReducer from '../reducers';
-import { filterData } from './utils';
-import { routeMap } from '../router';
+import { filterData } from '../utils/filters';
+import RouteMap from './../router/index';
+// const url = require('url');
 
 const mobileDetect = require('mobile-detect');
 const app = express();
@@ -35,14 +36,17 @@ app.get('*', (req, res, next) => {
     }
   };
   let promise;
-  const currentRoute = Routes.find(route => matchPath(req.url, route)) || {};
+  const currentRoute = Routes.find(route => matchPath(req.url, route)) || {
+    routeName: 'pagenotfound'
+  };
+
   promise = currentRoute['loadData']
-    ? currentRoute['loadData']()
+    ? currentRoute['loadData'](req.url)
     : Promise.resolve({});
 
   promise
     .then((response: any) => {
-      const cleanedData = filterData(req.path, response.data) || {};
+      const cleanedData = filterData(currentRoute.routeName, response) || {};
       preloadedState = { ...preloadedState, ...cleanedData };
       const store = createStore(rootReducer, preloadedState);
 
@@ -50,7 +54,9 @@ app.get('*', (req, res, next) => {
         <Loadable.Capture report={moduleName => modules.push(moduleName)}>
           <Provider store={store}>
             <StaticRouter location={req.path} context={context}>
-              <div>{routeMap()}</div>
+              <div>
+                <RouteMap />
+              </div>
             </StaticRouter>
           </Provider>
         </Loadable.Capture>
@@ -85,15 +91,15 @@ window.__PRELOADED_STATE__ = ${(JSON.stringify(finalState) as any).replace(
         '\\u003c'
       )}
 </script>
-          <script type="text/javascript" src="${
+          <script type="text/javascript" src="/${
             vendorfiles[0]
           }" async ></script>
           ${jsBudles
             .map(bundle => {
-              return `<script type="text/javascript" src="${bundle.file}"  defer></script>`;
+              return `<script type="text/javascript" src="/${bundle.file}"  defer></script>`;
             })
             .join('\\n')}
-          <script type="text/javascript" src="${mainFiles[1]}"  defer></script>
+          <script type="text/javascript" src="/${mainFiles[1]}"  defer></script>
         </body>
       </html>
     `);

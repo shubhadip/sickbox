@@ -1,17 +1,24 @@
 import * as React from 'react';
 import { hot } from 'react-hot-loader';
 import { connect } from 'react-redux';
-import { fetchAboutData } from './../../helpers/loadData';
+import { fetchProductDetails } from './../../actions/index';
 import HomeBox from './../functional/HomeBoxes/homeBox';
 import HomePromote from './../functional/HomePromote/HomePromote';
 import Subscribe from './../common/subscribe/Subscribe';
 
-import { data, renderTitles } from './../../constants';
+import { renderTitles } from './../../constants';
 const product = require('./../../assets/img/product.png');
+
 import './home.scss';
 
-class Home extends React.Component<any, any> {
-  constructor(props) {
+interface IProps {
+  productData: any;
+  fetchProductDetails: any;
+  items: any[];
+}
+
+class Home extends React.Component<IProps, any> {
+  constructor(props: IProps) {
     super(props);
     this.state = {
       email: ''
@@ -19,21 +26,23 @@ class Home extends React.Component<any, any> {
   }
 
   componentDidMount() {
-    const { todos = [], dispatch } = this.props;
-    if (!todos.length) {
-      fetchAboutData(dispatch);
+    const { items } = this.props;
+    if (!items.length) {
+      this.props.fetchProductDetails('sick-day-box');
     }
   }
 
   renderSections = () => {
+    // console.log('items', this.props.items)
+    const data = this.props.items;
     return data.map(article => {
       return (
         <HomeBox
           altTag={article.altTag}
           title={article.title}
-          desc={article.desc}
-          url={article.imgUrl}
-          key={article.altTag}
+          description={article.description}
+          imageUrl={article.imageUrl}
+          key={article.title}
         />
       );
     });
@@ -92,8 +101,13 @@ class Home extends React.Component<any, any> {
 
 function mapStateToProps(state) {
   return {
-    todos: state.todo && state.todo.list
+    productData: state.product && state.product.product,
+    items:
+      (state.product && state.product.product && state.product.product.items) ||
+      []
   };
 }
 
-export default hot(module)(connect(mapStateToProps, null)(Home));
+export default hot(module)(
+  connect(mapStateToProps, { fetchProductDetails })(Home)
+);

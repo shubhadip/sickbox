@@ -1,7 +1,7 @@
 import React from 'react';
 import Loadable from 'react-loadable';
 import Home from './../components/home/Home';
-import { fetchAboutData, fetchProductData } from '../helpers/loadData';
+import { fetchProductData, fetchHomeData } from '../actions/index';
 import PageNotFound from '../components/functional/PageNotFound/PageNotFound';
 import Product from './../components/product/Product';
 
@@ -29,7 +29,7 @@ const Contact = Loadable({
 
 const Cart = Loadable({
   loader: () =>
-    import(/* webpackChunkName: 'Contact' */ './../components/cart/Cart'),
+    import(/* webpackChunkName: 'Cart' */ './../components/cart/Cart'),
   loading,
   modules: ['./../components/cart/Cart'],
   webpack: () => [(require as any).resolveWeak('./../components/cart/Cart')]
@@ -38,29 +38,35 @@ const Cart = Loadable({
 export default [
   {
     component: Home,
+    routeName: 'home',
     path: '/',
     exact: true,
-    loadData: fetchAboutData
+    loadData: fetchHomeData
   },
   {
     component: About,
+    routeName: 'about',
     path: '/about'
   },
   {
     component: Contact,
+    routeName: 'contact',
     path: '/contact'
   },
   {
     component: Product,
+    routeName: 'product',
     path: '/p/:id',
     loadData: fetchProductData
   },
   {
     component: Cart,
+    routeName: 'cart',
     path: '/cart'
   },
   {
     component: PageNotFound,
+    routeName: 'pagenotfound',
     path: '*'
   }
 ];

@@ -54,7 +54,7 @@ export function signinUser({ email, password }) {
         password
       }
     };
-    const headers = GetHeaders(false);
+    const headers = GetHeaders();
     axios
       .post(`${API_URL}${AUTHENTICATION_URL}`, auth, headers)
       .then(response => {

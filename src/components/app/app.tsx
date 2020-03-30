@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Provider } from 'react-redux';
 import store from './../../configureStore';
 import './../../scss/main.scss'; // this has to be on the top
-import { routeMap } from '../../router';
+import RouteMap from '../../router';
 
 interface IProps {
   isMobileDevice?: boolean;
@@ -15,7 +15,9 @@ class App extends React.Component<any, any> {
   render() {
     return (
       <div>
-        <Provider store={store}>{routeMap()}</Provider>
+        <Provider store={store}>
+          <RouteMap />
+        </Provider>
       </div>
     );
   }
