@@ -1,7 +1,7 @@
 import React from 'react';
 import Loadable from 'react-loadable';
 import Home from './../components/home/Home';
-import { fetchProductData, fetchHomeData } from '../actions/index';
+import { fetchHomeData } from '../actions/index';
 import PageNotFound from '../components/functional/PageNotFound/PageNotFound';
 import Product from './../components/product/Product';
 
@@ -57,7 +57,7 @@ export default [
     component: Product,
     routeName: 'product',
     path: '/p/:id',
-    loadData: fetchProductData
+    loadData: fetchHomeData
   },
   {
     component: Cart,

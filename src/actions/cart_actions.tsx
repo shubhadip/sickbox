@@ -25,7 +25,7 @@ export function addToCart(payload) {
     axios
       .post(`${API_URL}/carts`, payload, GetHeaders())
       .then(response => {
-        dispatch(fetchCartDetails);
+        dispatch(fetchCartDetails());
       })
       .catch(error => {
         console.log('error', error);
