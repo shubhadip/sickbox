@@ -27,7 +27,7 @@
         }
         .w--button{
             color: $white;
-            background-color: $red;
+            background-color: lighten($red, 20%);
         }
     }
 }

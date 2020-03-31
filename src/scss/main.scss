@@ -113,7 +113,7 @@
 
 
 html {
-  font-family: $font-montserrat !important;;
+  font-family: $font-montserrat !important;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
@@ -1514,4 +1514,7 @@ ol ol {
   background-color: #404657;
 }
 
+.free{
+  color: rgb(111, 186, 49);
+}
 @import 'common';
