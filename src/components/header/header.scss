@@ -18,8 +18,22 @@
         }
     }
     .cart{
+        position: relative;
         cursor: pointer;
+        margin-right: 10px;
         font-size: 25px;
+        .cartCount{
+            position: absolute;
+            font-size: 13px;
+            top: 0px;
+            right: -7px;
+            background: $bg-black;
+            border-radius: 12px;
+            height: 18px;
+            width: 18px;
+            text-align: center;
+            border: 1px solid $white;
+        }
     }
     .mobile-ham{
         position: absolute;

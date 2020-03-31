@@ -9,7 +9,8 @@ export default function(
 ) {
   switch (action.type) {
     case SAVE_CART_DETAILS:
-      return { ...state, cart: action.payload && action.payload.carts };
+      const carts = (action.payload && action.payload.carts) || {};
+      return { ...state, ...carts };
     default:
       return { ...state };
   }
