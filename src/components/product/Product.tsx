@@ -6,6 +6,7 @@ import Button from '../common/Button/Button';
 import { connect } from 'react-redux';
 import { addToCart } from './../../actions/index';
 import { ingredients, productData } from './../../constants';
+import { fetchProductDetails } from './../../actions/index';
 interface IState {
   qty: string;
   showMore: boolean;
@@ -26,7 +27,9 @@ class Product extends React.Component<any, IState> {
     };
   }
 
-  componentDidMount() {}
+  componentDidMount() {
+    this.props.fetchProductDetails('sick-day-box');
+  }
 
   handleChange() {}
   handleCart = () => {
@@ -259,4 +262,4 @@ class Product extends React.Component<any, IState> {
   }
 }
 
-export default hot(module)(connect(null, { addToCart })(Product));
+export default hot(module)(connect(null, { addToCart, fetchProductDetails })(Product));

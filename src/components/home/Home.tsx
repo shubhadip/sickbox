@@ -12,7 +12,6 @@ const product = require('./../../assets/img/product.png');
 import './home.scss';
 
 interface IProps {
-  productData: any;
   fetchProductDetails: any;
   items: any[];
 }
@@ -101,9 +100,8 @@ class Home extends React.Component<IProps, any> {
 
 function mapStateToProps(state) {
   return {
-    productData: state.product && state.product.product,
     items:
-      (state.product && state.product.product && state.product.product.items) ||
+      (state.product && state.product && state.product.items) ||
       []
   };
 }

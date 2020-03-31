@@ -1,9 +1,7 @@
 import { SAVE_PRODUCT_DETAILS } from '../actions/types';
 
 export default function(
-  state = {
-    product: {}
-  },
+  state = {},
   action: {
     type: string;
     payload: any;
@@ -11,7 +9,7 @@ export default function(
 ) {
   switch (action.type) {
     case SAVE_PRODUCT_DETAILS:
-      return { ...state, product: action.payload };
+      return { ...state, ...action.payload };
     default:
       return { ...state };
   }

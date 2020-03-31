@@ -1,7 +1,7 @@
 export const homeData = response => {
   return {
     product: {
-      product: response[0].data
+      ...response[0].data
     },
     cart: {
       ...response[1].data.carts

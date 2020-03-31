@@ -4,6 +4,7 @@ import { SAVE_PRODUCT_DETAILS } from './types';
 import { API_URL } from './../services/api_urls';
 import { GetHeaders } from './../credentials/access_headers';
 
+
 export function fetchProductDetails(url: string) {
   return dispatch => {
     axios
