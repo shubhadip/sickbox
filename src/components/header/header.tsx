@@ -8,7 +8,7 @@ import './header.scss';
 
 interface Iprops {
   isMobileDevice?: boolean;
-  cart_quantity?: number
+  cart_quantity?: number;
 }
 
 class Header extends React.Component<Iprops, any> {
@@ -40,7 +40,7 @@ class Header extends React.Component<Iprops, any> {
               </span>
             </div>
             <div className="cart" onClick={this.handleClick}>
-              <span className='cartCount'>{this.props.cart_quantity}</span>
+              <span className="cartCount">{this.props.cart_quantity}</span>
               <span className="icon_bag" />
             </div>
           </div>
