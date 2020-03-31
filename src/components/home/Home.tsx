@@ -100,9 +100,7 @@ class Home extends React.Component<IProps, any> {
 
 function mapStateToProps(state) {
   return {
-    items:
-      (state.product && state.product && state.product.items) ||
-      []
+    items: (state.product && state.product && state.product.items) || []
   };
 }
 

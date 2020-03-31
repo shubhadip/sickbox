@@ -262,4 +262,6 @@ class Product extends React.Component<any, IState> {
   }
 }
 
-export default hot(module)(connect(null, { addToCart, fetchProductDetails })(Product));
+export default hot(module)(
+  connect(null, { addToCart, fetchProductDetails })(Product)
+);
