@@ -9,6 +9,8 @@ import {
   fetchCartDetails,
   addToCart
 } from './cart_actions';
+
+import {subscribeUser} from './subscribe_actions'
 import {
     fetchProductData,
     fetchHomeData
@@ -39,4 +41,7 @@ export {
 export {
   fetchCartDetails,
   addToCart
-}
+};
+export {
+  subscribeUser
+};

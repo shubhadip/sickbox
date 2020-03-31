@@ -40,7 +40,9 @@ class Header extends React.Component<Iprops, any> {
               </span>
             </div>
             <div className="cart" onClick={this.handleClick}>
-              <span className="cartCount">{this.props.cart_quantity}</span>
+              {this.props.cart_quantity ? (
+                <span className="cartCount">{this.props.cart_quantity}</span>
+              ) : null}
               <span className="icon_bag" />
             </div>
           </div>

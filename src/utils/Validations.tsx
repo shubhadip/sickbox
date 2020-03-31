@@ -227,7 +227,6 @@ export const validationHandler  = (value: any, validationArray: any)  => {
 
 	if (Object.prototype.toString.call(validationArray) !== '[object Array]') {
 		throw new Error('validationArray should be an array (In Validations.ts)')
-		return
 	} else {
 		for (let i = 0; i < validationArray.length; i++) {
 			if (typeof validationArray[i] == 'string') {
@@ -255,11 +254,9 @@ export const validationHandler  = (value: any, validationArray: any)  => {
 					}
 				} else {
 					throw new Error('Validation object must have name key')
-					return
 				}
 			} else {
 				throw new Error('Valdiation rules can only be of type string or object')
-				return
 			}
 
 			// breaking if any one validation is false

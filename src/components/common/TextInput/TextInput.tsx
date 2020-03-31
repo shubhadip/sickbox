@@ -36,6 +36,7 @@ interface IProps {
   focusOnMount?: boolean;
   onFocus?: () => void;
   readOnly?: boolean;
+  refIp?: any;
 }
 // interface IValidation {
 //   isValid?: boolean;
@@ -250,7 +251,7 @@ class TextInput extends React.Component<IProps, IState> {
         {prefixText ? <span className="input-prefix">{prefixText}</span> : null}
         <input
           id={uniqueKey}
-          ref={this.inputRef}
+          ref={this.props.refIp}
           type="text"
           tabIndex={0}
           value={value}

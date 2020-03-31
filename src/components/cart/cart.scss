@@ -1,0 +1,93 @@
+@import './../../scss/variables';
+.cart-container{
+    background-color: $white;
+    .subscribe-wrapper{
+        text-align: center;
+    }
+    .subscribe{
+        width: 100%;
+        padding: 30px 0px;
+        background-color: #f2f3f3;
+        color: $bg-black;
+    }
+    .empty-cart-wrapper{
+        color: $bg-black;
+        width: 100%;
+        text-align: center;
+        .container{
+            padding: 50px 0px;
+        }
+        h1{
+            margin: 20px;
+        }
+        .continue-shopping {
+            margin: 20px;
+            p{
+                padding: 20px;
+            }
+        }
+        .w--text_input{
+            cursor: pointer;
+            margin: 20px;
+            width: 150px;
+            color: $bg-black;
+            padding: 10px;
+            background-color: $white;
+            text-decoration: none;
+            padding: 10px;
+            border: 2px solid $bg-black;
+            border-radius: 5px;
+            outline: none;
+            font-size: 16px;
+        }
+    }
+
+}
+
+
+@media only screen and (min-width: $screen-width-xs + 1){
+    .cart-container{
+        background-color: $white;
+        .subscribe-wrapper{
+            text-align: center;
+        }
+        .subscribe{
+            width: 100%;
+            padding: 30px 0px;
+            background-color: #f2f3f3;
+            color: $bg-black;
+        }
+        .empty-cart-wrapper{
+            color: $bg-black;
+            width: 100%;
+            text-align: center;
+            .container{
+                padding: 50px 0px;
+            }
+            h1{
+                margin: 20px;
+            }
+            .continue-shopping {
+                margin: 20px;
+                p{
+                    padding: 20px;
+                }
+            }
+            .w--text_input{
+                cursor: pointer;
+                margin: 20px;
+                width: 150px;
+                color: $bg-black;
+                padding: 10px;
+                background-color: $white;
+                text-decoration: none;
+                padding: 10px;
+                border: 2px solid $bg-black;
+                border-radius: 5px;
+                outline: none;
+                font-size: 16px;
+            }
+        }
+
+    }
+}
