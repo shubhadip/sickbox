@@ -30,7 +30,8 @@
     "strict": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": false
+    "noEmit": false,
+    "strictPropertyInitialization": false
   },
   "exclude": [
     "node_modules/**",
@@ -38,6 +39,7 @@
     "scripts",
     "acceptance-tests",
     "webpack",
-    "jest"
+    "jest",
+    "/src/components/common/modal"
   ]
 }

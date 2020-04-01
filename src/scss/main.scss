@@ -8,7 +8,6 @@
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 @import "variables";
-@import "mixins";
 @import "./../fonts/iconmoon/style.scss";
 
 @font-face {
@@ -1516,5 +1515,8 @@ ol ol {
 
 .free{
   color: rgb(111, 186, 49);
+}
+.modal-open{
+  overflow: hidden;
 }
 @import 'common';

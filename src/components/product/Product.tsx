@@ -4,9 +4,8 @@ import './product.scss';
 import Subscribe from '../common/subscribe/Subscribe';
 import Button from '../common/Button/Button';
 import { connect } from 'react-redux';
-import { addToCart } from './../../actions/index';
+import { fetchProductDetails, addToCart } from './../../actions/index';
 import { ingredients, productData } from './../../constants';
-import { fetchProductDetails } from './../../actions/index';
 interface IState {
   qty: string;
   showMore: boolean;
