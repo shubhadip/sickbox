@@ -51,6 +51,9 @@
 		}
 		&__close {
 			// @mixin iconCross;
+			&.icon_close{
+				margin-left: 10px;
+			}
 			position: absolute;
 			cursor: pointer;
 			right: 12px;

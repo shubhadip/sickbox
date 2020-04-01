@@ -6,6 +6,7 @@ import Subscribe from './../common/subscribe/Subscribe';
 const img = require('./../../assets/img/product.png');
 import './cart.scss';
 import Button from '../common/Button/Button';
+import Modal from '../common/modal/Modal';
 
 interface Iprops {
   isMobileDevice?: boolean;
@@ -13,12 +14,39 @@ interface Iprops {
   quantity?: number;
 }
 
-class Cart extends React.Component<Iprops, any> {
+interface IState {
+  showQtyModal?: boolean;
+}
+class Cart extends React.Component<Iprops, IState> {
   constructor(props: Iprops) {
     super(props);
+    this.state = {
+      showQtyModal: false
+    };
   }
 
   componentDidMount() {}
+  toggleQtyModal = () => {
+    this.setState({ ...this.state, showQtyModal: !this.state.showQtyModal });
+  };
+
+  renderQtyModal = () => {
+    const numbersArray = [1, 2, 3, 4, 5];
+    return (
+      <Modal
+        customClass={'qty-modal'}
+        isCloseOnOutSideClick={true}
+        isCloseOnEscape={true}
+        onClose={this.toggleQtyModal}
+      >
+        <ul>
+          {numbersArray.map(count => {
+            return <li key={count}>{count}</li>;
+          })}
+        </ul>
+      </Modal>
+    );
+  };
 
   renderProducts = () => {
     const { products = [] } = this.props;
@@ -40,7 +68,7 @@ class Cart extends React.Component<Iprops, any> {
             <p className="product-price">
               <i className="icon_rupee">{product.price}</i>
             </p>
-            <p className="product-qty">
+            <p className="product-qty" onClick={this.toggleQtyModal}>
               <span> Qty : </span>
               <span className="qty">{product.selected_qty}</span>
             </p>
@@ -127,6 +155,7 @@ class Cart extends React.Component<Iprops, any> {
             </div>
           </section>
         )}
+        {this.state.showQtyModal ? this.renderQtyModal() : null}
         <div className="subscribe container">
           <Subscribe />
         </div>
