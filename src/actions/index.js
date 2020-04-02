@@ -7,7 +7,8 @@ import {
 } from './product_actions';
 import {
   fetchCartDetails,
-  addToCart
+  addToCart,
+  updateCart
 } from './cart_actions';
 
 import {subscribeUser} from './subscribe_actions'
@@ -40,7 +41,8 @@ export {
 };
 export {
   fetchCartDetails,
-  addToCart
+  addToCart,
+  updateCart
 };
 export {
   subscribeUser

@@ -278,3 +278,36 @@
         }
     }
 }
+
+
+.cf-modal__content{
+    &.qty-modal{
+        width: 140px;
+        padding: 15px;
+        .qty-header{
+            text-align: center;
+            font-size: 13px;
+            letter-spacing: 0.5px;
+            color: $bg-black;
+            margin: 10px 5px;
+        }
+        ul{
+            list-style: none;
+            padding: 0px;
+            margin: 0px;
+            li{
+                padding: 10px;
+                font-size: 18px;
+                font-weight: normal;
+                text-align: center;
+                &:hover{
+                    background-color: #f2f3f3;
+                }
+                &.selected{
+                    color: lighten($red, 20%);
+                    font-weight: $medium;
+                }
+            }
+        }
+    }
+}

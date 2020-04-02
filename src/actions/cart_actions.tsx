@@ -32,3 +32,16 @@ export function addToCart(payload) {
       });
   };
 }
+
+export function updateCart(payload) {
+  return dispatch => {
+    axios
+      .patch(`${API_URL}/carts/${payload['cart_id']}`, payload, GetHeaders())
+      .then(response => {
+        dispatch(fetchCartDetails());
+      })
+      .catch(error => {
+        console.log('error', error);
+      });
+  };
+}

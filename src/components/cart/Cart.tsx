@@ -3,6 +3,7 @@ import { hot } from 'react-hot-loader';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import Subscribe from './../common/subscribe/Subscribe';
+import { updateCart } from './../../actions/index';
 const img = require('./../../assets/img/product.png');
 import './cart.scss';
 import Button from '../common/Button/Button';
@@ -12,10 +13,12 @@ interface Iprops {
   isMobileDevice?: boolean;
   products?: any[];
   quantity?: number;
+  updateCart?: any;
 }
 
 interface IState {
   showQtyModal?: boolean;
+  selectedProduct?: any;
 }
 class Cart extends React.Component<Iprops, IState> {
   constructor(props: Iprops) {
@@ -30,24 +33,54 @@ class Cart extends React.Component<Iprops, IState> {
     this.setState({ ...this.state, showQtyModal: !this.state.showQtyModal });
   };
 
+  updateCartQty = (qty?: number) => {
+    const payload = {
+      cart_id: this.state.selectedProduct.cart_id,
+      quantity: qty,
+      product_id: this.state.selectedProduct.product_id
+    };
+    this.props.updateCart(payload);
+    this.toggleQtyModal();
+  };
+
   renderQtyModal = () => {
     const numbersArray = [1, 2, 3, 4, 5];
+    const selectedQty =
+      this.state.selectedProduct && this.state.selectedProduct.selected_qty;
     return (
       <Modal
         customClass={'qty-modal'}
         isCloseOnOutSideClick={true}
         isCloseOnEscape={true}
         onClose={this.toggleQtyModal}
+        position={'center'}
+        header={'Select Quantity'}
+        customHeaderClass={'qty-header'}
       >
         <ul>
           {numbersArray.map(count => {
-            return <li key={count}>{count}</li>;
+            return (
+              <li
+                className={[selectedQty === count ? 'selected' : ''].join(' ')}
+                key={count}
+                onClick={() => this.updateCartQty(count)}
+              >
+                {count}
+              </li>
+            );
           })}
         </ul>
       </Modal>
     );
   };
-
+  selectedCartProduct = product => {
+    const data = {
+      ...this.state,
+      ...{ selectedProduct: product },
+      showQtyModal: !this.state.showQtyModal
+    };
+    this.setState({ ...data });
+  };
   renderProducts = () => {
     const { products = [] } = this.props;
     const data = products.map(product => {
@@ -68,7 +101,12 @@ class Cart extends React.Component<Iprops, IState> {
             <p className="product-price">
               <i className="icon_rupee">{product.price}</i>
             </p>
-            <p className="product-qty" onClick={this.toggleQtyModal}>
+            <p
+              className="product-qty"
+              onClick={() => {
+                this.selectedCartProduct(product);
+              }}
+            >
               <span> Qty : </span>
               <span className="qty">{product.selected_qty}</span>
             </p>
@@ -170,4 +208,4 @@ function mapStateToProps(state) {
     quantity: state.cart && state.cart.total_quantity
   };
 }
-export default hot(module)(connect(mapStateToProps, null)(Cart));
+export default hot(module)(connect(mapStateToProps, { updateCart })(Cart));
