@@ -36,7 +36,7 @@ export const HomePromote = () => {
         <article>
           <img
             src="https://cdn.shopify.com/s/files/1/2225/6647/files/office_660x440.png"
-            alt=""
+            alt="pack-of-3"
           />
           <div className="content-wrapper">
             <p className="heading"> Stock up the office.</p>

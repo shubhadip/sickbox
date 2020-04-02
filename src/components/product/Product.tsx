@@ -79,7 +79,7 @@ class Product extends React.Component<any, IState> {
     return productData.map(data => {
       return (
         <li key={data.title}>
-          <img src={data.imgUrl} alt="data.title" />
+          <img src={data.imgUrl} alt={data.title} />
           <p>{data.title}</p>
         </li>
       );
@@ -153,6 +153,7 @@ class Product extends React.Component<any, IState> {
               <img
                 className="ingr-image"
                 src="https://images.ctfassets.net/iw4cawak30d4/5etL3Uy9hmgNdwa7u9HMaw/661f3ad60f7e0ac8fe0a79496b9a0bd0/Ginger___Greens_ingredients-image_2x-squashed.jpeg?w=550&fl=progressive"
+                alt={'item-main'}
               />
             </div>
           </div>

@@ -45,3 +45,19 @@ export function updateCart(payload) {
       });
   };
 }
+
+export function removeProduct(payload) {
+  return dispatch => {
+    axios
+      .delete(`${API_URL}/carts/${payload['cart_id']}`, {
+        ...GetHeaders(),
+        ...payload
+      })
+      .then(response => {
+        dispatch(fetchCartDetails());
+      })
+      .catch(error => {
+        console.log('error', error);
+      });
+  };
+}

@@ -3,7 +3,7 @@ import { hot } from 'react-hot-loader';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import Subscribe from './../common/subscribe/Subscribe';
-import { updateCart } from './../../actions/index';
+import { updateCart, removeProduct } from './../../actions/index';
 const img = require('./../../assets/img/product.png');
 import './cart.scss';
 import Button from '../common/Button/Button';
@@ -14,6 +14,7 @@ interface Iprops {
   products?: any[];
   quantity?: number;
   updateCart?: any;
+  removeProduct?: any;
 }
 
 interface IState {
@@ -81,6 +82,13 @@ class Cart extends React.Component<Iprops, IState> {
     };
     this.setState({ ...data });
   };
+  removeProduct = (product: any) => {
+    const payload = {
+      cart_id: product.cart_id,
+      product_id: product.product_id
+    };
+    this.props.removeProduct(payload);
+  };
   renderProducts = () => {
     const { products = [] } = this.props;
     const data = products.map(product => {
@@ -110,7 +118,12 @@ class Cart extends React.Component<Iprops, IState> {
               <span> Qty : </span>
               <span className="qty">{product.selected_qty}</span>
             </p>
-            <p className="remove-product">Remove</p>
+            <p
+              className="remove-product"
+              onClick={() => this.removeProduct(product)}
+            >
+              Remove
+            </p>
           </div>
         </div>
       );
@@ -208,4 +221,6 @@ function mapStateToProps(state) {
     quantity: state.cart && state.cart.total_quantity
   };
 }
-export default hot(module)(connect(mapStateToProps, { updateCart })(Cart));
+export default hot(module)(
+  connect(mapStateToProps, { updateCart, removeProduct })(Cart)
+);
