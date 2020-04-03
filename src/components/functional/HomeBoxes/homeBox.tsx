@@ -13,9 +13,10 @@ function HomeBox(props: IProps) {
   const img =
     props.imageUrl ||
     'https://cdn.shopify.com/s/files/1/2225/6647/files/12_660x275.png';
+  console.log(props);
   return (
     <section className="homebox">
-      <img src={img} alt={props.altTag} />
+      <img src={img} alt={props.title} />
       <article>
         <p className="title">{props.title}</p>
         <p className="desc">{props.description}</p>

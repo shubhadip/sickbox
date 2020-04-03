@@ -1,0 +1,58 @@
+@import './../../scss/variables';
+    .login-wrapper{
+        .icon_close{
+            padding: 5px;
+        }
+        .error-label {
+            margin-top: 0px;
+        }
+        .email-input{
+            text-align: left;
+            input{
+                border-radius: 0px;
+                width: 100%;
+                &:focus::placeholder {
+                    color: transparent;
+                }
+            }
+            input::placeholder {
+                text-align: left;
+            }
+            .w--text_input--label{
+                position: absolute;
+                left: 12px;
+                top: 3px;
+                opacity: 0.6;
+                font-size: 12px;
+            }
+        }
+        .header-login-wrapper{
+            text-align: left;
+            font-size: 20px;
+            font-weight: normal;
+            padding: 10px 10px 20px 10px;
+            margin-top: 10px;
+        }
+        .login-content{
+
+        }
+        .error-label{
+            text-align: left;
+            margin-left: 10px;
+            margin-top: 2px;
+            font-size: 12px;
+        }
+    }
+    .auth-submit{
+        width: 100%;
+        border-radius: 0px;
+        color: $white;
+        background-color:$red ;
+        margin-top: 10px;
+        letter-spacing: 1.5px;
+    }
+@media only screen and (min-width: $screen-width-xs + 1){
+    .auth-container{
+    }
+}
+

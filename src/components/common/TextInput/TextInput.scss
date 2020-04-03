@@ -38,7 +38,7 @@
     }
     &.has-error {
         input[type="text"]{
-            border: 1px solid lighten($red, 20%);
+            border: 1px solid lighten($red, 10%);
         }
     }
 }

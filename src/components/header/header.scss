@@ -20,19 +20,29 @@
     .cart{
         position: relative;
         cursor: pointer;
-        margin-right: 10px;
-        font-size: 25px;
+        margin-right: 8px;
         .cartCount{
             position: absolute;
-            font-size: 13px;
-            top: 0px;
-            right: -7px;
+            font-size: 11px;
+            top: -4px;
+            right: -6px;
             background: $bg-black;
             border-radius: 12px;
-            height: 18px;
-            width: 18px;
+            height: 16px;
+            width: 16px;
             text-align: center;
             border: 1px solid $white;
+        }
+        .icon_user{
+            margin-right: 20px;
+            &:before{
+                font-size: 18px;
+            }
+        }
+        .icon_bag{
+            &:before{
+                font-size: 21px;
+            }
         }
     }
     .mobile-ham{
@@ -75,7 +85,6 @@
         .container{
             border: 0px;
         }
-        
         .mobile-ham{
             display: none;
         }
@@ -84,6 +93,23 @@
             display: block;
             font-size: 25px;
             margin-top: -5px;
+            margin-right: 4px;
+            .cartCount{
+                font-size: 14px;
+                height: 20px;
+                width: 20px;
+            }
+            .icon_user{
+                margin-right: 25px;
+                &:before{
+                    font-size: 20px;
+                }
+            }
+            .icon_bag{
+                &:before{
+                    font-size: 25px;
+                }
+            }
         }
         .wrapper{
             min-height: 70px;

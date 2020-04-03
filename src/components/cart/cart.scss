@@ -132,8 +132,8 @@
                 width: 100%;
                 padding: 10px;
                 text-transform: uppercase;
-                border: 1px solid lighten($red, 20%);
-                background-color: lighten($red, 20%);
+                border: 1px solid lighten($red, 10%);
+                background-color: lighten($red, 10%);
                 color: $white;
             }
         }
@@ -228,8 +228,8 @@
                     width: 100%;
                     padding: 10px;
                     text-transform: uppercase;
-                    border: 1px solid lighten($red, 20%);
-                    background-color: lighten($red, 20%);
+                    border: 1px solid lighten($red, 10%);
+                    background-color: lighten($red, 10%);
                     color: $white;
                 }
             }
@@ -304,7 +304,7 @@
                     background-color: #f2f3f3;
                 }
                 &.selected{
-                    color: lighten($red, 20%);
+                    color: lighten($red, 10%);
                     font-weight: $medium;
                 }
             }

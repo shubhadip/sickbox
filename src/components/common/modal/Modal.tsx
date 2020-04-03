@@ -156,7 +156,6 @@ class Modal extends React.Component<IProps, IState> {
       theme,
       position
     } = this.props;
-    console.log(this.props);
     const { isOpen } = this.state;
 
     const popup = type === 'popup' ? 'cf-modal--popup ' : '';
@@ -171,14 +170,14 @@ class Modal extends React.Component<IProps, IState> {
     const closeIconClassName = `cf-modal__close ${
       headerOnTop ? 'cf-modal__close--top' : ''
     }`;
-    console.log(parentClassName)
+
     return ReactDOM.createPortal(
       <div ref={this.modal}>
         <div ref={this.modalBg} className={parentClassName}>
           <div ref={this.modalContent} className={className}>
             {this.props.isShowCloseIcon === true ? (
               <div
-                className={closeIconClassName}
+                className={['icon_close', (closeIconClassName)].join(' ')}
                 onClick={this.handleClose.bind(this, false)}
               />
             ) : null}

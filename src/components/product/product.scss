@@ -72,7 +72,7 @@
             outline: none;
             .w--button{
                 color: $white;
-                background-color: lighten($red, 20%);
+                background-color: lighten($red, 10%);
                 width: 100%;
                 font-weight: bold;
             }
@@ -237,7 +237,7 @@
                 }
                 .w--button{
                     color: $white;
-                    background-color: lighten($red, 20%);
+                    background-color: lighten($red, 10%);
                     border: 1px solid $white;
                     border-radius: 0px;
                     font-weight: normal;

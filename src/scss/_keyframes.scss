@@ -34,7 +34,7 @@ use : @mixin AnimateContent 0.5s, dropdownfadeIn, 0.25s;
 @keyframes slideup {
 	from {
 		opacity: 0;
-		transform: translateY(20%);
+		transform: translateY(10%);
 	}
 
 	to {
