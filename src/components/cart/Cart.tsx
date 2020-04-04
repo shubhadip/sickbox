@@ -8,6 +8,7 @@ const img = require('./../../assets/img/product.png');
 import './cart.scss';
 import Button from '../common/Button/Button';
 import Modal from '../common/modal/Modal';
+import Auth from './../auth/Auth';
 
 interface Iprops {
   isMobileDevice?: boolean;
@@ -15,23 +16,32 @@ interface Iprops {
   quantity?: number;
   updateCart?: any;
   removeProduct?: any;
+  authenticated?: boolean;
 }
 
 interface IState {
   showQtyModal?: boolean;
   selectedProduct?: any;
+  showAuth?: boolean;
 }
 class Cart extends React.Component<Iprops, IState> {
   constructor(props: Iprops) {
     super(props);
     this.state = {
-      showQtyModal: false
+      showQtyModal: false,
+      showAuth: false
     };
   }
 
   componentDidMount() {}
   toggleQtyModal = () => {
     this.setState({ ...this.state, showQtyModal: !this.state.showQtyModal });
+  };
+
+  showAuthComponent = () => {
+    this.setState({
+      showAuth: !this.state.showAuth
+    });
   };
 
   updateCartQty = (qty?: number) => {
@@ -130,6 +140,13 @@ class Cart extends React.Component<Iprops, IState> {
     });
     return data;
   };
+  handleSelectAddress = () => {
+    if (this.props.authenticated) {
+      console.log('cllaled');
+    } else {
+      this.showAuthComponent();
+    }
+  };
   render() {
     const qty = this.props.quantity;
     return (
@@ -202,10 +219,14 @@ class Cart extends React.Component<Iprops, IState> {
                   </i>
                 </p>
               </div>
-              <Button title={'Select Address'} />
+              <Button
+                title={'Select Address'}
+                onClick={this.handleSelectAddress}
+              />
             </div>
           </section>
         )}
+        {this.state.showAuth ? <Auth onClose={this.showAuthComponent} /> : null}
         {this.state.showQtyModal ? this.renderQtyModal() : null}
         <div className="subscribe container">
           <Subscribe />
@@ -218,7 +239,8 @@ class Cart extends React.Component<Iprops, IState> {
 function mapStateToProps(state) {
   return {
     products: state.cart && state.cart.products,
-    quantity: state.cart && state.cart.total_quantity
+    quantity: state.cart && state.cart.total_quantity,
+    authenticated: state.auth && state.auth.authenticated
   };
 }
 export default hot(module)(

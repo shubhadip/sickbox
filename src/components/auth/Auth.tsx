@@ -5,10 +5,15 @@ import './auth.scss';
 import Button from './../common/Button/Button';
 import Modal from '../common/modal/Modal';
 import TextInput from '../common/TextInput/TextInput';
+import PasswordInput from '../common/Password/PasswordInput';
+import { signinUser } from './../../actions/index';
+const facebooklogo = require('./../../assets/img/facebook.svg');
+const googlelogo = require('./../../assets/img/gplus.svg');
 
 interface IProps {
   isMobileDevice?: boolean;
   onClose: () => void;
+  signinUser: ({ email, password }) => any;
 }
 
 interface IState {
@@ -16,6 +21,9 @@ interface IState {
   showSignUp?: boolean;
   showForgotPassword?: boolean;
   email?: string;
+  password?: string;
+  firstName?: string;
+  lastName?: string;
 }
 
 const modalHeaders = {
@@ -32,15 +40,39 @@ const EMAIL_VALIDATIONS = [
   }
 ];
 
+const PASSWORD_VALIDATIONS = [
+  { name: 'required', message: 'Please enter your password.' }
+];
+
+const FIRSTNAME_VALIDATIONS = [
+  { name: 'required', message: 'Please enter firstName.' }
+];
+
+const LASTNAME_VALIDATIONS = [
+  { name: 'required', message: 'Please enter lastName.' }
+];
+
 class Auth extends React.Component<IProps, IState> {
+  private emailInput: React.RefObject<TextInput>;
+  private passwordInput: React.RefObject<PasswordInput>;
+  private firstnameInput: React.RefObject<TextInput>;
+  private lastnameInput: React.RefObject<TextInput>;
+
   constructor(props: IProps) {
     super(props);
     this.state = {
       showForgotPassword: false,
       showLogin: true,
       showSignUp: false,
-      email: ''
+      email: '',
+      password: '',
+      firstName: '',
+      lastName: ''
     };
+    this.emailInput = React.createRef<TextInput>();
+    this.passwordInput = React.createRef<PasswordInput>();
+    this.firstnameInput = React.createRef<TextInput>();
+    this.lastnameInput = React.createRef<TextInput>();
   }
 
   toggleAuthModal = () => {
@@ -48,19 +80,174 @@ class Auth extends React.Component<IProps, IState> {
   };
 
   handleSubmit = () => {
-    console.log('submit called');
+    if (this.state.showLogin) {
+      if (
+        this.emailInput.current?.isValid() &&
+        this.passwordInput.current?.isValid()
+      ) {
+        const email = this.emailInput.current?.getValue();
+        const password = this.passwordInput.current?.getValue();
+        this.props.signinUser({ email, password }).then(response => {
+          if (response.success) {
+            this.toggleAuthModal();
+          }
+        });
+      }
+    } else if (this.state.showForgotPassword) {
+      if (this.emailInput.current?.isValid()) {
+        const data = {
+          email: this.emailInput.current.getValue()
+        };
+        console.log(data);
+      }
+    } else if (this.state.showSignUp) {
+      const isEmailValid = this.emailInput.current?.isValid();
+      const isPasswordValid = this.passwordInput.current?.isValid();
+      const isFirstNameValid = this.firstnameInput.current?.isValid();
+      const isLastNameValid = this.lastnameInput.current?.isValid();
+      if (
+        isEmailValid &&
+        isPasswordValid &&
+        isFirstNameValid &&
+        isLastNameValid
+      ) {
+        const data = {
+          email: this.emailInput.current?.getValue(),
+          password: this.passwordInput.current?.getValue(),
+          lastName: this.lastnameInput.current?.getValue(),
+          firstName: this.firstnameInput.current?.getValue()
+        };
+        console.log(data);
+      }
+    }
   };
-
-  renderLogin = () => {
+  handleLogin = () => {
+    this.setState({
+      ...this.state,
+      showForgotPassword: false,
+      showLogin: true,
+      showSignUp: false
+    });
+  };
+  handleSignUp = () => {
+    this.setState({
+      ...this.state,
+      showForgotPassword: false,
+      showLogin: false,
+      showSignUp: true
+    });
+  };
+  handleForgotPassword = () => {
+    this.setState({
+      ...this.state,
+      showForgotPassword: true,
+      showLogin: false,
+      showSignUp: false
+    });
+  };
+  renderSignUp = () => {
     return (
       <div>
+        {this.renderSocialLogins()}
         <TextInput
+          ref={this.firstnameInput}
+          customClass={'name-input'}
+          validations={FIRSTNAME_VALIDATIONS}
+          placeholder={'FirstName'}
+          label={'FirstName'}
+          value={this.state.firstName}
+        />
+        <TextInput
+          ref={this.lastnameInput}
+          customClass={'name-input'}
+          validations={LASTNAME_VALIDATIONS}
+          placeholder={'LastName'}
+          label={'LastName'}
+          value={this.state.lastName}
+        />
+        <TextInput
+          ref={this.emailInput}
           customClass={'email-input'}
           validations={EMAIL_VALIDATIONS}
           placeholder={'Email'}
           label={'Email'}
           value={this.state.email}
         />
+        <TextInput
+          ref={this.passwordInput}
+          customClass={'password-input'}
+          validations={PASSWORD_VALIDATIONS}
+          placeholder={'Password'}
+          label={'Password'}
+          value={this.state.password}
+        />
+        <div className="link-wrapper">
+          <p onClick={this.handleLogin}>Login</p>
+          <p onClick={this.handleForgotPassword}>Forgot Password</p>
+        </div>
+      </div>
+    );
+  };
+  renderForgotPassword = () => {
+    return (
+      <div>
+        <TextInput
+          ref={this.emailInput}
+          customClass={'email-input'}
+          validations={EMAIL_VALIDATIONS}
+          placeholder={'Email'}
+          label={'Email'}
+          value={this.state.email}
+        />
+        <div className="link-wrapper">
+          <p onClick={this.handleLogin}>Login</p>
+          <p onClick={this.handleSignUp}>Sign Up</p>
+        </div>
+      </div>
+    );
+  };
+  renderSocialLogins = () => {
+    return (
+      <div className="social-wrapper">
+        <div className="fb">
+          <span>
+            <img src={facebooklogo.default} />
+          </span>
+          <span className="title">Facebook</span>
+        </div>
+        <div className="gplus">
+          <span>
+            <img src={googlelogo.default} />
+          </span>
+          <span className="title">Google</span>
+        </div>
+      </div>
+    );
+  };
+  renderLogin = () => {
+    return (
+      <div>
+        {this.renderSocialLogins()}
+        <TextInput
+          ref={this.emailInput}
+          customClass={'email-input'}
+          validations={EMAIL_VALIDATIONS}
+          placeholder={'Email'}
+          label={'Email'}
+          value={this.state.email}
+        />
+        <PasswordInput
+          ref={this.passwordInput}
+          customClass={'password-input'}
+          validations={PASSWORD_VALIDATIONS}
+          placeholder={'Password'}
+          label={'Password'}
+          value={this.state.password}
+        />
+        <div className="link-wrapper">
+          <p onClick={this.handleSignUp}>SignUp</p>
+          <p onClick={this.handleForgotPassword}>Forgot Password</p>
+        </div>
       </div>
     );
   };
@@ -88,10 +275,10 @@ class Auth extends React.Component<IProps, IState> {
           isShowCloseIcon={true}
         >
           {this.state.showLogin ? <div>{this.renderLogin()}</div> : null}
-          {this.state.showSignUp ? <div>I am Signup</div> : null}
           {this.state.showForgotPassword ? (
-            <div>I am ForgotPassword</div>
+            <div>{this.renderForgotPassword()}</div>
           ) : null}
+          {this.state.showSignUp ? <div>{this.renderSignUp()}</div> : null}
           <Button
             customClass={'auth-submit'}
             title={'Continue'}
@@ -106,4 +293,8 @@ class Auth extends React.Component<IProps, IState> {
 function mapStateToProps(state: IState) {
   return {};
 }
-export default hot(module)(connect(mapStateToProps, {})(Auth));
+export default hot(module)(
+  connect(mapStateToProps, {
+    signinUser
+  })(Auth)
+);

@@ -84,6 +84,7 @@ app.get('*', (req, res, next) => {
         </head>
         <body>
           <div id="app">${content}</div>
+          <div id="portal-root"></div>
 
 <script>
 window.__PRELOADED_STATE__ = ${(JSON.stringify(finalState) as any).replace(

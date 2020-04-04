@@ -6,7 +6,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const devMode = process.env.NODE_ENV !== 'production';
 const isForGHPAGE = process.env.GH__PAGES;
 
-
+console.log(isForGHPAGE);
 module.exports = {
   mode: 'development',
   entry: './src/client.tsx',
@@ -47,7 +47,7 @@ module.exports = {
           'sass-loader',
         ],
       },{
-        test:/\.(gif|jpe?g|png|ico)$/,
+        test:/\.(gif|jpe?g|png|ico|svg)$/,
         use:[
             {
                 loader: 'file-loader',
@@ -58,7 +58,7 @@ module.exports = {
         ]
       },
       {
-        test: /\.(woff|woff2|eot|ttf|svg|otf)$/,
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
         use: [
           {
             loader: 'file-loader',
@@ -82,7 +82,7 @@ module.exports = {
   plugins: [
     new webpack.DefinePlugin({
       __isBrowser__: JSON.stringify(true),
-      __isForGHPAGE__: JSON.stringify(true)
+      __isForGHPAGE__: JSON.stringify(isForGHPAGE ? true : false)
     }),
     new MiniCssExtractPlugin({
         filename: '[name].css' ,

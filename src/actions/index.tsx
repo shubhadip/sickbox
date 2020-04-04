@@ -6,26 +6,21 @@ import {
   updateCart,
   removeProduct
 } from './cart_actions';
-
+import { signinUser } from './auth_actions';
 import { subscribeUser } from './subscribe_actions';
 import { fetchProductData, fetchHomeData } from './server_actions';
 
 declare let __isBrowser__: boolean;
 
 let API_TOKEN;
-
-if (
+const isMobileToken =
   __isBrowser__ &&
   /android|webos|iphone|ipad|ipod|blackberry|windows phone|iemobile|BB10|playbook|opera mini|ucbrowser|wpdesktop/i.test(
     navigator.userAgent.toLowerCase()
-  )
-) {
-  API_TOKEN =
-    'NGNlNTUwYTc0MjBjYzQzZTdiZTNhMmY1NjNhMThhOGU6OGI1NThkZDgtOGQ5ZS00OWYxLTk4MDAtNzYxMGEzOGNjYzNk';
-} else {
-  API_TOKEN =
-    'MWY5ZTNmNzFmN2M1ZTUyMjkwNjM2NGMzNmNjZTA3N2Q6M2RhMmI3OTgtNTY2MC00ZDRhLWJhZWQtNTZlMDI2MWRlYmZm';
-}
+  );
+API_TOKEN = isMobileToken
+  ? 'NGNlNTUwYTc0MjBjYzQzZTdiZTNhMmY1NjNhMThhOGU6OGI1NThkZDgtOGQ5ZS00OWYxLTk4MDAtNzYxMGEzOGNjYzNk'
+  : 'MWY5ZTNmNzFmN2M1ZTUyMjkwNjM2NGMzNmNjZTA3N2Q6M2RhMmI3OTgtNTY2MC00ZDRhLWJhZWQtNTZlMDI2MWRlYmZm';
 axios.defaults.headers.common['Api-Token'] = API_TOKEN;
 
 axios.interceptors.response.use(
@@ -50,3 +45,4 @@ export { fetchProductData };
 export { fetchHomeData };
 export { fetchCartDetails, addToCart, updateCart, removeProduct };
 export { subscribeUser };
+export { signinUser };

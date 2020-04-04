@@ -55,17 +55,18 @@ export function signinUser({ email, password }) {
       }
     };
     const headers = GetHeaders();
-    axios
+    return axios
       .post(`${API_URL}${AUTHENTICATION_URL}`, auth, headers)
       .then(response => {
         dispatch({
           type: AUTH_USER
         });
         saveAccessCredentials(response.data);
-        history.push('/feature');
+        return { success: 'Success' };
       })
       .catch(error => {
-        dispatch(authError(error.response.data.error.message));
+        // dispatch(authError());
+        return { error: error.response.data.error.message };
       });
   };
 }

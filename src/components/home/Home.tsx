@@ -32,7 +32,6 @@ class Home extends React.Component<IProps, any> {
   }
 
   renderSections = () => {
-    // console.log('items', this.props.items)
     const data = this.props.items;
     return data.map(article => {
       return (
