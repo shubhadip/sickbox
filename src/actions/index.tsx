@@ -49,4 +49,4 @@ export { fetchHomeData };
 export { fetchCartDetails, addToCart, updateCart, removeProduct };
 export { subscribeUser };
 export { signinUser };
-export {fetchAddresses}
+export { fetchAddresses };

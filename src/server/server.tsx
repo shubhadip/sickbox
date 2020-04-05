@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as ReactDOMServer from 'react-dom/server';
-import compression from "compression";
+import compression from 'compression';
 import { Provider } from 'react-redux';
 import Loadable from 'react-loadable';
 import { getBundles } from 'react-loadable/webpack';
@@ -19,14 +19,13 @@ const data = require('../../build/stats.json');
 const stats = require('../../build/react-loadable.json');
 const PORT = process.env.PORT || 4000;
 
-
 // tbd: need to move this to nginx level
 app.get('*.js', (req, res, next) => {
   req.url = req.url + '.gz';
   res.set('Content-Encoding', 'gzip');
   res.set('Content-Type', 'text/javascript');
   next();
- });
+});
 
 app.use(compression());
 app.use(express.static('build'));
