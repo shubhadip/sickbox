@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { hot } from 'react-hot-loader';
+import { Helmet } from 'react-helmet';
 import { connect } from 'react-redux';
 import { fetchProductDetails } from './../../actions/index';
 import HomeBox from './../functional/HomeBoxes/homeBox';
@@ -14,6 +15,7 @@ import './home.scss';
 interface IProps {
   fetchProductDetails: any;
   items: any[];
+  product: any;
 }
 
 class Home extends React.Component<IProps, any> {
@@ -51,8 +53,16 @@ class Home extends React.Component<IProps, any> {
   };
 
   render() {
+    const meta_description =
+      this.props.product && this.props.product.meta_description;
+    const meta_keywords =
+      this.props.product && this.props.product.meta_keywords;
     return (
       <>
+        <Helmet>
+          <meta name="description" content={meta_description} />
+          <meta name="keywords" content={meta_keywords} />
+        </Helmet>
         <section className="hcontainer">
           <div className="container">
             <div className="hcontainer-banner">
@@ -99,7 +109,8 @@ class Home extends React.Component<IProps, any> {
 
 function mapStateToProps(state) {
   return {
-    items: (state.product && state.product && state.product.items) || []
+    items: (state.product && state.product && state.product.items) || [],
+    product: state.product || {}
   };
 }
 

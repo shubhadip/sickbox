@@ -7,6 +7,7 @@ import {
   removeProduct
 } from './cart_actions';
 import { signinUser } from './auth_actions';
+import { fetchAddresses } from './address_actions';
 import { subscribeUser } from './subscribe_actions';
 import { fetchProductData, fetchHomeData } from './server_actions';
 
@@ -30,11 +31,13 @@ axios.interceptors.response.use(
   error => {
     if ([500, 501, 502, 503, 503].indexOf(error.response.status) > -1) {
       // toastr.warning('Something went wrong try again later ...');
+      console.log('servererror');
     } else if (
       error.response.status === 401 &&
       error.response.data.error.code === 10
     ) {
       // signoutUser();
+      console.log('testtst');
     }
     return Promise.reject(error);
   }
@@ -46,3 +49,4 @@ export { fetchHomeData };
 export { fetchCartDetails, addToCart, updateCart, removeProduct };
 export { subscribeUser };
 export { signinUser };
+export {fetchAddresses}

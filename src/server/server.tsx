@@ -1,16 +1,17 @@
 import * as React from 'react';
 import * as ReactDOMServer from 'react-dom/server';
+import compression from "compression";
 import { Provider } from 'react-redux';
 import Loadable from 'react-loadable';
 import { getBundles } from 'react-loadable/webpack';
 import Routes from '../router/routerLinks';
+import { Helmet } from 'react-helmet';
 import express from 'express';
 import { StaticRouter, matchPath } from 'react-router-dom';
 import { createStore } from 'redux';
 import rootReducer from '../reducers';
 import { filterData } from '../utils/filters';
 import RouteMap from './../router/index';
-// const url = require('url');
 
 const mobileDetect = require('mobile-detect');
 const app = express();
@@ -18,7 +19,18 @@ const data = require('../../build/stats.json');
 const stats = require('../../build/react-loadable.json');
 const PORT = process.env.PORT || 4000;
 
+
+// tbd: need to move this to nginx level
+app.get('*.js', (req, res, next) => {
+  req.url = req.url + '.gz';
+  res.set('Content-Encoding', 'gzip');
+  res.set('Content-Type', 'text/javascript');
+  next();
+ });
+
+app.use(compression());
 app.use(express.static('build'));
+
 // temp favicon fix
 app.get('/favicon.ico', (req, res) => res.status(204));
 
@@ -39,7 +51,7 @@ app.get('*', (req, res, next) => {
   const currentRoute = Routes.find(route => matchPath(req.url, route)) || {
     routeName: 'pagenotfound'
   };
-
+  console.log(currentRoute);
   promise = currentRoute['loadData']
     ? currentRoute['loadData'](req.url)
     : Promise.resolve({});
@@ -61,7 +73,7 @@ app.get('*', (req, res, next) => {
           </Provider>
         </Loadable.Capture>
       );
-
+      const helmet = Helmet.renderStatic();
       const finalState = store.getState();
       const bundles = getBundles(stats, modules);
       const cssStyles = bundles.filter(bundle => bundle.file.endsWith('.css'));
@@ -73,7 +85,8 @@ app.get('*', (req, res, next) => {
       <!DOCTYPE html>
       <html lang='en'>
         <head>
-          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+          ${helmet.meta.toString()}
           <title>SickDay Box</title>
           <link href="/${mainFiles[0]}" rel="stylesheet"/>
           ${cssStyles

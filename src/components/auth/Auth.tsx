@@ -41,15 +41,15 @@ const EMAIL_VALIDATIONS = [
 ];
 
 const PASSWORD_VALIDATIONS = [
-  { name: 'required', message: 'Please enter your password.' }
+  { name: 'required', message: 'Please enter your Password.' }
 ];
 
 const FIRSTNAME_VALIDATIONS = [
-  { name: 'required', message: 'Please enter firstName.' }
+  { name: 'required', message: 'Please enter First Name.' }
 ];
 
 const LASTNAME_VALIDATIONS = [
-  { name: 'required', message: 'Please enter lastName.' }
+  { name: 'required', message: 'Please enter Last Name.' }
 ];
 
 class Auth extends React.Component<IProps, IState> {

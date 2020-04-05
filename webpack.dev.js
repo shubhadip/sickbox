@@ -3,6 +3,7 @@ const webpack = require('webpack');
 const htmlWebpackPlugin = require('html-webpack-plugin');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const HtmlCriticalWebpackPlugin = require("html-critical-webpack-plugin");
 const devMode = process.env.NODE_ENV !== 'production';
 const isForGHPAGE = process.env.GH__PAGES;
 
@@ -84,17 +85,18 @@ module.exports = {
       __isBrowser__: JSON.stringify(true),
       __isForGHPAGE__: JSON.stringify(isForGHPAGE ? true : false)
     }),
+    new htmlWebpackPlugin({
+      template: path.resolve(__dirname, 'src/index.html'),
+      filename: 'index.html',
+      async: ['app', 'vendor'],
+    }),
     new MiniCssExtractPlugin({
         filename: '[name].css' ,
         chunkFilename: '[id].css',
     }),
     new ForkTsCheckerWebpackPlugin(),
     new webpack.HotModuleReplacementPlugin(),
-    new htmlWebpackPlugin({
-      template: path.resolve(__dirname, 'src/index.html'),
-      filename: 'index.html',
-      async: ['app', 'vendor'],
-    }),
+    
   ],
   optimization:{
     splitChunks: {

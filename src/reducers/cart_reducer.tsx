@@ -1,7 +1,9 @@
 import { SAVE_CART_DETAILS } from '../actions/types';
 
 export default function(
-  state = {},
+  state = {
+    products: []
+  },
   action: {
     type: string;
     payload: any;

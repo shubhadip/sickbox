@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { hot } from 'react-hot-loader';
+import { Helmet } from 'react-helmet';
 import './product.scss';
 import Subscribe from '../common/subscribe/Subscribe';
 import Button from '../common/Button/Button';
@@ -14,8 +15,18 @@ interface IState {
   howToUse: boolean;
 }
 
-class Product extends React.Component<any, IState> {
-  constructor(props) {
+interface IProps {
+  fetchProductDetails: any;
+  addToCart: any;
+  items: any[];
+  product: any;
+  match: any;
+  isProductInBag?: boolean;
+  history: any;
+}
+
+class Product extends React.Component<IProps, IState> {
+  constructor(props: IProps) {
     super(props);
     this.state = {
       qty: '1',
@@ -25,17 +36,25 @@ class Product extends React.Component<any, IState> {
       howToUse: false
     };
   }
-
+  static defaultProps = {
+    isProductInBag: false
+  };
   componentDidMount() {
-    this.props.fetchProductDetails('sick-day-box');
+    const { items } = this.props;
+    const url = this.props.match && this.props.match.params.id;
+    if (!items.length) {
+      this.props.fetchProductDetails(url);
+    }
   }
 
   handleChange() {}
   handleCart = () => {
-    this.props.addToCart({
-      product_id: 1,
-      quantity: 1
-    });
+    this.props.isProductInBag
+      ? this.props.history.push('/cart')
+      : this.props.addToCart({
+          product_id: 1,
+          quantity: 1
+        });
   };
 
   handleShowMore = () => {
@@ -87,11 +106,20 @@ class Product extends React.Component<any, IState> {
   };
   render() {
     const { ingredient, nutritionFacts, howToUse } = this.state;
+    const productDetails = this.props.product;
+    const meta_description =
+      this.props.product && this.props.product.meta_description;
+    const meta_keywords =
+      this.props.product && this.props.product.meta_keywords;
     return (
       <div className="product-container">
+        <Helmet>
+          <meta name="description" content={meta_description} />
+          <meta name="keywords" content={meta_keywords} />
+        </Helmet>
         <div className="">
           <section>
-            <div className="bread-crum"> Home / sick-day-box</div>
+            <div className="bread-crum"> Home / {productDetails.url}</div>
             <div className="product-details-wrapper">
               <div className="productimage-wrapper">
                 <div>
@@ -104,16 +132,21 @@ class Product extends React.Component<any, IState> {
               </div>
               <div className="detail-wrapper">
                 <div className="title">
-                  <span>Sick Day Box </span>
+                  <span>{productDetails.name}</span>
                 </div>
                 <div className="rupee">
-                  <i className="icon_rupee">399</i>
+                  <i className="icon_rupee">{productDetails.price}</i>
                 </div>
                 <div className="price">contains : </div>
                 <hr />
                 <ul className="title-wrapper">{this.renderArticleImage()}</ul>
                 <div className="add-to-cart">
-                  <Button onClick={this.handleCart} title={'Add To Cart'} />
+                  <Button
+                    onClick={this.handleCart}
+                    title={
+                      this.props.isProductInBag ? 'Move To Bag' : 'Add To Cart'
+                    }
+                  />
                 </div>
                 {/* <div className="ing">
                   <p className="desc-title">
@@ -262,6 +295,21 @@ class Product extends React.Component<any, IState> {
   }
 }
 
+function mapStateToProps(state) {
+  const productIds =
+    (state.cart &&
+      state.cart.products &&
+      state.cart.products.map(product => product.product_id)) ||
+    [];
+  const isProductInBag =
+    productIds.indexOf(state.product && state.product.id) > -1;
+  return {
+    items: (state.product && state.product && state.product.items) || [],
+    product: state.product || {},
+    isProductInBag
+  };
+}
+
 export default hot(module)(
-  connect(null, { addToCart, fetchProductDetails })(Product)
+  connect(mapStateToProps, { addToCart, fetchProductDetails })(Product)
 );

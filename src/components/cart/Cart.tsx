@@ -142,7 +142,6 @@ class Cart extends React.Component<Iprops, IState> {
   };
   handleSelectAddress = () => {
     if (this.props.authenticated) {
-      console.log('cllaled');
     } else {
       this.showAuthComponent();
     }

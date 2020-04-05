@@ -30,10 +30,11 @@ export function signupUser({ email, password }) {
           type: AUTH_USER
         });
         saveAccessCredentials(response.data);
-        history.push('/feature');
+        return { success: 'Success' };
       })
       .catch(error => {
-        dispatch(authError(error.response.data.error.message));
+        // dispatch(authError(error.response.data.error.message));
+        return { error: error.response.data.error.message };
       });
   };
 }
