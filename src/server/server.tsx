@@ -50,7 +50,9 @@ app.get('*', (req, res, next) => {
   const currentRoute = Routes.find(route => matchPath(req.url, route)) || {
     routeName: 'pagenotfound'
   };
-  console.log(currentRoute);
+  try{
+
+  
   promise = currentRoute['loadData']
     ? currentRoute['loadData'](req.url)
     : Promise.resolve({});
@@ -120,6 +122,9 @@ window.__PRELOADED_STATE__ = ${(JSON.stringify(finalState) as any).replace(
     .catch(e => {
       next(e);
     });
+  }catch(e){
+    next(e)
+  }
 });
 
 Loadable.preloadAll().then(() => {

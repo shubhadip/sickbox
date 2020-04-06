@@ -2,7 +2,7 @@
 .subscribe-wrapper{
     padding: 20px 8px;
     h1{
-      color: lighten($red, 10%);
+      color: $red;
     }
     .desc{
       padding: 20px;
@@ -15,7 +15,7 @@
       width: 50%;
       border-radius: 0px;
       color: white;
-      background-color: lighten($red, 10%);
+      background-color: $red;
       letter-spacing: 1.5px;
     }
   }

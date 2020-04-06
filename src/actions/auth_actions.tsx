@@ -18,13 +18,10 @@ export function authError(error) {
   };
 }
 
-export function signupUser({ email, password }) {
+export function signupUser(payload) {
   return dispatch => {
     axios
-      .post(`${API_URL}/signup`, {
-        email,
-        password
-      })
+      .post(`${API_URL}/signup`, payload)
       .then(response => {
         dispatch({
           type: AUTH_USER

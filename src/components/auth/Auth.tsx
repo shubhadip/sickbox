@@ -114,10 +114,15 @@ class Auth extends React.Component<IProps, IState> {
         const data = {
           email: this.emailInput.current?.getValue(),
           password: this.passwordInput.current?.getValue(),
-          lastName: this.lastnameInput.current?.getValue(),
-          firstName: this.firstnameInput.current?.getValue()
+          last_name: this.lastnameInput.current?.getValue(),
+          first_name: this.firstnameInput.current?.getValue(),
+          mobile: 9878765554
         };
-        console.log(data);
+        this.props.signinUser(data).then(response => {
+          if (response.success) {
+            this.toggleAuthModal();
+          }
+        });
       }
     }
   };

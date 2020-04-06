@@ -1,0 +1,128 @@
+@import './../../scss/variables';
+.ac{
+    background-color: $white;
+    color: $black;
+    .subscribe-wrapper{
+        text-align: center;
+    }
+    .sd-title{
+        padding: 10px 10px 0px 20px;
+        font-weight: $medium;
+        text-transform: uppercase;
+        width: 100%;
+        margin: 0px;
+    }
+    .subscribe{
+        width: 100%;
+        padding: 30px 0px;
+        background-color: #f2f3f3;
+        color: $bg-black;
+    }
+    .a-wrap{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+
+        .l-s{
+            width: 98%;
+            margin: 0px;
+            padding-bottom: 20px;
+            height: 400px;
+            overflow-y: scroll;
+            .list-wrapper{
+                padding: 10px;
+                margin: 10px;
+                background-color: #f2f3f3;
+                position: relative;
+                min-height: 180px;
+                .w--button{
+                    width: 100%;
+                    border-radius: 0px;
+                    background-color: $red;
+                    color: $white;
+                    height: 40px;
+                }
+            }
+            .select-adderss{
+                &:before{
+                    height: 18px;
+                    width: 10px;
+                    right: 20px;
+                    top: 8px;
+                    content: '';
+                    position: absolute;
+                    border: 3px solid $red;
+                    -webkit-transform: rotate(45deg);
+                    -ms-transform: rotate(45deg);
+                    transform: rotate(45deg);
+                    border-top: 0px;
+                    border-left: 0px;
+                }
+            }
+            .name,.address,.city,.state{
+                text-transform: capitalize;
+                margin-bottom: 0px;
+            }
+            .name{
+                margin-bottom: 5px;
+            }
+        }
+        .r-s{
+            padding: 20px;
+            width: 100%;
+            .icon_rupee{
+                &:before{
+                    font-size: 11px;
+                    margin-right: 4px;
+                    font-weight: 400;
+                }
+            }
+            .summary-row{
+                display: flex;
+                justify-content: space-between;
+                margin: 10px 0px;
+                .key{
+                    padding: 6px 0px;
+                    margin: 0px;
+                    color: $bg-black;
+                }
+                .value{
+                    padding: 6px 0px;
+                    margin: 0px;
+                }
+            }
+        }
+    }
+}
+@media only screen and (min-width: $screen-width-xs + 1){
+    .ac{
+        background-color: $white;
+        color: $black;
+        .sd-title{
+            padding: 10px 10px 0px 75px;
+            font-weight: 600;
+        }
+        .a-wrap{
+            flex-wrap: nowrap;
+            padding: 0px 10px;
+            .l-s{
+                flex: 2;
+                display: flex;
+                flex-wrap: wrap;
+                // height: 360px;
+                max-width: 800px;
+                .list-wrapper{
+                    width: 340px;
+                    // min-height: 180px;
+                }
+            }
+            .r-s{
+                width: 400px;
+                margin-right: 10px;
+                padding-right: 20px;
+                border: 1px solid #f2f3f3;
+                height: 360px;
+            }
+        }
+        }
+    }

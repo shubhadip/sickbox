@@ -15,6 +15,26 @@ const About = Loadable({
   webpack: () => [(require as any).resolveWeak('./../components/about/About')]
 });
 
+const Payment = Loadable({
+  loader: () =>
+    import(/* webpackChunkName: 'Payment' */ './../components/payment/Payment'),
+  loading,
+  modules: ['./../components/payment/Payment'],
+  webpack: () => [
+    (require as any).resolveWeak('./../components/payment/Payment')
+  ]
+});
+
+const Address = Loadable({
+  loader: () =>
+    import(/* webpackChunkName: 'Address' */ './../components/address/Address'),
+  loading,
+  modules: ['./../components/about/About'],
+  webpack: () => [
+    (require as any).resolveWeak('./../components/address/Address')
+  ]
+});
+
 const Contact = Loadable({
   loader: () =>
     import(
@@ -63,6 +83,16 @@ export default [
     component: Cart,
     routeName: 'cart',
     path: '/cart'
+  },
+  {
+    component: Address,
+    routeName: 'address',
+    path: '/checkout/address'
+  },
+  {
+    component: Payment,
+    routeName: 'payment',
+    path: '/checkout/payment'
   },
   {
     component: PageNotFound,

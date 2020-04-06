@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-import { SAVE_CART_DETAILS } from './types';
+import { SAVE_ADDRESS } from './types';
 import { API_URL } from './../services/api_urls';
 import { GetHeaders } from './../credentials/access_headers';
 
@@ -10,7 +10,7 @@ export function fetchAddresses() {
       .get(`${API_URL}/addresses`, GetHeaders())
       .then(response => {
         dispatch({
-          type: SAVE_CART_DETAILS,
+          type: SAVE_ADDRESS,
           payload: response.data
         });
       })
