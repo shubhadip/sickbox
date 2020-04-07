@@ -20,12 +20,12 @@ const stats = require('../../build/react-loadable.json');
 const PORT = process.env.PORT || 4000;
 
 // tbd: need to move this to nginx level
-app.get('*.js', (req, res, next) => {
-  req.url = req.url + '.gz';
-  res.set('Content-Encoding', 'gzip');
-  res.set('Content-Type', 'text/javascript');
-  next();
-});
+// app.get('*.js', (req, res, next) => {
+//   req.url = req.url + '.gz';
+//   res.set('Content-Encoding', 'gzip');
+//   res.set('Content-Type', 'text/javascript');
+//   next();
+// });
 
 app.use(compression());
 app.use(express.static('build'));
@@ -50,39 +50,39 @@ app.get('*', (req, res, next) => {
   const currentRoute = Routes.find(route => matchPath(req.url, route)) || {
     routeName: 'pagenotfound'
   };
-  try{
+  try {
+    promise = currentRoute['loadData']
+      ? currentRoute['loadData'](req.url)
+      : Promise.resolve({});
 
-  
-  promise = currentRoute['loadData']
-    ? currentRoute['loadData'](req.url)
-    : Promise.resolve({});
+    promise
+      .then((response: any) => {
+        const cleanedData = filterData(currentRoute.routeName, response) || {};
+        preloadedState = { ...preloadedState, ...cleanedData };
+        const store = createStore(rootReducer, preloadedState);
 
-  promise
-    .then((response: any) => {
-      const cleanedData = filterData(currentRoute.routeName, response) || {};
-      preloadedState = { ...preloadedState, ...cleanedData };
-      const store = createStore(rootReducer, preloadedState);
+        const content = ReactDOMServer.renderToString(
+          <Loadable.Capture report={moduleName => modules.push(moduleName)}>
+            <Provider store={store}>
+              <StaticRouter location={req.path} context={context}>
+                <div>
+                  <RouteMap />
+                </div>
+              </StaticRouter>
+            </Provider>
+          </Loadable.Capture>
+        );
+        const helmet = Helmet.renderStatic();
+        const finalState = store.getState();
+        const bundles = getBundles(stats, modules);
+        const cssStyles = bundles.filter(bundle =>
+          bundle.file.endsWith('.css')
+        );
+        const jsBudles = bundles.filter(bundle => bundle.file.endsWith('.js'));
 
-      const content = ReactDOMServer.renderToString(
-        <Loadable.Capture report={moduleName => modules.push(moduleName)}>
-          <Provider store={store}>
-            <StaticRouter location={req.path} context={context}>
-              <div>
-                <RouteMap />
-              </div>
-            </StaticRouter>
-          </Provider>
-        </Loadable.Capture>
-      );
-      const helmet = Helmet.renderStatic();
-      const finalState = store.getState();
-      const bundles = getBundles(stats, modules);
-      const cssStyles = bundles.filter(bundle => bundle.file.endsWith('.css'));
-      const jsBudles = bundles.filter(bundle => bundle.file.endsWith('.js'));
+        promise = null;
 
-      promise = null;
-
-      return res.send(`
+        return res.send(`
       <!DOCTYPE html>
       <html lang='en'>
         <head>
@@ -102,9 +102,9 @@ app.get('*', (req, res, next) => {
 
 <script>
 window.__PRELOADED_STATE__ = ${(JSON.stringify(finalState) as any).replace(
-        /</g,
-        '\\u003c'
-      )}
+          /</g,
+          '\\u003c'
+        )}
 </script>
           <script type="text/javascript" src="/${
             vendorfiles[0]
@@ -118,12 +118,12 @@ window.__PRELOADED_STATE__ = ${(JSON.stringify(finalState) as any).replace(
         </body>
       </html>
     `);
-    })
-    .catch(e => {
-      next(e);
-    });
-  }catch(e){
-    next(e)
+      })
+      .catch(e => {
+        next(e);
+      });
+  } catch (e) {
+    next(e);
   }
 });
 

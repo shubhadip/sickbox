@@ -17,7 +17,7 @@ interface Iprops {
   updateCart?: any;
   removeProduct?: any;
   authenticated?: boolean;
-  history?: any
+  history?: any;
 }
 
 interface IState {
@@ -143,7 +143,7 @@ class Cart extends React.Component<Iprops, IState> {
   };
   handleSelectAddress = () => {
     if (this.props.authenticated) {
-      this.props.history.push('/checkout/address')
+      this.props.history.push('/checkout/address');
     } else {
       this.showAuthComponent();
     }
@@ -221,7 +221,11 @@ class Cart extends React.Component<Iprops, IState> {
                 </p>
               </div>
               <Button
-                title={'Select Address'}
+                title={
+                  this.props.authenticated
+                    ? 'Proceed To Checkout'
+                    : 'Select Address'
+                }
                 onClick={this.handleSelectAddress}
               />
             </div>

@@ -1,0 +1,35 @@
+@import './../../../scss/variables';
+
+.add-address-modal{
+    .add-address-header{
+        font-weight: $bold;
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    &.cf-modal__content{
+        width: 100%;
+    }
+    .btn-add-container{
+        display: flex;
+            align-items: center;
+            justify-content: space-around;
+    }
+}
+
+
+
+
+
+@media only screen and (min-width: $screen-width-xs + 1){
+
+    .add-address-container{
+        color:$red;
+        margin-top: 10px;
+        .btn-add-container{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+    }
+    
+}

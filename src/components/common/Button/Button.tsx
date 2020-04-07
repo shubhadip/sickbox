@@ -11,7 +11,8 @@ type ButtonTheme =
   | 'orange-gradient'
   | 'basedark'
   | 'loading'
-  | 'link';
+  | 'link'
+  | 'bordered';
 
 interface IProps {
   title?: any;
