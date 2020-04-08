@@ -5,10 +5,12 @@ const AssetsPlugin = require('assets-webpack-plugin')
 const { StatsWriterPlugin } = require("webpack-stats-plugin")
 const { ReactLoadablePlugin } = require('react-loadable/webpack');
 const reactLoadableTransformer = require('react-loadable-ts-transformer');
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const { CheckerPlugin } = require('awesome-typescript-loader')
+
 
 const devMode = process.env.NODE_ENV !== 'production';
 
@@ -70,6 +72,9 @@ module.exports = {
             exclude: '/node_modules/',
             options: {
                 jsx: 'react',
+
+            useCache: true,
+            useTranspileModule: true,
                 getCustomTransformers: () => ({
                   before: [reactLoadableTransformer],
               }),
@@ -106,6 +111,7 @@ module.exports = {
         new ReactLoadablePlugin({
             filename: './build/react-loadable.json',
         }),
+        new CheckerPlugin(),
         // new BundleAnalyzerPlugin(),
     ],
     optimization: {

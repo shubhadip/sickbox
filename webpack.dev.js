@@ -1,7 +1,9 @@
 const path = require('path');
 const webpack = require('webpack');
 const htmlWebpackPlugin = require('html-webpack-plugin');
-const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
+// const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
+const { CheckerPlugin } = require('awesome-typescript-loader')
+
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlCriticalWebpackPlugin = require("html-critical-webpack-plugin");
 const devMode = process.env.NODE_ENV !== 'production';
@@ -76,6 +78,8 @@ module.exports = {
         exclude: '/node_modules/',
         options: {
           jsx: 'react',
+          useCache: true,
+          useTranspileModule: true
         },
       },
     ],
@@ -94,7 +98,8 @@ module.exports = {
         filename: '[name].css' ,
         chunkFilename: '[id].css',
     }),
-    new ForkTsCheckerWebpackPlugin(),
+    // new ForkTsCheckerWebpackPlugin(),
+    new CheckerPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     
   ],

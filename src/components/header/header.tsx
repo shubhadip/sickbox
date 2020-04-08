@@ -69,12 +69,14 @@ class Header extends React.Component<IProps, IState> {
               </span>
             </div>
             <div className="cart">
-              <span
-                className="icon_user"
-                onClick={
-                  !authenticated ? this.showAuthComponent : this.showUserMenu
-                }
-              />
+              {authenticated ? (
+                <span className="icon_user" onClick={this.showUserMenu} />
+              ) : (
+                <span className="login" onClick={this.showAuthComponent}>
+                  {' '}
+                  Login
+                </span>
+              )}
               {this.props.cart_quantity ? (
                 <span className="cartCount" onClick={this.handleClick}>
                   {this.props.cart_quantity}

@@ -20,7 +20,7 @@ class RouteMap extends React.Component<any, any> {
     return (
       <main>
         <Header />
-        {renderRoutes(Routes)}
+        {renderRoutes(Routes as any)}
         <Footer />
       </main>
     );

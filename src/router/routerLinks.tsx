@@ -4,6 +4,7 @@ import Home from './../components/home/Home';
 import { fetchHomeData, fetchProductData } from '../actions/index';
 import PageNotFound from '../components/functional/PageNotFound/PageNotFound';
 import Product from './../components/product/Product';
+import ProtectedRoute from './../components/ProtectedRoute';
 
 const loading = () => <div>Loading...</div>;
 
@@ -85,12 +86,12 @@ export default [
     path: '/cart'
   },
   {
-    component: Address,
+    component: ProtectedRoute(Address),
     routeName: 'address',
     path: '/checkout/address'
   },
   {
-    component: Payment,
+    component: ProtectedRoute(Payment),
     routeName: 'payment',
     path: '/checkout/payment'
   },
