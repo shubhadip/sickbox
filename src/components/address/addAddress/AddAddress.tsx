@@ -2,6 +2,7 @@ import * as React from 'react';
 import { hot } from 'react-hot-loader';
 import { connect } from 'react-redux';
 import Modal from '../../common/modal/Modal';
+import {fetchlocationDetails} from './../../../actions/index'
 
 import './addaddress.scss';
 import Button from '../../common/Button/Button';
@@ -12,6 +13,10 @@ interface Iprops {
   isMobileDevice?: boolean;
   onClose: any;
   onSubmit: any;
+  fetchlocationDetails: any
+  authenticated: boolean
+  data: any[]
+  states: any[]
 }
 
 const REQ_VALIDATIONS = [
@@ -56,7 +61,9 @@ class AddAddress extends React.Component<Iprops, any> {
     this.pincodeInput = React.createRef<TextInput>();
   }
 
-  componentDidMount() {}
+  componentDidMount() {
+    this.props.fetchlocationDetails()
+  }
 
   onClose = () => {
     this.props.onClose();
@@ -84,22 +91,24 @@ class AddAddress extends React.Component<Iprops, any> {
               label={'Name'}
               value={this.state.name}
             />
-            <MobileInput
-              ref={this.mobileInput}
-              customClass={'mobile-input'}
-              validations={MOBILE_VALIDATIONS}
-              placeholder={'Mobile'}
-              label={'Mobile'}
-              value={this.state.mobile}
-            />
-            <MobileInput
-              ref={this.alternatemobileInput}
-              customClass={'alternate-input'}
-              validations={MOBILE_VALIDATIONS}
-              placeholder={'Alternate Mobile'}
-              label={'Alternate Mobile'}
-              value={this.state.alternate_mobile}
-            />
+            <div className="mobile-wrapper">
+              <MobileInput
+                ref={this.mobileInput}
+                customClass={'mobile-input'}
+                validations={MOBILE_VALIDATIONS}
+                placeholder={'Mobile'}
+                label={'Mobile'}
+                value={this.state.mobile}
+              />
+              <MobileInput
+                ref={this.alternatemobileInput}
+                customClass={'alternate-input'}
+                validations={MOBILE_VALIDATIONS}
+                placeholder={'Alternate Mobile'}
+                label={'Alternate Mobile'}
+                value={this.state.alternate_mobile}
+              />
+            </div>
             <TextInput
               ref={this.addressInput}
               customClass={'address-input'}
@@ -141,7 +150,9 @@ class AddAddress extends React.Component<Iprops, any> {
 
 function mapStateToProps(state: any) {
   return {
-    authenticated: state.auth
+    authenticated: state.auth.authenticated,
+    states: state.static.states,
+    data: state.static.data
   };
 }
-export default hot(module)(connect(mapStateToProps, null)(AddAddress));
+export default hot(module)(connect(mapStateToProps, {fetchlocationDetails})(AddAddress));

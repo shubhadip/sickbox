@@ -10,6 +10,7 @@ import { signinUser } from './auth_actions';
 import { fetchAddresses } from './address_actions';
 import { subscribeUser } from './subscribe_actions';
 import { fetchProductData, fetchHomeData } from './server_actions';
+import {fetchlocationDetails} from './static_actions';
 
 declare let __isBrowser__: boolean;
 
@@ -50,3 +51,4 @@ export { fetchCartDetails, addToCart, updateCart, removeProduct };
 export { subscribeUser };
 export { signinUser };
 export { fetchAddresses };
+export {fetchlocationDetails}
