@@ -1,6 +1,11 @@
 @import './../../../scss/variables';
 .subscribe-wrapper{
     padding: 20px 8px;
+    .w--text_input{
+      input{
+        border: 0px
+      }
+    }
     h1{
       color: $red;
     }
@@ -43,6 +48,9 @@
           padding: 0px;
           margin: 0px;
           height: 50px;
+          input{
+            border: 0px
+          }
         }
       }
   }

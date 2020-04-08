@@ -18,6 +18,8 @@ interface Iprops {
   removeProduct?: any;
   authenticated?: boolean;
   history?: any;
+  price: number
+  discount: number
 }
 
 interface IState {
@@ -180,7 +182,7 @@ class Cart extends React.Component<Iprops, IState> {
                   <p className="key">Total MRP (Inclusive of all taxes)</p>
                   <p className="value solidy">
                     <i>
-                      <b className="icon_rupee">349</b>
+        <b className="icon_rupee">{this.props.price}</b>
                     </i>
                   </p>
                 </div>
@@ -194,7 +196,7 @@ class Cart extends React.Component<Iprops, IState> {
                   <p className="key">Bag Discount</p>
                   <p className="value free">
                     <i className="icon_rupee">
-                      <b>50</b>
+        <b>{this.props.discount}</b>
                     </i>
                   </p>
                 </div>
@@ -204,7 +206,7 @@ class Cart extends React.Component<Iprops, IState> {
                   </p>
                   <p className="value solidy">
                     <i className="icon_rupee">
-                      <b>299</b>
+        <b>{this.props.price - this.props.discount}</b>
                     </i>
                   </p>
                 </div>
@@ -216,7 +218,7 @@ class Cart extends React.Component<Iprops, IState> {
                 </p>
                 <p className="value solidy">
                   <i className="icon_rupee">
-                    <b>299</b>
+                    <b>{this.props.price - this.props.discount}</b>
                   </i>
                 </p>
               </div>
@@ -245,6 +247,8 @@ function mapStateToProps(state) {
   return {
     products: state.cart && state.cart.products,
     quantity: state.cart && state.cart.total_quantity,
+    price: state.cart && state.cart.total_price,
+    discount: state.cart && state.cart.discount,
     authenticated: state.auth && state.auth.authenticated
   };
 }
