@@ -223,7 +223,7 @@ class MobileInput extends React.Component<IProps, IState> {
         }
       >
         <div className={'w--text_input--label ' + labelClass}>
-          {hasValueorisFocused ? this.props.label : this.props.placeholder}
+          {hasValueorisFocused ? this.props.label : ''}
         </div>
         {hasValueorisFocused ? null : (
           <div className="info-label">{this.props.extraLabel}</div>
@@ -237,6 +237,7 @@ class MobileInput extends React.Component<IProps, IState> {
           ref={this.props.refIp}
           type="tel"
           tabIndex={0}
+          placeholder={this.props.placeholder}
           value={this.state.value !== undefined ? this.state.value + '' : ''}
           {...handlers}
         />

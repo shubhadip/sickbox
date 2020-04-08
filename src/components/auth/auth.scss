@@ -22,24 +22,32 @@
         .w--password_input{
             margin-bottom: 8px;
         }
-        .email-input, .password-input, .name-input{
+        .email-input, .password-input, .name-input, .mobile-input{
             text-align: left;
             input{
+                border: 0px;
                 border-radius: 0px;
+                border-bottom: 1px solid #000;
+                padding-left: 0px;
                 width: 100%;
+                // &:focus{
+                //     height: 45px;
+                // }
                 &:focus::placeholder {
                     color: transparent;
                 }
             }
             input:not([value=""]){
-                padding-top: 10px;
+                margin-top: 10px;
             }
             input::placeholder {
                 text-align: left;
+                padding: 0px;
+                margin: 0px;
             }
             .w--text_input--label, .w--password_input--label{
                 position: absolute;
-                left: 12px;
+                left: 0px;
                 top: 3px;
                 opacity: 0.6;
                 font-size: 12px;
@@ -52,12 +60,9 @@
             padding: 10px 10px;
             margin-top: 10px;
         }
-        .login-content{
-
-        }
         .error-label{
             text-align: left;
-            margin-left: 10px;
+            margin-left: 0px;
             margin-top: 2px;
             font-size: 12px;
         }

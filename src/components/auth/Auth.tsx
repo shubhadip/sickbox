@@ -5,6 +5,7 @@ import './auth.scss';
 import Button from './../common/Button/Button';
 import Modal from '../common/modal/Modal';
 import TextInput from '../common/TextInput/TextInput';
+import MobileInput from '../common/MobileInput/MobileInput';
 import PasswordInput from '../common/Password/PasswordInput';
 import { signinUser } from './../../actions/index';
 const facebooklogo = require('./../../assets/img/facebook.svg');
@@ -24,6 +25,7 @@ interface IState {
   password?: string;
   firstName?: string;
   lastName?: string;
+  mobile?: string | number;
 }
 
 const modalHeaders = {
@@ -37,6 +39,18 @@ const EMAIL_VALIDATIONS = [
   {
     name: 'email',
     message: 'Oh. Looks like that email is not valid. Check again?'
+  }
+];
+
+const MOBILE_VALIDATIONS = [
+  { name: 'required', message: 'Please enter a mobile number.' },
+  {
+    name: 'integer',
+    message: 'Please enter a valid phone number'
+  },
+  {
+    name: 'mobile',
+    message: 'Please enter a valid phone number'
   }
 ];
 
@@ -57,6 +71,7 @@ class Auth extends React.Component<IProps, IState> {
   private passwordInput: React.RefObject<PasswordInput>;
   private firstnameInput: React.RefObject<TextInput>;
   private lastnameInput: React.RefObject<TextInput>;
+  private mobileInput: React.RefObject<MobileInput>;
 
   constructor(props: IProps) {
     super(props);
@@ -67,12 +82,14 @@ class Auth extends React.Component<IProps, IState> {
       email: '',
       password: '',
       firstName: '',
-      lastName: ''
+      lastName: '',
+      mobile: ''
     };
     this.emailInput = React.createRef<TextInput>();
     this.passwordInput = React.createRef<PasswordInput>();
     this.firstnameInput = React.createRef<TextInput>();
     this.lastnameInput = React.createRef<TextInput>();
+    this.mobileInput = React.createRef<MobileInput>();
   }
 
   toggleAuthModal = () => {
@@ -105,18 +122,20 @@ class Auth extends React.Component<IProps, IState> {
       const isPasswordValid = this.passwordInput.current?.isValid();
       const isFirstNameValid = this.firstnameInput.current?.isValid();
       const isLastNameValid = this.lastnameInput.current?.isValid();
+      const isMobileValid = this.mobileInput.current?.isValid();
       if (
         isEmailValid &&
         isPasswordValid &&
         isFirstNameValid &&
-        isLastNameValid
+        isLastNameValid &&
+        isMobileValid
       ) {
         const data = {
           email: this.emailInput.current?.getValue(),
           password: this.passwordInput.current?.getValue(),
           last_name: this.lastnameInput.current?.getValue(),
           first_name: this.firstnameInput.current?.getValue(),
-          mobile: 9878765554
+          mobile: this.mobileInput.current?.getValue()
         };
         this.props.signinUser(data).then(response => {
           if (response.success) {
@@ -185,6 +204,14 @@ class Auth extends React.Component<IProps, IState> {
           placeholder={'Password'}
           label={'Password'}
           value={this.state.password}
+        />
+        <MobileInput
+          ref={this.mobileInput}
+          customClass={'mobile-input'}
+          validations={MOBILE_VALIDATIONS}
+          placeholder={'Phone'}
+          label={'Phone'}
+          value={this.state.mobile}
         />
         <div className="link-wrapper">
           <p onClick={this.handleLogin}>Login</p>
