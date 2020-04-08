@@ -18,8 +18,8 @@ interface Iprops {
   removeProduct?: any;
   authenticated?: boolean;
   history?: any;
-  price: number
-  discount: number
+  price: number;
+  discount: number;
 }
 
 interface IState {
@@ -182,7 +182,7 @@ class Cart extends React.Component<Iprops, IState> {
                   <p className="key">Total MRP (Inclusive of all taxes)</p>
                   <p className="value solidy">
                     <i>
-        <b className="icon_rupee">{this.props.price}</b>
+                      <b className="icon_rupee">{this.props.price}</b>
                     </i>
                   </p>
                 </div>
@@ -196,7 +196,7 @@ class Cart extends React.Component<Iprops, IState> {
                   <p className="key">Bag Discount</p>
                   <p className="value free">
                     <i className="icon_rupee">
-        <b>{this.props.discount}</b>
+                      <b>{this.props.discount}</b>
                     </i>
                   </p>
                 </div>
@@ -206,7 +206,7 @@ class Cart extends React.Component<Iprops, IState> {
                   </p>
                   <p className="value solidy">
                     <i className="icon_rupee">
-        <b>{this.props.price - this.props.discount}</b>
+                      <b>{this.props.price - this.props.discount}</b>
                     </i>
                   </p>
                 </div>
