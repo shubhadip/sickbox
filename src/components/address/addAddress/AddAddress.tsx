@@ -2,7 +2,7 @@ import * as React from 'react';
 import { hot } from 'react-hot-loader';
 import { connect } from 'react-redux';
 import Modal from '../../common/modal/Modal';
-import {fetchlocationDetails} from './../../../actions/index'
+import { fetchlocationDetails } from './../../../actions/index';
 
 import './addaddress.scss';
 import Button from '../../common/Button/Button';
@@ -13,10 +13,10 @@ interface Iprops {
   isMobileDevice?: boolean;
   onClose: any;
   onSubmit: any;
-  fetchlocationDetails: any
-  authenticated: boolean
-  data: any[]
-  states: any[]
+  fetchlocationDetails: any;
+  authenticated: boolean;
+  data: any[];
+  states: any[];
 }
 
 const REQ_VALIDATIONS = [
@@ -62,7 +62,7 @@ class AddAddress extends React.Component<Iprops, any> {
   }
 
   componentDidMount() {
-    this.props.fetchlocationDetails()
+    this.props.fetchlocationDetails();
   }
 
   onClose = () => {
@@ -155,4 +155,6 @@ function mapStateToProps(state: any) {
     data: state.static.data
   };
 }
-export default hot(module)(connect(mapStateToProps, {fetchlocationDetails})(AddAddress));
+export default hot(module)(
+  connect(mapStateToProps, { fetchlocationDetails })(AddAddress)
+);
