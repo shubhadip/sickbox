@@ -4,6 +4,7 @@ const htmlWebpackPlugin = require('html-webpack-plugin');
 const { CheckerPlugin } = require('awesome-typescript-loader')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const WorkboxPlugin = require('workbox-webpack-plugin');
 const devMode = process.env.NODE_ENV !== 'production';
 const isForGHPAGE = process.env.GH__PAGES;
 
@@ -101,7 +102,18 @@ module.exports = {
     new CopyWebpackPlugin([
       {from:'./src/assets/app-images',to : './'},
       {from:'manifest.json',to:'./'},
-    ])
+    ]),
+    new WorkboxPlugin.InjectManifest({
+      swSrc: './sw-base.js',
+      swDest: './service-worker.js',
+      exclude: [
+        /\.map$/,
+        /manifest$/,
+        /\.htaccess$/,
+        /service-worker\.js$/,
+        /sw-base\.js$/,
+      ]
+    })
   ],
   optimization:{
     splitChunks: {

@@ -98,6 +98,8 @@ app.get('*', (req, res, next) => {
             <meta name='apple-mobile-web-app-capable' content="yes">
             <meta name="apple-mobile-web-app-status-bar-style" content="black"></meta>
             <meta name="apple-mobile-web-app-title" content="SickBox"></meta>
+            <meta name="theme-color" content="#e00000"/>
+
         </head>
         <body>
           <div id="app">${content}</div>
@@ -118,7 +120,7 @@ window.__PRELOADED_STATE__ = ${(JSON.stringify(finalState) as any).replace(
             })
             .join('\\n')}
           <script type="text/javascript" src="/${mainFiles[1]}"  defer></script>
-          <script>
+          <script type="text/javascript" defer>
             if ('serviceWorker' in navigator) {
               window.addEventListener('load', function() {
                 navigator.serviceWorker.register('/service-worker.js').then(function(registration) {

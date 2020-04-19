@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "webpack:client": "webpack-dev-server --config='webpack.dev.js'",
-    "webpack:ssr": " NODE_ENV='production' ./node_modules/webpack/bin/webpack.js --config webpack.prod.js &&   NODE_ENV='production' ./node_modules/webpack/bin/webpack.js --config webpack.server.js && node --inspect build/server.js",
+    "webpack:ssr": " NODE_ENV='production' ./node_modules/webpack/bin/webpack.js --config webpack.prod.js &&   NODE_ENV='production' ./node_modules/webpack/bin/webpack.js --config webpack.server.js ",
+    "webpack:server": "   NODE_ENV='production' ./node_modules/webpack/bin/webpack.js --config webpack.server.js",
     "lint:ts": "tslint 'src/**/*.{ts,tsx,js}' --fix",
     "tslint-check": "tslint-config-prettier-check ./tslint.json",
     "gh-build": "NODE_ENV='development' GH__PAGES='gh_page' webpack -p --config='webpack.dev.js' && npm run copygh",
@@ -52,6 +53,7 @@
     "clean-webpack-plugin": "^3.0.0",
     "compression": "^1.7.4",
     "compression-webpack-plugin": "^3.1.0",
+    "copy-webpack-plugin": "^5.1.1",
     "css-loader": "^3.4.2",
     "express": "^4.17.1",
     "file-loader": "^5.1.0",
@@ -90,7 +92,9 @@
     "webpack-hot-middleware": "^2.25.0",
     "webpack-node-externals": "^1.7.2",
     "webpack-pwa-manifest": "^4.2.0",
-    "webpack-stats-plugin": "^0.3.1"
+    "webpack-stats-plugin": "^0.3.1",
+    "workbox-cli": "^5.1.2",
+    "workbox-webpack-plugin": "^5.1.2"
   },
   "husky": {
     "hooks": {

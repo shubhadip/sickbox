@@ -11,6 +11,7 @@ const CompressionPlugin = require('compression-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const { CheckerPlugin } = require('awesome-typescript-loader')
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const WorkboxPlugin = require('workbox-webpack-plugin');
 
 const devMode = process.env.NODE_ENV !== 'production';
 
@@ -115,7 +116,19 @@ module.exports = {
         new CopyWebpackPlugin([
           './src/assets/app-images',
           {from:'manifest.json',to:'./'},
+          {from:'favicon.ico',to: './'}
         ]),
+        new WorkboxPlugin.InjectManifest({
+          swSrc: './sw-base.js',
+          swDest: './service-worker.js',
+          exclude: [
+            /\.map$/,
+            /manifest$/,
+            /\.htaccess$/,
+            /service-worker\.js$/,
+            /sw-base\.js$/,
+          ]
+        })
     ],
     optimization: {
       minimizer:[
