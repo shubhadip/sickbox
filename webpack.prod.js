@@ -10,7 +10,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const { CheckerPlugin } = require('awesome-typescript-loader')
-
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const devMode = process.env.NODE_ENV !== 'production';
 
@@ -112,7 +112,10 @@ module.exports = {
             filename: './build/react-loadable.json',
         }),
         new CheckerPlugin(),
-        // new BundleAnalyzerPlugin(),
+        new CopyWebpackPlugin([
+          './src/assets/app-images',
+          {from:'manifest.json',to:'./'},
+        ]),
     ],
     optimization: {
       minimizer:[

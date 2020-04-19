@@ -1,0 +1,47 @@
+{
+  "name": "SickDayBox",
+  "short_name": "SickBox",
+  "theme_color": "#030303",
+  "background_color": "#e00000",
+  "display": "standalone",
+  "Scope": "/",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "/icons/icon-72x62.png",
+      "sizes": "72x62",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-96x82.png",
+      "sizes": "96x82",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-128x110.png",
+      "sizes": "128x110",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-152x131.png",
+      "sizes": "152x131",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-192x165.png",
+      "sizes": "192x165",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-384x331.png",
+      "sizes": "384x331",
+      "type": "image/png"
+    }
+  ],
+  "splash_pages": null
+}

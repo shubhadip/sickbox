@@ -12,7 +12,6 @@ import { createStore } from 'redux';
 import rootReducer from '../reducers';
 import { filterData } from '../utils/filters';
 import RouteMap from './../router/index';
-
 const mobileDetect = require('mobile-detect');
 const app = express();
 const data = require('../../build/stats.json');
@@ -95,6 +94,10 @@ app.get('*', (req, res, next) => {
               return `<link href="/${style.file}" rel="stylesheet"/>`;
             })
             .join('\n')}
+            <link rel='manifest' href='manifest.json' ></link>
+            <meta name='apple-mobile-web-app-capable' content="yes">
+            <meta name="apple-mobile-web-app-status-bar-style" content="black"></meta>
+            <meta name="apple-mobile-web-app-title" content="SickBox"></meta>
         </head>
         <body>
           <div id="app">${content}</div>
@@ -115,6 +118,17 @@ window.__PRELOADED_STATE__ = ${(JSON.stringify(finalState) as any).replace(
             })
             .join('\\n')}
           <script type="text/javascript" src="/${mainFiles[1]}"  defer></script>
+          <script>
+            if ('serviceWorker' in navigator) {
+              window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+                  console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                }, function(err) {
+                  console.log('ServiceWorker registration failed: ', err);
+                });
+              });
+            }
+          </script>
         </body>
       </html>
     `);

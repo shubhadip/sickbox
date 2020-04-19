@@ -3,9 +3,24 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
     <title>SickDay Box</title>
+    <link rel='manifest' href='manifest.json' ></link>
+    <meta name='apple-mobile-web-app-capable' content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"></meta>
+    <meta name="apple-mobile-web-app-title" content="SickBox"></meta>
   </head>
   <body>
     <div id="app"></div>
     <div id="portal-root"></div>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+            console.log('ServiceWorker registration successful with scope: ', registration.scope);
+          }, function(err) {
+            console.log('ServiceWorker registration failed: ', err);
+          });
+        });
+      }
+    </script>
   </body>
 </html>

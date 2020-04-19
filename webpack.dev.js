@@ -1,15 +1,12 @@
 const path = require('path');
 const webpack = require('webpack');
 const htmlWebpackPlugin = require('html-webpack-plugin');
-// const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 const { CheckerPlugin } = require('awesome-typescript-loader')
-
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const HtmlCriticalWebpackPlugin = require("html-critical-webpack-plugin");
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const devMode = process.env.NODE_ENV !== 'production';
 const isForGHPAGE = process.env.GH__PAGES;
 
-console.log(isForGHPAGE);
 module.exports = {
   mode: 'development',
   entry: './src/client.tsx',
@@ -101,7 +98,10 @@ module.exports = {
     // new ForkTsCheckerWebpackPlugin(),
     new CheckerPlugin(),
     new webpack.HotModuleReplacementPlugin(),
-    
+    new CopyWebpackPlugin([
+      {from:'./src/assets/app-images',to : './'},
+      {from:'manifest.json',to:'./'},
+    ])
   ],
   optimization:{
     splitChunks: {
