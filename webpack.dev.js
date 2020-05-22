@@ -103,17 +103,17 @@ module.exports = {
       {from:'./src/assets/app-images',to : './'},
       {from:'manifest.json',to:'./'},
     ]),
-    new WorkboxPlugin.InjectManifest({
-      swSrc: './sw-base.js',
-      swDest: './service-worker.js',
-      exclude: [
-        /\.map$/,
-        /manifest$/,
-        /\.htaccess$/,
-        /service-worker\.js$/,
-        /sw-base\.js$/,
-      ]
-    })
+    // new WorkboxPlugin.InjectManifest({
+    //   swSrc: './sw-base.js',
+    //   swDest: './service-worker.js',
+    //   exclude: [
+    //     /\.map$/,
+    //     /manifest$/,
+    //     /\.htaccess$/,
+    //     /service-worker\.js$/,
+    //     /sw-base\.js$/,
+    //   ]
+    // })
   ],
   optimization:{
     splitChunks: {
