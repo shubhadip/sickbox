@@ -16,7 +16,7 @@ class Footer extends React.Component<any, any> {
   render() {
     return (
       <footer className="footer-container">
-        <section className="container">
+        <section className="container content">
           <section className="container order">
             <div>
               <p className="heads">Customer Service</p>
