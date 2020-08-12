@@ -46,7 +46,7 @@ class Header extends React.Component<IProps, IState> {
               <span className="icon" />
             </div>
             <div className="logo">
-              <a href='/'>
+              <a href="/">
                 <img alt="logo" src={logo.default} />
               </a>
             </div>
