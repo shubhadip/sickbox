@@ -3,7 +3,6 @@ import { hot } from 'react-hot-loader';
 import { browserHistory } from './../../history';
 import { connect } from 'react-redux';
 const logo = require('./../../assets/img/logo.png');
-// import Auth from './../auth/Auth';
 
 import './header.scss';
 
@@ -37,25 +36,8 @@ class Header extends React.Component<IProps, IState> {
     console.log('show menu');
   };
 
-  goToHomepage = () => {
-    browserHistory.push('/');
-  };
-
-  showAuthComponent = () => {
-    import('./../auth/Auth').then(component => {
-      this.setState({ ComponentClass: component.default, showAuth: true });
-    });
-  };
-
-  closeAuthComponent = () => {
-    this.setState({
-      showAuth: false
-    });
-  };
-
   render() {
     const authenticated = this.props.authenticated;
-    const ComponentClass = this.state.ComponentClass;
     return (
       <header className="header-container">
         <div className="container">
@@ -63,10 +45,10 @@ class Header extends React.Component<IProps, IState> {
             <div className="mobile-ham">
               <span className="icon" />
             </div>
-            <div className="logo" onClick={this.goToHomepage}>
-              <span>
+            <div className="logo">
+              <a href='/'>
                 <img alt="logo" src={logo.default} />
-              </span>
+              </a>
             </div>
             <div className="cart">
               {authenticated ? (
@@ -95,13 +77,6 @@ class Header extends React.Component<IProps, IState> {
             </div>
           </div>
         </div>
-        {this.state.showAuth ? (
-          ComponentClass ? (
-            <ComponentClass onClose={this.closeAuthComponent} />
-          ) : (
-            <div />
-          )
-        ) : null}
       </header>
     );
   }
