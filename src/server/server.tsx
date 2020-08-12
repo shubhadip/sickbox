@@ -80,13 +80,13 @@ app.get('*', (req, res, next) => {
         const jsBudles = bundles.filter(bundle => bundle.file.endsWith('.js'));
 
         promise = null;
-
         return res.send(`
       <!DOCTYPE html>
       <html lang='en'>
         <head>
           <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
           ${helmet.meta.toString()}
+          ${helmet.script.toString()}
           <title>SickDay Box</title>
           <link href="/${mainFiles[0]}" rel="stylesheet"/>
           ${cssStyles

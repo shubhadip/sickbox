@@ -7,7 +7,7 @@ import HomeBox from './../functional/HomeBoxes/homeBox';
 import HomePromote from './../functional/HomePromote/HomePromote';
 import Subscribe from './../common/subscribe/Subscribe';
 
-import { renderTitles } from './../../constants';
+import { renderTitles, structuredDataOrganization } from './../../constants';
 const product = require('./../../assets/img/product.png');
 
 import './home.scss';
@@ -60,8 +60,11 @@ class Home extends React.Component<IProps, any> {
     return (
       <>
         <Helmet>
-          <meta name="description" content={meta_description} />
-          <meta name="keywords" content={meta_keywords} />
+          {meta_description ? <meta name="description" content={meta_description} />  : null }
+          {meta_keywords ? <meta name="keywords" content={meta_keywords} /> : null }
+          <script type="application/ld+json">
+              {structuredDataOrganization}
+          </script>
         </Helmet>
         <section className="hcontainer">
           <div className="container">
