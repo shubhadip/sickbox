@@ -10,7 +10,7 @@ interface Istate {
   email: string;
 }
 
-class Login extends React.Component<Iprops, Istate> {
+class ForgotPassword extends React.Component<Iprops, Istate> {
   private emailInput: React.RefObject<TextInput>;
 
   constructor(props) {
@@ -71,10 +71,10 @@ class Login extends React.Component<Iprops, Istate> {
   render() {
     return (
       <div>
-        <div className="loginWrapper">{this.renderLogin()}</div>
+        <div className="forgotWrapper">{this.renderLogin()}</div>
       </div>
     );
   }
 }
 
-export default Login;
+export default ForgotPassword;

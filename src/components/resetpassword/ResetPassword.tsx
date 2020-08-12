@@ -10,7 +10,7 @@ interface Istate {
   password: string;
 }
 
-class Login extends React.Component<Iprops, Istate> {
+class ResetPassword extends React.Component<Iprops, Istate> {
   private passwordInput: React.RefObject<TextInput>;
 
   constructor(props) {
@@ -67,10 +67,10 @@ class Login extends React.Component<Iprops, Istate> {
   render() {
     return (
       <div>
-        <div className="loginWrapper">{this.renderLogin()}</div>
+        <div className="resetWrapper">{this.renderLogin()}</div>
       </div>
     );
   }
 }
 
-export default Login;
+export default ResetPassword;

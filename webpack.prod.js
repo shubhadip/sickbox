@@ -5,7 +5,7 @@ const AssetsPlugin = require('assets-webpack-plugin')
 const { StatsWriterPlugin } = require("webpack-stats-plugin")
 const { ReactLoadablePlugin } = require('react-loadable/webpack');
 const reactLoadableTransformer = require('react-loadable-ts-transformer');
-// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
@@ -128,7 +128,8 @@ module.exports = {
             /service-worker\.js$/,
             /sw-base\.js$/,
           ]
-        })
+        }),
+        // new BundleAnalyzerPlugin(),
     ],
     optimization: {
       minimizer:[

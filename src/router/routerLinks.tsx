@@ -7,7 +7,7 @@ import Product from './../components/product/Product';
 import ProtectedRoute from './../components/ProtectedRoute';
 import Login from './../components/login/Login';
 import ResetPassword from './../components/resetpassword/ResetPassword';
-import ForgotPassword from './../components/forgotpassword/ForgotPassword';
+// import ForgotPassword from './../components/forgotpassword/ForgotPassword';
 import Register from './../components/register/Register';
 
 const loading = () => <div>Loading...</div>;
@@ -78,11 +78,11 @@ export default [
     routeName: 'register',
     path: '/register'
   },
-  {
-    component: ForgotPassword,
-    routeName: 'forgotpassword',
-    path: '/forgotpassword'
-  },
+  // {
+  //   component: ForgotPassword,
+  //   routeName: 'forgotpassword',
+  //   path: '/forgotpassword'
+  // },
   {
     component: ResetPassword,
     routeName: 'resetpassword',
