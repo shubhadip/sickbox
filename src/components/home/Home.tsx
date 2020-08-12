@@ -60,10 +60,14 @@ class Home extends React.Component<IProps, any> {
     return (
       <>
         <Helmet>
-          {meta_description ? <meta name="description" content={meta_description} />  : null }
-          {meta_keywords ? <meta name="keywords" content={meta_keywords} /> : null }
+          {meta_description ? (
+            <meta name="description" content={meta_description} />
+          ) : null}
+          {meta_keywords ? (
+            <meta name="keywords" content={meta_keywords} />
+          ) : null}
           <script type="application/ld+json">
-              {structuredDataOrganization}
+            {structuredDataOrganization}
           </script>
         </Helmet>
         <section className="hcontainer">
