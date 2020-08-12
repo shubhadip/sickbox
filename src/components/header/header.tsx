@@ -70,24 +70,32 @@ class Header extends React.Component<IProps, IState> {
             </div>
             <div className="cart">
               {authenticated ? (
-                <span className="icon_user" onClick={this.showUserMenu} />
+                <div className="login_wrapper">
+                  <a className="iconh icon_user" href="/profile">
+                    <p className="icont login">Profile</p>
+                  </a>
+                </div>
               ) : (
-                <span className="login" onClick={this.showAuthComponent}>
-                  {' '}
-                  Login
-                </span>
+                <div className="login_wrapper">
+                  <a className="iconh icon_user" href="/login">
+                    <p className="icont login">Profile</p>
+                  </a>
+                </div>
               )}
               {this.props.cart_quantity ? (
                 <span className="cartCount" onClick={this.handleClick}>
                   {this.props.cart_quantity}
                 </span>
               ) : null}
-              <span className="icon_bag" onClick={this.handleClick} />
+              <div className="bag_wrapper">
+                <a className="iconh icon_bag" href="/cart">
+                  <p className="icont">Cart</p>
+                </a>
+              </div>
             </div>
           </div>
         </div>
         {this.state.showAuth ? (
-          // <Auth onClose={this.showAuthComponent} />
           ComponentClass ? (
             <ComponentClass onClose={this.closeAuthComponent} />
           ) : (

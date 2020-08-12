@@ -18,14 +18,15 @@
         }
     }
     .login{
-        font-size: 18px;
+        font-size: 14px;
         margin-right: 30px;
         font-weight: normal;
     }
     .cart{
+        display: flex;
+        flex-direction: row;
         position: relative;
         cursor: pointer;
-        margin-right: 8px;
         .cartCount{
             position: absolute;
             font-size: 11px;
@@ -38,16 +39,34 @@
             text-align: center;
             border: 1px solid $white;
         }
-        .icon_user{
-            margin-right: 20px;
-            &:before{
-                font-size: 18px;
+
+        .iconh {
+            font-size: 14px;
+            position: relative;
+            margin: 5px 0px;
+            padding: 0;
+            text-decoration: none;
+            color: $white;
+            cursor: pointer;
+            &.icon_user{
+                &:before{
+                    font-size: 14px;
+                }
+            }
+            &.icon_bag{
+                &:before{
+                    font-size: 15px;
+                }
             }
         }
-        .icon_bag{
-            &:before{
-                font-size: 21px;
-            }
+        .icont {
+            font-size: 12px;
+            padding: 0;
+            margin: 0;
+        }
+        .user_wrapper,.bag_wrapper,.login_wrapper{
+            padding: 0px 10px;
+            text-align: center;
         }
     }
     .mobile-ham{
@@ -94,8 +113,9 @@
             display: none;
         }
         .cart{
+            display: flex;
+            flex-direction: row;
             cursor: pointer;
-            display: block;
             font-size: 25px;
             margin-top: -5px;
             margin-right: 4px;
@@ -104,16 +124,33 @@
                 height: 20px;
                 width: 20px;
             }
-            .icon_user{
-                margin-right: 25px;
-                &:before{
-                    font-size: 20px;
+            .iconh {
+                font-size: 14px;
+                position: relative;
+                margin: 5px 0px;
+                padding: 0;
+                text-decoration: none;
+                color: $white;
+                cursor: pointer;
+                &.icon_user{
+                    &:before{
+                        font-size: 14px;
+                    }
+                }
+                &.icon_bag{
+                    &:before{
+                        font-size: 15px;
+                    }
                 }
             }
-            .icon_bag{
-                &:before{
-                    font-size: 25px;
-                }
+            .icont {
+                font-size: 12px;
+                padding: 0;
+                margin: 0;
+            }
+            .user_wrapper,.bag_wrapper,.login_wrapper{
+                padding: 0px 10px;
+                text-align: center;
             }
         }
         .wrapper{

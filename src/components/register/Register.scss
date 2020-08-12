@@ -1,0 +1,77 @@
+@import './../../scss/variables';
+.registerWrapper{
+    padding: 20px;
+    background-color: $white;
+    padding: 20px ;
+		color: lighten($color: $black, $amount: 30);
+		.header {
+			margin-bottom: 25px;
+			font-weight: bold;
+		}
+		
+		.email-input, .mobile-input,.password-input{
+			font-size: 14px;
+			margin: 0px 0px 10px 0px;
+			label{
+				margin: 5px 0px;
+				display: block;
+			}
+			
+			input {
+				width: 100%;
+				padding: 10px;
+				height: 40px;
+                border: 1px solid lighten($color: $black, $amount: 50);
+                border-radius: 5px;
+			}
+    }
+		
+		.w--button{
+			width: 100%;
+			margin: 10px 0px;
+		}
+	
+		.or{
+			font-size: 12px;
+			background-color: $white;
+			display: block;
+			color: rgba(0, 0, 0, 0.6);
+			margin: 15px 0px;
+			text-align: center;
+		}
+	
+		.link-wrapper{
+			text-align: left;
+			font-size: 14px;
+			margin: 10px 0px;
+			a {
+				color:  #ff704c;
+			};
+		}
+		.auth-submit{
+			text-transform: capitalize;
+		}
+		.gplus{
+			background-color: $white;
+			text-transform: capitalize;
+			font-weight: 600;
+			border: 1.5px solid lighten($color: $black, $amount: 30);
+		}
+		.gwrapper{
+			position: relative;
+			.imggplus{
+				position: absolute;
+				width: 40px;
+				top: 12px;
+				left: 40px;
+			}
+		}
+}
+
+@media only screen and (min-width: $screen-width-xs + 1) {
+	.registerWrapper{
+		max-width: 400px;
+		margin: 0px auto 40px auto;
+		border-radius: 5px;
+	}
+}

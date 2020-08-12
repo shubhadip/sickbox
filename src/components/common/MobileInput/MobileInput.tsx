@@ -30,6 +30,7 @@ interface IProps {
   disabled?: boolean;
   onFocus?: () => void;
   refIp?: any;
+  showLabel?: boolean;
 }
 // interface IValidation {
 //   isValid: boolean;
@@ -61,11 +62,12 @@ class MobileInput extends React.Component<IProps, IState> {
     countryCode: '+91',
     maxlength: 10,
     customClass: '',
-    placeholder: 'Mobile No',
+    placeholder: '',
     isValidateOnBlur: true,
     validations: ['mobile'],
     errorClass: '',
-    disabled: false
+    disabled: false,
+    showLabel: false
   };
   private modal: React.RefObject<HTMLDivElement>;
   refs: any;
@@ -223,7 +225,7 @@ class MobileInput extends React.Component<IProps, IState> {
         }
       >
         <div className={'w--text_input--label ' + labelClass}>
-          {hasValueorisFocused ? this.props.label : ''}
+          {hasValueorisFocused || this.props.showLabel ? this.props.label : ''}
         </div>
         {hasValueorisFocused ? null : (
           <div className="info-label">{this.props.extraLabel}</div>

@@ -37,6 +37,7 @@ interface IProps {
   onFocus?: () => void;
   readOnly?: boolean;
   refIp?: any;
+  showLabel: boolean;
 }
 // interface IValidation {
 //   isValid?: boolean;
@@ -68,7 +69,8 @@ class TextInput extends React.Component<IProps, IState> {
     ellipsisOnOverflow: false,
     capitalize: false,
     focusOnMount: false,
-    readOnly: false
+    readOnly: false,
+    showLabel: false
   };
   inputRef = React.createRef<HTMLInputElement>();
   refs: any;
@@ -245,7 +247,9 @@ class TextInput extends React.Component<IProps, IState> {
             className={'w--text_input--label ' + labelClass}
             htmlFor={uniqueKey}
           >
-            {isShowFloatingLabel ? this.props.label : ''}
+            {isShowFloatingLabel || this.props.showLabel
+              ? this.props.label
+              : ''}
           </label>
         </div>
         {prefixText ? <span className="input-prefix">{prefixText}</span> : null}

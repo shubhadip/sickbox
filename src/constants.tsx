@@ -182,3 +182,39 @@ export const Base64 = {
     return t;
   }
 };
+
+
+export const EMAIL_VALIDATIONS = [
+  { name: 'required', message: 'Please enter your Email.' },
+  {
+    name: 'email',
+    message: 'Please Enter a Valid Email?'
+  }
+];
+
+export const PASSWORD_VALIDATIONS = [
+  { name: 'required', message: 'Please enter your Password.' }
+];
+
+export const OTP_VALIDATIONS = [
+  { name: 'required', message: 'Please enter 6 digit Otp.' }
+];
+
+export const REQUIRED_VALIDATIONS = (fieldName = '') =>  {
+  return [
+    { name: 'required', message: 'Please enter your '+fieldName+' .' }
+  ]
+};
+
+export const  MOBILE_VALIDATIONS = [
+  { name: "required", message: "Please enter your MobileNumber." },
+  {
+    name: "integer",
+    message: "Please enter a valid Phone Number",
+  },
+  {
+    name: "mobile",
+    message: "Please enter a valid Phone Number",
+  },
+];
+

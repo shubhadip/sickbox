@@ -38,9 +38,12 @@
     }
     .error-label,
     .text-description {
-        font-size: 14px;
-        margin-top: 5px;
+        font-size: 12px;
+        margin: 0px;
         display: block;
+    }
+    .error-label{
+        text-align: right;
     }
     &.has-error {
         input{

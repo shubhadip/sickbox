@@ -3,7 +3,8 @@
     padding: 20px 8px;
     .w--text_input{
       input{
-        border: 0px
+        border: 0px;
+        width: 100%;
       }
     }
     h1{
@@ -38,16 +39,14 @@
         align-items: center;
         .w--button{
           width: 120px;
-          padding: 0px;
-          margin: 0px;
-          height: 44px;
+          padding: 10px;
+          margin: 0px 10px;
           border-radius: 0px;
         }
         .w--text_input{
           width: 320px;
           padding: 0px;
           margin: 0px;
-          height: 50px;
           input{
             border: 0px
           }
