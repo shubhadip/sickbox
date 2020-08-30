@@ -29,7 +29,8 @@ class ForgotPassword extends React.Component<Iprops, Istate> {
     });
   };
 
-  handleSubmit = () => {
+  handleSubmit = e => {
+    e.preventDefault();
     if (this.emailInput.current?.isValid(true)) {
       const email = this.emailInput.current?.getValue();
       console.log(email);
@@ -44,7 +45,7 @@ class ForgotPassword extends React.Component<Iprops, Istate> {
           Enter the email address associated with your account and we will send
           you a link to reset your password.
         </p>
-        <div>
+        <form>
           <TextInput
             ref={this.emailInput}
             customClass={'email-input'}
@@ -63,7 +64,7 @@ class ForgotPassword extends React.Component<Iprops, Istate> {
           <div className="signup-text">
             Don't Have an account? <a href="/register">Sign Up?</a>
           </div>
-        </div>
+        </form>
       </>
     );
   };

@@ -3,14 +3,43 @@ import Loadable from 'react-loadable';
 import Home from './../components/home/Home';
 import { fetchHomeData, fetchProductData } from '../actions/index';
 import PageNotFound from '../components/functional/PageNotFound/PageNotFound';
-import Product from './../components/product/Product';
 import ProtectedRoute from './../components/ProtectedRoute';
-import Login from './../components/login/Login';
-import ResetPassword from './../components/resetpassword/ResetPassword';
 // import ForgotPassword from './../components/forgotpassword/ForgotPassword';
-import Register from './../components/register/Register';
 
 const loading = () => <div>Loading...</div>;
+
+const Register = Loadable({
+  loader: () =>
+    import(/* webpackChunkName: 'Register' */ './../components/register/Register'),
+  loading,
+  modules: ['./../components/register/Register'],
+  webpack: () => [(require as any).resolveWeak('./../components/register/Register')]
+});
+
+const Product = Loadable({
+  loader: () =>
+    import(/* webpackChunkName: 'Product' */ './../components/product/Product'),
+  loading,
+  modules: ['./../components/product/Product'],
+  webpack: () => [(require as any).resolveWeak('./../components/product/Product')]
+});
+
+const Login = Loadable({
+  loader: () =>
+    import(/* webpackChunkName: 'Login' */ './../components/login/Login'),
+  loading,
+  modules: ['./../components/login/Login'],
+  webpack: () => [(require as any).resolveWeak('./../components/login/Login')]
+});
+
+const ResetPassword = Loadable({
+  loader: () =>
+    import(/* webpackChunkName: 'ResetPassword' */ './../components/resetpassword/ResetPassword'),
+  loading,
+  modules: ['./../components/resetpassword/ResetPassword'],
+  webpack: () => [(require as any).resolveWeak('./../components/resetpassword/ResetPassword')]
+});
+
 
 const About = Loadable({
   loader: () =>

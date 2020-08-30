@@ -6,6 +6,7 @@ import { connect } from 'react-redux';
 import Routes from './routerLinks';
 import Header from './../components/header/header';
 import Footer from './../components/footer/footer';
+// import ErrorBoundary from '../components/errorBoundary/ErrorBoundary';
 
 class RouteMap extends React.Component<any, any> {
   constructor(props) {
@@ -18,11 +19,11 @@ class RouteMap extends React.Component<any, any> {
 
   render() {
     return (
-      <main>
-        <Header />
-        {renderRoutes(Routes as any)}
-        <Footer />
-      </main>
+        <main>
+          <Header />
+          {renderRoutes(Routes as any)}
+          <Footer />
+        </main>
     );
   }
 }

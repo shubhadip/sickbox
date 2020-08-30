@@ -12,6 +12,7 @@ import PasswordInput from '../common/Password/PasswordInput';
 import MobileInput from '../common/MobileInput/MobileInput';
 import Button from './../common/Button/Button';
 import { GoogleLogin } from 'react-google-login';
+import { parseQueryParams } from '../../utils/TransitionUtils';
 
 interface Iprops {}
 
@@ -20,6 +21,7 @@ interface Istate {
   password: string;
   mobile: string;
   name: string;
+  moveToCheckout: boolean;
 }
 
 class Register extends React.Component<Iprops, Istate> {
@@ -30,11 +32,13 @@ class Register extends React.Component<Iprops, Istate> {
 
   constructor(props) {
     super(props);
+    const isCheckoutStage = parseQueryParams(props.location.search);
     this.state = {
       email: '',
       password: '',
       mobile: '',
-      name: ''
+      name: '',
+      moveToCheckout: isCheckoutStage['movetocheckout'] === 'true' || false
     };
     this.emailInput = React.createRef<TextInput>();
     this.nameInput = React.createRef<TextInput>();
@@ -50,7 +54,8 @@ class Register extends React.Component<Iprops, Istate> {
     });
   };
 
-  handleSubmit = () => {
+  handleSubmit = e => {
+    e.preventDefault();
     if (
       this.emailInput.current?.isValid(true) &&
       this.passwordInput.current?.isValid(true)
@@ -66,12 +71,12 @@ class Register extends React.Component<Iprops, Istate> {
     return (
       <>
         <h4 className="header">Create your account</h4>
-        <div>
+        <form>
           <TextInput
             ref={this.nameInput}
             customClass={'email-input'}
             validations={REQUIRED_VALIDATIONS('Name')}
-            label={'Email'}
+            label={'Name'}
             value={this.state.name}
             onChange={e => this.handleFieldChange('name', e)}
             showLabel={true}
@@ -109,12 +114,13 @@ class Register extends React.Component<Iprops, Istate> {
             onClick={this.handleSubmit}
             theme={'orange'}
           />
-        </div>
+        </form>
       </>
     );
   };
 
   render() {
+    const loginUrl = `/login?movetocheckout=${this.state.moveToCheckout}`;
     return (
       <div className="registerWrapper">
         {this.renderRegister()}
@@ -143,7 +149,7 @@ class Register extends React.Component<Iprops, Istate> {
           cookiePolicy={'single_host_origin'}
         />
         <div className="link-wrapper">
-          <a href="/login">Sign In?</a>
+          <a href={loginUrl}>Sign In?</a>
         </div>
       </div>
     );

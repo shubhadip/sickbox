@@ -52,28 +52,28 @@ class Header extends React.Component<IProps, IState> {
             </div>
             <div className="cart">
               {authenticated ? (
-                <div className="login_wrapper">
-                  <a className="iconh icon_user" href="/profile">
-                    <p className="icont login">Profile</p>
-                  </a>
-                </div>
+                <a className="login_wrapper" href="/profile">
+                  <i className="iconh icon_user">
+                    <span className="icont login">Profile</span>
+                  </i>
+                </a>
               ) : (
-                <div className="login_wrapper">
-                  <a className="iconh icon_user" href="/login">
-                    <p className="icont login">Profile</p>
-                  </a>
-                </div>
+                <a className="login_wrapper" href="/login">
+                  <i className="iconh icon_user">
+                    <span className="icont login">Profile</span>
+                  </i>
+                </a>
               )}
               {this.props.cart_quantity ? (
                 <span className="cartCount" onClick={this.handleClick}>
                   {this.props.cart_quantity}
                 </span>
               ) : null}
-              <div className="bag_wrapper">
-                <a className="iconh icon_bag" href="/cart">
-                  <p className="icont">Cart</p>
-                </a>
-              </div>
+              <a className="bag_wrapper" href="/cart">
+                <i className="iconh icon_bag">
+                  <span className="icont">Cart</span>
+                </i>
+              </a>
             </div>
           </div>
         </div>

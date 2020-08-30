@@ -88,6 +88,8 @@ app.get('*', (req, res, next) => {
           ${helmet.meta.toString()}
           ${helmet.script.toString()}
           <title>SickDay Box</title>
+          <link rel="preload" as="font" type="font/ttf" href="/fonts/icomoon.ttf" crossorigin="anonymous">
+          <link rel="preload" as="font" type="font/ttf" href="/fonts/Helvetica.ttf" crossorigin="anonymous">
           <link href="/${mainFiles[0]}" rel="stylesheet"/>
           ${cssStyles
             .map(style => {
@@ -136,9 +138,11 @@ window.__PRELOADED_STATE__ = ${(JSON.stringify(finalState) as any).replace(
     `);
       })
       .catch(e => {
+        console.log('errror', e);
         next(e);
       });
   } catch (e) {
+    console.log('errr1r', e);
     next(e);
   }
 });

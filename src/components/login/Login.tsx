@@ -12,8 +12,11 @@ import MobileInput from '../common/MobileInput/MobileInput';
 import Button from './../common/Button/Button';
 import OtpInput from 'react-otp-input';
 import { GoogleLogin } from 'react-google-login';
+import { parseQueryParams } from '../../utils/TransitionUtils';
 
-interface Iprops {}
+interface Iprops {
+  customClass?: string;
+}
 
 interface Istate {
   email: string;
@@ -22,6 +25,7 @@ interface Istate {
   showOTP: boolean;
   showOtpLogin: boolean;
   mobile: string;
+  moveToCheckout: boolean;
 }
 
 class Login extends React.Component<Iprops, Istate> {
@@ -31,13 +35,15 @@ class Login extends React.Component<Iprops, Istate> {
 
   constructor(props) {
     super(props);
+    const isCheckoutStage = parseQueryParams(props.location.search);
     this.state = {
       email: '',
       password: '',
       otp: '',
       showOTP: false,
       showOtpLogin: false,
-      mobile: ''
+      mobile: '',
+      moveToCheckout: isCheckoutStage['movetocheckout'] === 'true' || false
     };
     this.emailInput = React.createRef<TextInput>();
     this.passwordInput = React.createRef<PasswordInput>();
@@ -74,7 +80,9 @@ class Login extends React.Component<Iprops, Istate> {
       otp
     });
 
-  handleSubmit = () => {
+  handleSubmit = e => {
+    // if move To Checkout is set true send user to checkout address page
+    e.preventDefault();
     if (this.state.showOTP && this.state.showOtpLogin && this.state.otp) {
       const email = this.state.email;
       const otp = this.state.otp;
@@ -152,13 +160,14 @@ class Login extends React.Component<Iprops, Istate> {
   };
 
   renderLogin = () => {
+    const registerUrl = `/register?movetocheckout=${this.state.moveToCheckout}`;
     return (
       <>
         <div className="signup-text">
-          <a href="/register">Sign Up?</a>
+          <a href={registerUrl}>Sign Up?</a>
         </div>
         <h4 className="header">Sign in to your account</h4>
-        <div>
+        <form>
           <TextInput
             ref={this.emailInput}
             customClass={'email-input'}
@@ -186,14 +195,14 @@ class Login extends React.Component<Iprops, Istate> {
           <div className="otp-text" onClick={this.toggleLogin}>
             <span>Login via {this.state.showOtpLogin ? 'Email' : 'OTP'}</span>
           </div>
-        </div>
+        </form>
       </>
     );
   };
 
   render() {
     return (
-      <div className="loginWrapper">
+      <div className={['loginWrapper', this.props.customClass].join(' ')}>
         {this.state.showOtpLogin ? this.renderOtpLogin() : this.renderLogin()}
         <p className="or">or Connect with Social Media</p>
         <GoogleLogin
@@ -219,9 +228,11 @@ class Login extends React.Component<Iprops, Istate> {
           onFailure={() => {}}
           cookiePolicy={'single_host_origin'}
         />
-        <div className="link-wrapper">
-          <a href="/forgotpassword">Forgot Password?</a>
-        </div>
+        {!this.state.moveToCheckout ? (
+          <div className="link-wrapper">
+            <a href="/forgotpassword">Forgot Password?</a>
+          </div>
+        ) : null}
       </div>
     );
   }

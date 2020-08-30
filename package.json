@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "webpack:client": "webpack-dev-server --config='webpack.dev.js'",
+    "webpack:client": "webpack-dev-server --config='webpack.dev.js' --host 0.0.0.0",
+    "webpack:prod": "webpack -p --config='webpack.prod.js'",
     "webpack:ssr": " NODE_ENV='production' ./node_modules/webpack/bin/webpack.js --config webpack.prod.js &&   NODE_ENV='production' ./node_modules/webpack/bin/webpack.js --config webpack.server.js ",
     "webpack:server": "   NODE_ENV='production' ./node_modules/webpack/bin/webpack.js --config webpack.server.js",
     "lint:ts": "tslint 'src/**/*.{ts,tsx,js}' --fix",

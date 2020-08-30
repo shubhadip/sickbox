@@ -29,7 +29,8 @@ class ResetPassword extends React.Component<Iprops, Istate> {
     });
   };
 
-  handleSubmit = () => {
+  handleSubmit = e => {
+    e.preventDefault();
     if (this.passwordInput.current?.isValid(true)) {
       const name = this.passwordInput.current?.getValue();
       console.log(name);
@@ -40,7 +41,7 @@ class ResetPassword extends React.Component<Iprops, Istate> {
     return (
       <>
         <h4 className="header">Reset password?</h4>
-        <div>
+        <form>
           <TextInput
             ref={this.passwordInput}
             customClass={'name-input'}
@@ -59,7 +60,7 @@ class ResetPassword extends React.Component<Iprops, Istate> {
           <div className="signup-text">
             Have an account <a href="/login">Sign In?</a>
           </div>
-        </div>
+        </form>
       </>
     );
   };

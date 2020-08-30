@@ -143,13 +143,15 @@ class Cart extends React.Component<Iprops, IState> {
     });
     return data;
   };
+
   handleSelectAddress = () => {
     if (this.props.authenticated) {
       this.props.history.push('/checkout/address');
     } else {
-      this.showAuthComponent();
+      this.props.history.push('/login?movetocheckout');
     }
   };
+
   render() {
     const qty = this.props.quantity;
     return (

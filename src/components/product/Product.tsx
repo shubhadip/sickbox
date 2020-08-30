@@ -167,22 +167,20 @@ class Product extends React.Component<IProps, IState> {
               <p className="desc-subtitle">
                 Kicks fatigue to the curb. Leaves inflammation in the dust.
               </p>
-              {this.state.showMore ? (
-                <p className="desc">
-                  Makes bloating a thing of the past. It's a bird, it's a plane,
-                  it's Ginger + Greens! And while it may sound too good to be
-                  true, this thick and velvety, not-crazy-sweet, perfectly zingy
-                  blend does it all. With stomach-soothing ginger, apple cider
-                  vinegar, mineral-dense spinach, and avocado, it's the hero
-                  your taste buds deserve.
-                </p>
-              ) : null}
-              <Button
+              <p className={['desc'].join(' ')}>
+                Makes bloating a thing of the past. It's a bird, it's a plane,
+                it's Ginger + Greens! And while it may sound too good to be
+                true, this thick and velvety, not-crazy-sweet, perfectly zingy
+                blend does it all. With stomach-soothing ginger, apple cider
+                vinegar, mineral-dense spinach, and avocado, it's the hero your
+                taste buds deserve.
+              </p>
+              {/* <Button
                 onClick={this.handleShowMore}
                 title={this.state.showMore ? 'Read Less' : 'Show More'}
-              />
+              /> */}
             </div>
-            <div>
+            <div className="ingr-img-container">
               <img
                 className="ingr-image"
                 src="https://images.ctfassets.net/iw4cawak30d4/5etL3Uy9hmgNdwa7u9HMaw/661f3ad60f7e0ac8fe0a79496b9a0bd0/Ginger___Greens_ingredients-image_2x-squashed.jpeg?w=550&fl=progressive"
@@ -192,7 +190,10 @@ class Product extends React.Component<IProps, IState> {
           </div>
         </section>
         <section>
-          <div className="container ingredient-dd">
+          <div
+            className="container ingredient-dd"
+            onClick={this.handleIngredientToggle}
+          >
             <div>
               <p className="ingrients-p">
                 <span className="contain">Ingredients</span>
@@ -201,7 +202,6 @@ class Product extends React.Component<IProps, IState> {
                     'icon_down_solid',
                     ingredient ? 'opened' : ''
                   ].join(' ')}
-                  onClick={this.handleIngredientToggle}
                 />
               </p>
               {/* {ingredient ? ( */}
@@ -216,7 +216,10 @@ class Product extends React.Component<IProps, IState> {
               {/* ) : null} */}
             </div>
           </div>
-          <div className="container ingredient-dd">
+          <div
+            className="container ingredient-dd"
+            onClick={this.handleNutritionFact}
+          >
             <div>
               <p className="ingrients-p">
                 <span className="contain">Nutrition Facts</span>
@@ -225,7 +228,6 @@ class Product extends React.Component<IProps, IState> {
                     'icon_down_solid',
                     nutritionFacts ? 'opened' : ''
                   ].join(' ')}
-                  onClick={this.handleNutritionFact}
                 />
               </p>
               <div
@@ -238,7 +240,10 @@ class Product extends React.Component<IProps, IState> {
               </div>
             </div>
           </div>
-          <div className="container ingredient-dd">
+          <div
+            className="container ingredient-dd"
+            onClick={this.handleHowToUse}
+          >
             <div>
               <p className="ingrients-p">
                 <span className="contain">How To Use</span>
@@ -246,7 +251,6 @@ class Product extends React.Component<IProps, IState> {
                   className={['icon_down_solid', howToUse ? 'opened' : ''].join(
                     ' '
                   )}
-                  onClick={this.handleHowToUse}
                 />
               </p>
               {/* {howToUse ? ( */}

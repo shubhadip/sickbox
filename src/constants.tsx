@@ -217,38 +217,3 @@ export const  MOBILE_VALIDATIONS = [
     message: "Please enter a valid Phone Number",
   },
 ];
-
-
-export const structuredDataOrganization = `{
-  "@context": "http://schema.org",
-  "@type": "Organization",
-  "legalName": "SickBox",
-  "url": "https://www.sickbox.com/",
-  "logo": "https://images.bewakoof.com/logos/bewakoof-logo-og.png",
-  "foundingDate": "16/Dec/2020",
-  "founders": [{
-    "@type": "Person",
-    "name": "Mr. Xyz developers"
-  }],
-  "contactPoint": [{
-    "@type": "ContactPoint",
-    "email": "sickboxday.gmail.com",
-    "telephone": "9999999999",
-    "contactType": "customer service"
-  }],
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Mumbai",
-    "addressRegion": "Mumbai",
-    "addressCountry": "India",
-    "postalCode": "400076"
-  },
-  "sameAs": [
-    "https://twitter.com/sickbox",
-    "https://plus.google.com/+SickBox",
-    "https://www.youtube.com/sickbox",
-    "https://www.linkedIn.com/sickbox",
-    "https://www.instagram.com/sickbox",
-    "https://in.pinterest.com/sickbox"
-  ]
-  }`

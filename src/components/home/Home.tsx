@@ -7,7 +7,8 @@ import HomeBox from './../functional/HomeBoxes/homeBox';
 import HomePromote from './../functional/HomePromote/HomePromote';
 import Subscribe from './../common/subscribe/Subscribe';
 
-import { renderTitles, structuredDataOrganization } from './../../constants';
+import { renderTitles } from './../../constants';
+import { structuredDataOrganization } from './../../structuredDataJson';
 const product = require('./../../assets/img/product.png');
 
 import './home.scss';
@@ -24,6 +25,7 @@ class Home extends React.Component<IProps, any> {
     this.state = {
       email: ''
     };
+    // throw new Error('Something just blew up')
   }
 
   componentDidMount() {
