@@ -19,11 +19,11 @@ class RouteMap extends React.Component<any, any> {
 
   render() {
     return (
-        <main>
-          <Header />
-          {renderRoutes(Routes as any)}
-          <Footer />
-        </main>
+      <main>
+        <Header />
+        {renderRoutes(Routes as any)}
+        <Footer />
+      </main>
     );
   }
 }

@@ -10,10 +10,14 @@ const loading = () => <div>Loading...</div>;
 
 const Register = Loadable({
   loader: () =>
-    import(/* webpackChunkName: 'Register' */ './../components/register/Register'),
+    import(
+      /* webpackChunkName: 'Register' */ './../components/register/Register'
+    ),
   loading,
   modules: ['./../components/register/Register'],
-  webpack: () => [(require as any).resolveWeak('./../components/register/Register')]
+  webpack: () => [
+    (require as any).resolveWeak('./../components/register/Register')
+  ]
 });
 
 const Product = Loadable({
@@ -21,7 +25,9 @@ const Product = Loadable({
     import(/* webpackChunkName: 'Product' */ './../components/product/Product'),
   loading,
   modules: ['./../components/product/Product'],
-  webpack: () => [(require as any).resolveWeak('./../components/product/Product')]
+  webpack: () => [
+    (require as any).resolveWeak('./../components/product/Product')
+  ]
 });
 
 const Login = Loadable({
@@ -34,12 +40,15 @@ const Login = Loadable({
 
 const ResetPassword = Loadable({
   loader: () =>
-    import(/* webpackChunkName: 'ResetPassword' */ './../components/resetpassword/ResetPassword'),
+    import(
+      /* webpackChunkName: 'ResetPassword' */ './../components/resetpassword/ResetPassword'
+    ),
   loading,
   modules: ['./../components/resetpassword/ResetPassword'],
-  webpack: () => [(require as any).resolveWeak('./../components/resetpassword/ResetPassword')]
+  webpack: () => [
+    (require as any).resolveWeak('./../components/resetpassword/ResetPassword')
+  ]
 });
-
 
 const About = Loadable({
   loader: () =>
